@@ -37,7 +37,7 @@ const accent = (eb) => /實作③|實作④|方法/.test(eb) ? C.amber : /實作
 function header(s, eyebrow, title, color) {
   s.addShape(pres.shapes.RECTANGLE, { x: M, y: 0.36, w: 0.12, h: 0.12, fill: { color: color || C.mag } });
   s.addText(eyebrow, { x: M + 0.2, y: 0.28, w: 7.5, h: 0.28, fontFace: F, fontSize: 11, bold: true, color: C.muted, margin: 0, isTextBox: true, charSpacing: 1 });
-  s.addText(title, { x: M, y: 0.6, w: 8.5, h: 0.6, fontFace: F, fontSize: 24, bold: true, color: C.ink, margin: 0, isTextBox: true, valign: "top" });
+  s.addText(title, { x: M, y: 0.6, w: 8.5, h: 0.6, fontFace: F, fontSize: [...title].length > 26 ? 19 : 24, bold: true, color: C.ink, margin: 0, isTextBox: true, valign: "top" });
 }
 function imgFit(s, p, x, y, w, h, bg) {
   if (bg !== false) s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: bg || "2A2925" }, rectRadius: 0.06, line: { color: C.line, width: 0.75 } });
@@ -137,8 +137,8 @@ const by = (t) => D.find((d) => d.title === t);
 {
   const s = pres.addSlide({ masterName: "PAPER" });
   header(s, "今天的地圖", "一個下午，跑完 ICOPE 的 AI 工作流", C.amber);
-  const rows = [["0", "暖身：AI 做出的 ICOPE 工具", "10′", C.mag], ["1", "三個 AI 怎麼選＋守住界線", "15′", C.ink], ["2", "實作① 用說的：語音輸入", "10′", C.blue], ["3", "實作② 讀資料：Chrome 問問 Gemini", "15′", C.blue], ["4", "實作③ 參考風格做衛教圖", "25′", C.amber], ["5", "實作④ 參考設計做網頁型簡報", "30′", C.amber],
-    ["6", "實作⑤ 做簡報：NotebookLM", "10′", C.mag], ["7", "實作⑥ 看數據：Gemini 與 ChatGPT 對照", "30′", C.mag], ["8", "Napkin：文字變圖表", "5′", C.lime], ["9", "實作⑦ 上架：GitHub Pages", "15′", C.lime], ["10", "提示詞庫＋課後任務", "5′", C.sky]];
+  const rows = [["0", "暖身：AI 做出的 ICOPE 工具", "10′", C.mag], ["1", "三個 AI 怎麼選＋守住界線", "15′", C.ink], ["2", "實作① 語音轉文字＋手機即時字幕", "20′", C.blue], ["3", "實作② 讀資料：Chrome 問問 Gemini", "10′", C.blue], ["4", "實作③ 參考風格做衛教圖", "25′", C.amber], ["5", "實作④ 參考設計做網頁型簡報", "25′", C.amber],
+    ["6", "實作⑤ 做簡報：NotebookLM", "10′", C.mag], ["7", "實作⑥ 看數據：Gemini 與 ChatGPT 對照", "25′", C.mag], ["8", "Napkin：文字變圖表", "5′", C.lime], ["9", "實作⑦ 上架：GitHub Pages", "15′", C.lime], ["10", "提示詞庫＋課後任務", "5′", C.sky]];
   rows.forEach(([n, t, m, c], i) => {
     const col = i < 6 ? 0 : 1, r = i < 6 ? i : i - 6, x = M + col * 4.6, y = 1.4 + r * 0.6;
     s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: y + 0.06, w: 0.36, h: 0.36, fill: { color: c }, rectRadius: 0.05 });
@@ -215,6 +215,9 @@ worksSlide("精選作品", "這些 ICOPE 工具，都是用 AI 做的", [
 }
 stepSlides(by("三不原則與去識別化"));
 stepSlides(by("實作① 語音輸入"));
+stepSlides(by("實作① 不用安裝：ChatGPT、Gemini 的麥克風"));
+stepSlides(by("語音轉文字設定成繁體中文"));
+stepSlides(by("幫重聽長輩：手機即時字幕"));
 stepSlides(by("實作② Chrome 問問 Gemini"));
 // 10 方法
 {

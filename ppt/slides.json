@@ -133,6 +133,133 @@
   ]
  },
  {
+  "title": "實作① 不用安裝：ChatGPT、Gemini 的麥克風",
+  "eyebrow": "實作①　用說的：不用安裝",
+  "h2": "沒有 Typeless？ChatGPT、Gemini 的麥克風就能語音轉文字",
+  "lede": "",
+  "steps": [
+   {
+    "img": "img/v01_gpt_mic.jpg",
+    "cap": "ChatGPT 輸入框右邊的麥克風＝「聽寫」（快捷鍵 Ctrl＋Shift＋D）",
+    "title": "ChatGPT：按麥克風「聽寫」",
+    "desc": "按一下開始說，說完再按一下。文字會出現在輸入框，可以先修改再送出。最接近 Typeless 的用法。"
+   },
+   {
+    "img": "img/v02_gpt_voice.jpg",
+    "cap": "藍色圓形按鈕＝「開始語音對話」：像講電話一樣一來一往",
+    "title": "ChatGPT：藍色按鈕是「語音對話」",
+    "desc": "跟 AI 直接聊天，邊講邊釐清想法。聊完對話紀錄會留成文字，可以回頭複製。"
+   },
+   {
+    "img": "img/v03_gem_mic.jpg",
+    "cap": "Gemini 輸入框右邊的麥克風＝「語音輸入」（快捷鍵 ⌘＋Shift＋D）",
+    "title": "Gemini：按麥克風「語音輸入」",
+    "desc": "一樣按一下開始、再按一下結束。手機 Gemini App 的麥克風也一樣。"
+   },
+   {
+    "img": "img/v01_gpt_mic.jpg",
+    "cap": "第一次使用時，瀏覽器會問能不能用麥克風：按「允許」",
+    "title": "第一次用：允許麥克風",
+    "desc": "瀏覽器跳出詢問就按「允許」。教室電腦沒有麥克風，請用自己的手機 App 練習。"
+   }
+  ],
+  "prompts": [
+   {
+    "lab": "提示詞・口述整理（貼在語音內容前面）",
+    "text": "以下是我用語音口述的內容，請：1. 去掉口語贅詞與重複，保留原意 2. 整理成條列 3. 不確定的專有名詞與數字用【？】標出 4. 全部使用繁體中文（台灣用語）。\n口述內容："
+   }
+  ]
+ },
+ {
+  "title": "語音轉文字設定成繁體中文",
+  "eyebrow": "實作①　避免出現簡體字",
+  "h2": "語音轉出來是簡體字？這樣設定成繁體中文",
+  "lede": "",
+  "steps": [
+   {
+    "img": "img/v05_gpt_voiceset.jpg",
+    "cap": "ChatGPT：左下角頭像 → 設定 → 聲音 → 語言",
+    "title": "ChatGPT：聲音的「語言」選「國語」",
+    "desc": "左下角頭像 → 設定 → 聲音 → 語言。不要用「自動偵測」，比較不會被認成其他語言。"
+   },
+   {
+    "img": "img/v06_gpt_lang.jpg",
+    "cap": "下拉選單第一個是「自動偵測」，往下找到「國語」",
+    "title": "在清單裡找到「國語」",
+    "desc": "清單很長，可以直接滑到「國語」。介面語言在「一般 → 語言」，選中文（台灣）。"
+   },
+   {
+    "img": "img/v07_gpt_custom.jpg",
+    "cap": "ChatGPT：設定 → 個人化 → 自訂指示 → ChatGPT",
+    "title": "ChatGPT：自訂指示寫一句話",
+    "desc": "個人化 → 自訂指示 → ChatGPT，貼上下方那句。之後每個對話都會照做。"
+   },
+   {
+    "img": "img/v08_google_lang.jpg",
+    "cap": "myaccount.google.com/language：偏好語言「繁體中文　台灣」",
+    "title": "Gemini：Google 帳戶語言設成繁體中文（台灣）",
+    "desc": "網址 myaccount.google.com/language → 偏好語言按鉛筆 → 選「繁體中文　台灣」。Gemini 的語音輸入跟著這個設定。"
+   },
+   {
+    "img": "img/v09_gem_personal.jpg",
+    "cap": "Gemini：左下齒輪 → 個人化智慧服務 → 給 Gemini 的指令",
+    "title": "Gemini：「給 Gemini 的指令」也寫一句",
+    "desc": "左下齒輪 → 個人化智慧服務 → 給 Gemini 的指令，貼上同一句話。"
+   }
+  ],
+  "prompts": [
+   {
+    "lab": "自訂指示（ChatGPT、Gemini 都貼）",
+    "text": "請一律使用繁體中文（台灣用語）回覆，包含語音聽寫整理出來的文字；不要使用簡體字。"
+   }
+  ]
+ },
+ {
+  "title": "幫重聽長輩：手機即時字幕",
+  "eyebrow": "實作①　延伸：幫重聽長輩「看見」對話",
+  "h2": "iPhone「即時字幕」、Android「即時轉錄」：說的話馬上變大字",
+  "lede": "",
+  "steps": [
+   {
+    "img": "img/h01_ios_hearing.jpg",
+    "cap": "iPhone 實機畫面：設定 › 輔助使用 › 往下到「聽力」 › 即時字幕",
+    "title": "iPhone：設定 › 輔助使用 › 即時字幕",
+    "desc": "往下滑到「聽力」區，點「即時字幕」並打開。iPhone 11 以後的機型才有。"
+   },
+   {
+    "img": "img/h02_ios_lc_guide.jpg",
+    "cap": "Apple 使用手冊：點「外觀」自訂字幕的文字、大小和顏色",
+    "title": "iPhone：「外觀」把字放大、換顏色",
+    "desc": "即時字幕 › 外觀：粗體、字體大小、文字顏色、背景顏色都能調。字幕視窗可以切成全螢幕，放桌上給長輩看。"
+   },
+   {
+    "img": "img/h03_ios_lc_lang.jpg",
+    "cap": "Apple 官網「功能特色適用範圍」：即時字幕支援國語（台灣）",
+    "title": "iPhone：支援國語（台灣）",
+    "desc": "Apple 官網列出即時字幕支援國語（台灣）。設定成「輔助使用快速鍵」，按三下側邊按鈕就能開。"
+   },
+   {
+    "img": "img/h04_play_lt.jpg",
+    "cap": "Google Play：「即時轉錄和聲響通知」（Google 出品，Android 12 以上）",
+    "title": "Android：「即時轉錄和聲響通知」",
+    "desc": "多數手機在 設定 › 無障礙 › 即時轉錄 就有；沒有就到 Play 商店搜尋下載。超過 80 種語言。"
+   },
+   {
+    "img": "img/h05_play_bigtext.jpg",
+    "cap": "即時轉錄可以使用較大的字型；在 App 的「設定」調整文字大小與語言",
+    "title": "Android：語言選中文（台灣），字調大",
+    "desc": "App 內「設定」：主要語言選中文（台灣）、調整文字大小、設定「說出名稱時震動」。也能打字回覆，按「大聲朗讀」唸給長輩聽。"
+   },
+   {
+    "img": "img/h01_ios_hearing.jpg",
+    "cap": "整支手機也能調：字更大、更粗、對比更高",
+    "title": "整支手機看得更清楚",
+    "desc": "iPhone：輔助使用 › 顯示與文字大小（更大的文字、粗體文字、增加對比）。Android：無障礙 › 字型大小、高對比文字。"
+   }
+  ],
+  "prompts": []
+ },
+ {
   "title": "實作② Chrome 問問 Gemini",
   "eyebrow": "實作②　讀資料",
   "h2": "WHO 手冊 168 頁，請 Chrome 幫你讀",
