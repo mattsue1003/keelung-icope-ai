@@ -351,15 +351,15 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
     <a href="#s5"><span class="no" style="--c:var(--mag)">0</span><span><strong>暖身：AI 做出的 ICOPE 工具</strong><small>先看成品，知道做得到什麼</small></span><em>10′</em></a>
     <a href="#s7"><span class="no" style="--c:var(--ink)">1</span><span><strong>三個 AI 怎麼選＋守住界線</strong><small>ChatGPT／Gemini／Claude、三不原則、去識別化練習</small></span><em>15′</em></a>
     <a href="#s9"><span class="no" style="--c:var(--blue)">2</span><span><strong>實作①　用說的：語音轉文字</strong><small>Typeless、ChatGPT／Gemini 麥克風、繁體設定、手機即時字幕</small></span><em>20′</em></a>
-    <a href="#s13"><span class="no" style="--c:var(--blue)">3</span><span><strong>實作②　讀資料：Chrome 問問 Gemini</strong><small>WHO 手冊、YouTube 影片重點整理</small></span><em>10′</em></a>
-    <a href="#s14"><span class="no dk" style="--c:var(--amber)">4</span><span><strong>實作③　參考風格做衛教圖</strong><small>ChatGPT 做圖，Gemini 免費版</small></span><em>25′</em></a>
-    <a href="#s17"><span class="no dk" style="--c:var(--amber)">5</span><span><strong>實作④　參考設計做網頁型簡報</strong><small>Gemini、Claude，再做團康互動網頁</small></span><em>25′</em></a>
+    <a href="#s13"><span class="no" style="--c:var(--blue)">3</span><span><strong>實作②　讀資料：手冊與影片</strong><small>Chrome 問問 Gemini、直接丟 AI 的差別、Gemini 筆記本</small></span><em>15′</em></a>
+    <a href="#s16"><span class="no dk" style="--c:var(--amber)">4</span><span><strong>實作③　參考風格做衛教圖</strong><small>ChatGPT 做圖、Canva 魔法圖層改字改圖</small></span><em>25′</em></a>
+    <a href="#s20"><span class="no dk" style="--c:var(--amber)">5</span><span><strong>實作④　參考設計做網頁型簡報</strong><small>Gemini、Claude，再做團康互動網頁</small></span><em>25′</em></a>
     <div class="brk">休息 10 分鐘</div>
-    <a href="#s20"><span class="no" style="--c:var(--mag)">6</span><span><strong>實作⑤　做簡報：NotebookLM</strong><small>來源→簡報→可編輯 PPT</small></span><em>10′</em></a>
-    <a href="#s21"><span class="no" style="--c:var(--mag)">7</span><span><strong>實作⑥　看數據：Gemini 與 ChatGPT 對照</strong><small>虛擬 120 筆練習檔＋驗算</small></span><em>25′</em></a>
-    <a href="#s24"><span class="no dk" style="--c:var(--lime)">8</span><span><strong>Napkin：文字秒變圖表</strong><small>報告、簡報用的流程圖</small></span><em>5′</em></a>
-    <a href="#s25"><span class="no dk" style="--c:var(--lime)">9</span><span><strong>實作⑦　上架：GitHub Pages</strong><small>做好的網頁變成一個網址</small></span><em>15′</em></a>
-    <a href="#s27"><span class="no" style="--c:var(--sky)">10</span><span><strong>提示詞庫＋課後任務</strong><small>帶回單位直接用</small></span><em>5′</em></a>
+    <a href="#s23"><span class="no" style="--c:var(--mag)">6</span><span><strong>實作⑤　做簡報：NotebookLM</strong><small>來源→簡報→可編輯 PPT</small></span><em>10′</em></a>
+    <a href="#s24"><span class="no" style="--c:var(--mag)">7</span><span><strong>實作⑥　看數據：Gemini 與 ChatGPT 對照</strong><small>虛擬 120 筆練習檔＋驗算</small></span><em>25′</em></a>
+    <a href="#s27"><span class="no dk" style="--c:var(--lime)">8</span><span><strong>Napkin：文字秒變圖表</strong><small>報告、簡報用的流程圖</small></span><em>5′</em></a>
+    <a href="#s28"><span class="no dk" style="--c:var(--lime)">9</span><span><strong>實作⑦　上架：GitHub Pages</strong><small>做好的網頁變成一個網址</small></span><em>15′</em></a>
+    <a href="#s30"><span class="no" style="--c:var(--sky)">10</span><span><strong>提示詞庫＋課後任務</strong><small>帶回單位直接用</small></span><em>5′</em></a>
   </nav>
 </section>
 
@@ -576,6 +576,44 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   </div>
 </section>
 
+<!-- 9b 沒有問問 Gemini -->
+<section class="slide" data-title="實作② 沒有問問 Gemini：直接丟給 Gemini、ChatGPT">
+  <div class="eyebrow" style="--c:var(--blue)"><span class="sq"></span>實作②　沒有「問問 Gemini」怎麼辦</div>
+  <h2>直接把手冊網址丟給 Gemini、ChatGPT：結果差很多</h2>
+  <div class="stepper" data-stepper>
+    <ol class="steps">
+      <li data-img="img/w01_gem_prompt.jpg" data-cap="同一段提示詞＋WHO 手冊 PDF 網址，分別貼給 Gemini 和 ChatGPT（11/11 實測）"><span class="n">1</span><div><b>同一段提示詞，貼上 PDF 網址</b><p>WHO 手冊頁的「Download PDF」按右鍵複製網址，連同提示詞一起貼進去。</p></div></li>
+      <li data-img="img/w02_gem_title.jpg" data-cap="Gemini 把文件名稱講錯了：寫成另一份 WHO 文件「implementation framework」"><span class="n">2</span><div><b>Gemini：連文件名稱都講錯</b><p>它說這是「ICOPE implementation framework」，其實是「person-centred assessment and pathways in primary care」第二版。</p></div></li>
+      <li data-img="img/w03_gem_table.jpg" data-cap="Gemini 的六力表：每一格都寫「文件未提及」，但手冊裡其實有"><span class="n">3</span><div><b>Gemini：表格全部「文件未提及」</b><p>它沒有真的讀到檔案內容。好在它有照規定寫「未提及」，沒有亂編。</p></div></li>
+      <li data-img="img/w04_gpt_title.jpg" data-cap="ChatGPT：花 1 分鐘讀檔，文件名稱與 ISBN 都正確"><span class="n">4</span><div><b>ChatGPT：真的打開 PDF 讀</b><p>約 1 分鐘。書名、出版年、ISBN 都對，還註明頁碼以印刷頁碼為準。</p></div></li>
+      <li data-img="img/w05_gpt_table.jpg" data-cap="ChatGPT 的六力表：附頁碼（p.20–24），篩檢題目與切點都對得上手冊"><span class="n">5</span><div><b>ChatGPT：六力表附頁碼</b><p>五次坐站 14 秒、三個月體重減輕 3 公斤等，都對得上手冊。台灣實務請再對照國健署手冊的切點。</p></div></li>
+    </ol>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+      <div class="note" style="--c:var(--blue)"><b>結論</b><span>貼網址，AI 不一定真的讀到。最穩：<b>下載 PDF 直接上傳</b>，或用 Chrome「問問 Gemini」、Gemini 筆記本（下一頁）。每次都核對書名和一兩個頁碼。</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9c Gemini 筆記本 -->
+<section class="slide" data-title="實作② Gemini 筆記本">
+  <div class="eyebrow" style="--c:var(--blue)"><span class="sq"></span>實作②　也可以用 Gemini 筆記本</div>
+  <h2>Gemini 筆記本：把手冊放進去，之後每次都根據它回答</h2>
+  <div class="stepper" data-stepper>
+    <ol class="steps">
+      <li data-img="img/nb01_sidebar.jpg" data-cap="Gemini 左側欄：筆記本 → 新增筆記本"><span class="n">1</span><div><b>左側欄「筆記本」→「新增筆記本」</b><p>左上角打開側欄就看得到。和 NotebookLM 是同一家，現在直接做進 Gemini 裡。</p></div></li>
+      <li data-img="img/nb02_type.jpg" data-cap="選用途：整理思路，或讀書與學習"><span class="n">2</span><div><b>選用途</b><p>「整理思路」：依資料回答與整理；「讀書與學習」：會幫你排讀書計畫、出題。</p></div></li>
+      <li data-img="img/nb03_topic.jpg" data-cap="輸入主題「WHO ICOPE 長者量六力」→ 已建立筆記本"><span class="n">3</span><div><b>輸入主題</b><p>例如「WHO ICOPE 長者量六力」，按箭頭就建立好了。</p></div></li>
+      <li data-img="img/nb05_upload.jpg" data-cap="輸入框「＋」：上傳檔案、加入雲端硬碟檔案"><span class="n">4</span><div><b>「＋」上傳 PDF 當來源</b><p>WHO 手冊、國健署手冊、單位 SOP 都放進來。之後在這本筆記本裡問的問題，都會根據這些來源。</p></div></li>
+      <li data-img="img/nb04_page.jpg" data-cap="筆記本頁：對話紀錄都留在這本，右上角可開 Gemini Notebook 完整版"><span class="n">5</span><div><b>同一主題的對話都留在這本</b><p>下次打開繼續問，不用重新上傳。右上角「Gemini Notebook」可開完整版，做簡報、語音摘要。</p></div></li>
+    </ol>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+      <div class="prompt"><div class="lab">在筆記本裡問<button class="copy">複製</button></div>只根據這本筆記本的來源回答：做一張表「六力｜篩檢題目｜異常判定｜下一步」，每列標出來源檔名與頁碼；來源沒有的寫「來源未提及」。</div>
+    </div>
+  </div>
+</section>
+
 <!-- 10a 參考風格方法 -->
 <section class="slide" data-title="方法：參考別人的 UI 風格">
   <div class="eyebrow" style="--c:var(--amber)"><span class="sq"></span>今天做圖、做網頁的共同方法</div>
@@ -594,19 +632,38 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
 <!-- 10b ChatGPT 參考風格做圖 -->
 <section class="slide" data-title="實作③ ChatGPT 參考風格做衛教圖">
   <div class="eyebrow" style="--c:var(--amber)"><span class="sq"></span>實作③　做衛教圖：ChatGPT</div>
-  <h2>上傳參考截圖，做出同風格的 ICOPE 衛教圖</h2>
+  <h2>拿一張喜歡的衛教海報當參考，做出同風格的 ICOPE 海報</h2>
   <div class="stepper" data-stepper>
     <ol class="steps">
-      <li data-img="img/ref_webtech_hero.jpg" data-cap="參考圖：米洛科技首頁截圖（白底、粗黑字、彩色小方塊）"><span class="n">1</span><div><b>準備參考截圖</b><p>截一張喜歡的網站畫面。今天用米洛科技首頁示範。</p></div></li>
-      <li data-img="img/m01_upload.jpg" data-cap="chatgpt.com：把截圖拖進輸入框，或按「＋」上傳"><span class="n">2</span><div><b>打開 ChatGPT，上傳截圖</b><p>chatgpt.com 登入 → 截圖直接拖進輸入框。免費帳號每天可做幾張圖。</p></div></li>
-      <li data-img="img/m02_prompt.jpg" data-cap="提示詞：參考什麼＋不要什麼＋我的內容＋格式"><span class="n">3</span><div><b>貼上提示詞</b><p>四段：參考的風格、不要的東西（人、商標）、你的內容（六力六格）、格式（A4 直式、繁中、字大）。</p></div></li>
-      <li data-img="img/m03_drawing.jpg" data-cap="「正在勾勒草圖」：約 30 秒～1 分鐘"><span class="n">4</span><div><b>等它畫</b><p>畫面會顯示進度。這段時間可以先想要怎麼檢查。</p></div></li>
-      <li data-img="img/m06_poster.jpg" data-cap="實際產出（11/11 實測）：配色、方塊、膠囊按鈕都抓到了"><span class="n">5</span><div><b>檢查成品</b><p>六格文字全對、繁體中文、沒有原網站的人和商標。逐字看錯字與說法，再拿去用。</p></div></li>
-      <li data-img="img/m05_editor.jpg" data-cap="點圖片：標註、擦除、移除背景、調整大小，在下方輸入要改什麼"><span class="n">6</span><div><b>局部修改</b><p>點圖片 → 用「標註」圈出要改的地方 → 下方輸入「這格改成…」。右上角下載。</p></div></li>
+      <li data-img="img/ref_hpa_poster.jpg" data-cap="參考海報：國健署「從兒童發展篩檢到聯合評估 家長指南」（只參考版面與配色）"><span class="n">1</span><div><b>找一張版面喜歡的海報</b><p>右側直排大標題、粉彩配色、手繪人物、彩色小標籤、左下「溫馨提醒」。截圖或存下來。</p></div></li>
+      <li data-img="img/q02_prompt.jpg" data-cap="chatgpt.com：上傳參考海報，貼提示詞（參考什麼、不要什麼、我的內容）"><span class="n">2</span><div><b>上傳參考圖，說清楚要參考什麼</b><p>寫出你看到的版面特徵，加一句「不要複製它的文字、QR code 和標誌」，再放進自己的內容。</p></div></li>
+      <li data-img="img/m03_drawing.jpg" data-cap="約 1 分鐘：畫面顯示正在勾勒草圖"><span class="n">3</span><div><b>等它畫</b><p>約 1 分鐘。這段時間可以先想要怎麼檢查內容。</p></div></li>
+      <li data-img="img/q04_poster.jpg" data-cap="實際產出（11/11 實測）：直排標題、彩色標籤、溫馨提醒框都照參考，內容是 ICOPE"><span class="n">4</span><div><b>檢查成品</b><p>版面跟參考海報一樣好讀，內容換成「篩檢→複評→轉介」。逐字看：錯字、數字、醫療說法。</p></div></li>
+      <li data-img="img/q03_viewer.jpg" data-cap="點圖片：標註、擦除、移除背景、調整大小；下方輸入要改什麼"><span class="n">5</span><div><b>小地方用 ChatGPT 改，大改到 Canva</b><p>點圖片 → 「標註」圈起來說要改什麼。要改多處文字，下一頁用 Canva 魔法圖層更快。</p></div></li>
+    </ol>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame" style="background:var(--soft)"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+      <div class="prompt"><div class="lab">提示詞・參考海報風格<button class="copy">複製</button></div>請參考這張海報的 UI 設計（右側直排大標題、粉彩粉橘配淡藍、手繪線條人物、彩色小標籤標題、左下圓角「溫馨提醒」框），只參考版面與配色，不要複製它的文字、QR code 和標誌。幫我做一張 A4 直式衛教海報：右側直排標題「長者量六力 從篩檢到轉介」，副標「家屬指南」。三個標籤段落：篩檢：65 歲以上每年量一次六力；複評：有一項異常，由醫事人員再仔細評估；轉介：依結果連結復能、營養、眼科或耳鼻喉科。溫馨提醒：按時篩檢，及早發現、及早介入。繁體中文、字要大、不要錯字。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 10c Canva 魔法圖層 -->
+<section class="slide" data-title="實作③ Canva 魔法圖層改字改圖">
+  <div class="eyebrow" style="--c:var(--amber)"><span class="sq"></span>實作③　Canva 魔法圖層</div>
+  <h2>AI 圖上的字改不了？Canva「魔法圖層」拆開來改</h2>
+  <div class="stepper" data-stepper>
+    <ol class="steps">
+      <li data-img="img/cm01_home.jpg" data-cap="canva.com 首頁：上方工具列最右邊「魔法圖層」"><span class="n">1</span><div><b>canva.com 首頁點「魔法圖層」</b><p>在「你今天要設計些什麼呢？」下方那排，往右滑就看得到。</p></div></li>
+      <li data-img="img/cm02_picker.jpg" data-cap="選取媒體：點「上傳」，選 AI 做好的海報（只支援影像）"><span class="n">2</span><div><b>上傳 AI 做好的海報</b><p>點「上傳」選圖片。處理好會跳出「你的設計已準備就緒」，按「開啟編輯器」。</p></div></li>
+      <li data-img="img/cm03_layers.jpg" data-cap="拆好了：每段文字變成可以改的文字框，人物和圖示變成獨立圖片"><span class="n">3</span><div><b>文字、圖片都拆成獨立圖層</b><p>紫框就是拆出來的每一塊。標題、標籤、說明文字都變成真的文字框，字型也幫你配好。</p></div></li>
+      <li data-img="img/cm04_text.jpg" data-cap="改字：雙擊文字框 → 全選 → 打新的字；上方可改字型、大小、顏色"><span class="n">4</span><div><b>改字：雙擊文字，直接打</b><p>把「溫馨提醒」改成你的單位要說的話。字太長就調小字級或拉寬文字框。</p></div></li>
+      <li data-img="img/cm05_select.jpg" data-cap="改圖：點一下圖片，上方出現 編輯／取代／背景移除／橡皮擦／顏色"><span class="n">5</span><div><b>改圖：點一下圖片</b><p>可以移動、放大縮小、刪除，或用「取代」換成別的圖、「橡皮擦」擦掉一部分。</p></div></li>
+      <li data-img="img/cm06_color.jpg" data-cap="圖片的顏色也能換：例如把醫院的紅十字換成單位代表色"><span class="n">6</span><div><b>換顏色，對上單位色系</b><p>上方的色票就是圖裡的顏色，點一下換成品牌色。改完右上「分享」→ 下載 PNG／PDF。</p></div></li>
     </ol>
     <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
       <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
-      <div class="prompt"><div class="lab">提示詞・參考風格做衛教圖<button class="copy">複製</button></div>請參考這張網站截圖的 UI 風格（白底、粗黑字、彩色小方塊點綴、圓角卡片、膠囊按鈕），只參考配色與版面，不要畫截圖裡的人和商標。幫我做一張 A4 直式衛教圖：「長者量六力 ICOPE」，六格卡片分別是認知、行動、營養、視力、聽力、情緒，每格一個圖示加一句說明，最下方放「65 歲以上免費評估」膠囊按鈕。繁體中文、字要大、不要錯字。</div>
+      <div class="note" style="--c:var(--amber)"><b>完成圖</b><span>溫馨提醒改成「一年一次 顧好健康」、醫院十字改成藍綠色，其他照原樣保留。點「步驟 6」右邊截圖可放大。</span></div>
     </div>
   </div>
 </section>

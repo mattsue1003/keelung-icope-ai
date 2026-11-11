@@ -137,7 +137,7 @@ const by = (t) => D.find((d) => d.title === t);
 {
   const s = pres.addSlide({ masterName: "PAPER" });
   header(s, "今天的地圖", "一個下午，跑完 ICOPE 的 AI 工作流", C.amber);
-  const rows = [["0", "暖身：AI 做出的 ICOPE 工具", "10′", C.mag], ["1", "三個 AI 怎麼選＋守住界線", "15′", C.ink], ["2", "實作① 語音轉文字＋手機即時字幕", "20′", C.blue], ["3", "實作② 讀資料：Chrome 問問 Gemini", "10′", C.blue], ["4", "實作③ 參考風格做衛教圖", "25′", C.amber], ["5", "實作④ 參考設計做網頁型簡報", "25′", C.amber],
+  const rows = [["0", "暖身：AI 做出的 ICOPE 工具", "10′", C.mag], ["1", "三個 AI 怎麼選＋守住界線", "15′", C.ink], ["2", "實作① 語音轉文字＋手機即時字幕", "20′", C.blue], ["3", "實作② 讀資料：手冊、影片、筆記本", "15′", C.blue], ["4", "實作③ 衛教圖＋Canva 魔法圖層", "25′", C.amber], ["5", "實作④ 參考設計做網頁型簡報", "25′", C.amber],
     ["6", "實作⑤ 做簡報：NotebookLM", "10′", C.mag], ["7", "實作⑥ 看數據：Gemini 與 ChatGPT 對照", "25′", C.mag], ["8", "Napkin：文字變圖表", "5′", C.lime], ["9", "實作⑦ 上架：GitHub Pages", "15′", C.lime], ["10", "提示詞庫＋課後任務", "5′", C.sky]];
   rows.forEach(([n, t, m, c], i) => {
     const col = i < 6 ? 0 : 1, r = i < 6 ? i : i - 6, x = M + col * 4.6, y = 1.4 + r * 0.6;
@@ -219,6 +219,8 @@ stepSlides(by("實作① 不用安裝：ChatGPT、Gemini 的麥克風"));
 stepSlides(by("語音轉文字設定成繁體中文"));
 stepSlides(by("幫重聽長輩：手機即時字幕"));
 stepSlides(by("實作② Chrome 問問 Gemini"));
+stepSlides(by("實作② 沒有問問 Gemini：直接丟給 Gemini、ChatGPT"));
+stepSlides(by("實作② Gemini 筆記本"));
 // 10 方法
 {
   const d = by("方法：參考別人的 UI 風格");
@@ -234,6 +236,7 @@ stepSlides(by("實作② Chrome 問問 Gemini"));
   });
 }
 stepSlides(by("實作③ ChatGPT 參考風格做衛教圖"));
+stepSlides(by("實作③ Canva 魔法圖層改字改圖"));
 stepSlides(by("實作③ 免費版：Gemini 建立圖像"));
 stepSlides(by("實作④ 參考設計做網頁型簡報"));
 stepSlides(by("實作④ Claude 做網頁型簡報"));
