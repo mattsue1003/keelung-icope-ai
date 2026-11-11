@@ -115,26 +115,30 @@ const by = (t) => D.find((d) => d.title === t);
 // 2 講師
 {
   const s = pres.addSlide({ masterName: "PAPER" });
-  header(s, "講師", "鍾孟修 職能治療師", C.blue);
-  imgFit(s, "img/speaker.jpg", M, 1.4, 2.4, 3.4, false);
-  s.addText("社團法人台灣生活復能健康促進協會 理事長\n愛迪樂居家職能治療所、物理治療所、長照機構、失智據點、巷弄長照站", { x: 3.2, y: 1.4, w: 6.3, h: 0.9, fontFace: F, fontSize: 13, color: C.muted, margin: 0, isTextBox: true, valign: "top" });
-  ["長照復能", "銀髮體適能", "認知及體智", "遊戲化教學", "MAT 功能性評估國際認證"].forEach((t, i) => {
-    const x = 3.2 + (i % 3) * 2.05, y = 2.45 + Math.floor(i / 3) * 0.48;
-    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w: 1.9, h: 0.36, fill: { color: C.soft }, rectRadius: 0.18 });
-    s.addText(t, { x, y, w: 1.9, h: 0.36, fontFace: F, fontSize: 11, bold: true, color: C.ink, align: "center", valign: "middle", margin: 0, isTextBox: true });
+  header(s, "講師", "大家好！我是鍾孟修 職能治療師", C.blue);
+  s.addImage({ path: IMG("img/speaker.jpg"), x: M, y: 1.45, w: 2.3, h: 2.3, altText: "鍾孟修 職能治療師", rounding: false });
+  ["長照復能", "銀髮體適能", "認知及體智", "遊戲化教學"].forEach((t, i) => {
+    const x = M + (i % 2) * 1.17, y = 3.95 + Math.floor(i / 2) * 0.42;
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w: 1.12, h: 0.34, fill: { color: C.soft }, rectRadius: 0.17 });
+    s.addText(t, { x, y, w: 1.12, h: 0.34, fontFace: F, fontSize: 9.5, bold: true, color: C.ink, align: "center", valign: "middle", margin: 0, isTextBox: true });
   });
-  [["11", "經營與籌備的服務單位", C.mag], ["30+", "用 AI 做出的教學網頁", C.blue], ["4", "專長領域", C.amber]].forEach(([b, t, c], i) => {
-    const x = 3.2 + i * 2.1;
-    s.addText(b, { x, y: 3.55, w: 2, h: 0.6, fontFace: "Arial", fontSize: 32, bold: true, color: c, margin: 0, isTextBox: true });
-    s.addText(t, { x, y: 4.15, w: 2, h: 0.3, fontFace: F, fontSize: 11, color: C.muted, margin: 0, isTextBox: true });
-  });
+  const list = (title, items, x, w) => {
+    s.addText(title, { x, y: 1.4, w, h: 0.3, fontFace: F, fontSize: 11, bold: true, color: C.muted, margin: 0, isTextBox: true });
+    s.addText(items.map((t, i) => ({ text: t, options: { bullet: true, breakLine: i < items.length - 1 } })), { x, y: 1.72, w, h: 3.35, fontFace: F, fontSize: 10.5, color: C.ink, margin: 0, valign: "top", isTextBox: true, paraSpaceAfter: 3 });
+  };
+  list("協會與機構", ["社團法人台灣生活復能健康促進協會 理事長", "愛迪樂有限公司（105/08）", "愛迪樂居家職能治療所（107/01）", "愛迪樂物理治療所（107/12）", "愛迪樂中山聯合治療所（111/12）", "愛迪樂新北長期照顧服務機構（108/01）", "愛迪樂三重失智症據點（111/01）", "新北市私立愛迪樂東湖國小社區長照機構（112/05）", "銀光復能咖啡館 C 單位巷弄長照站（108/11）", "五股日間照顧中心及身障日間照顧中心（籌備中）"], 3.05, 3.05);
+  list("角色與專長", ["職能治療師／執行長", "Homeseen 失智症遊戲包 共同創辦人", "關懷小丑協會 監事", "長庚大學職能治療系系友會 監事", "銀髮體適能教練、皮拉提斯教練 ABC 級", "認知桌遊活動遊戲設計", "MAT 功能性評估國際認證", "簡報遊戲化教學設計"], 6.25, 1.75);
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 8.12, y: 1.45, w: 1.38, h: 2.55, fill: { color: "FFFFFF" }, line: { color: C.line, width: 0.75 }, rectRadius: 0.08 });
+  s.addImage({ path: IMG("img/qr-fb.png"), x: 8.2, y: 1.55, w: 1.22, h: 1.22, altText: "粉絲專頁 QR code" });
+  s.addText("加入粉絲專頁\n看更多作品", { x: 8.12, y: 2.82, w: 1.38, h: 0.5, fontFace: F, fontSize: 10.5, bold: true, color: C.ink, align: "center", margin: 0, isTextBox: true });
+  s.addText("鍾孟修Matt-職能治療師", { x: 8.12, y: 3.36, w: 1.38, h: 0.5, fontFace: F, fontSize: 8, color: C.blue, align: "center", margin: 0, isTextBox: true, hyperlink: { url: "https://www.facebook.com/profile.php?id=100063748491881" } });
 }
 // 3 地圖
 {
   const s = pres.addSlide({ masterName: "PAPER" });
   header(s, "今天的地圖", "一個下午，跑完 ICOPE 的 AI 工作流", C.amber);
-  const rows = [["0", "暖身：AI 做出的 ICOPE 工具", "10′", C.mag], ["1", "守住界線：三不原則＋去識別化", "10′", C.ink], ["2", "實作① 用說的：語音輸入", "15′", C.blue], ["3", "實作② 讀資料：Chrome 問問 Gemini", "15′", C.blue], ["4", "方法＋實作③ 參考風格做衛教圖", "25′", C.amber], ["5", "實作④ 參考設計做網頁型簡報", "25′", C.amber],
-    ["6", "實作⑤ 做簡報：NotebookLM", "15′", C.mag], ["7", "實作⑥ 看數據：描述性統計＋驗算", "25′", C.mag], ["8", "Napkin：文字變圖表", "5′", C.lime], ["9", "實作⑦ 上架：GitHub Pages", "15′", C.lime], ["10", "提示詞庫＋課後任務", "10′", C.sky]];
+  const rows = [["0", "暖身：AI 做出的 ICOPE 工具", "10′", C.mag], ["1", "三個 AI 怎麼選＋守住界線", "15′", C.ink], ["2", "實作① 用說的：語音輸入", "10′", C.blue], ["3", "實作② 讀資料：Chrome 問問 Gemini", "15′", C.blue], ["4", "實作③ 參考風格做衛教圖", "25′", C.amber], ["5", "實作④ 參考設計做網頁型簡報", "30′", C.amber],
+    ["6", "實作⑤ 做簡報：NotebookLM", "10′", C.mag], ["7", "實作⑥ 看數據：Gemini 與 ChatGPT 對照", "30′", C.mag], ["8", "Napkin：文字變圖表", "5′", C.lime], ["9", "實作⑦ 上架：GitHub Pages", "15′", C.lime], ["10", "提示詞庫＋課後任務", "5′", C.sky]];
   rows.forEach(([n, t, m, c], i) => {
     const col = i < 6 ? 0 : 1, r = i < 6 ? i : i - 6, x = M + col * 4.6, y = 1.4 + r * 0.6;
     s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: y + 0.06, w: 0.36, h: 0.36, fill: { color: c }, rectRadius: 0.05 });
@@ -149,7 +153,7 @@ const by = (t) => D.find((d) => d.title === t);
 {
   const s = pres.addSlide({ masterName: "PAPER" });
   header(s, "開始前 5 分鐘", "先把這五件事打勾", C.lime);
-  ["電腦 Chrome 登入自己的 Google 帳號（上課電腦用完記得登出）", "打開 gemini.google.com 能對話", "手機裝 Gemini App", "加入 LINE 學員社群（封底 QR code）", "下載練習檔：ICOPE 虛擬 120 筆（網頁版右下角）"].forEach((t, i) => {
+  ["電腦 Chrome 登入自己的 Google 帳號（上課電腦用完記得登出）", "打開 gemini.google.com 能對話", "手機裝 Gemini App", "加入 LINE 學員社群（封底 QR code）", "下載三個練習檔：Word、照片、Excel（網頁版第 4 頁）"].forEach((t, i) => {
     const y = 1.45 + i * 0.6;
     s.addShape(pres.shapes.RECTANGLE, { x: M, y: y + 0.08, w: 0.28, h: 0.28, fill: { color: "FFFFFF" }, line: { color: C.ink, width: 1.25 } });
     s.addText(t, { x: M + 0.45, y, w: 4.5, h: 0.45, fontFace: F, fontSize: 13, color: C.ink, margin: 0, valign: "middle", isTextBox: true });
@@ -193,6 +197,22 @@ worksSlide("精選作品", "這些 ICOPE 工具，都是用 AI 做的", [
   s.addText("一定要人工把關", { x: 5.2, y: 1.35, w: 4.3, h: 0.3, fontFace: F, fontSize: 14, bold: true, color: C.mag, margin: 0, isTextBox: true });
   s.addTable([[hdr("風險"), hdr("怎麼做")], ["幻覺", "先給資料，規定只能根據文件回答，沒提到就寫「文件未提及」"], ["計算", "要求列出分母與算式，自己挑一項驗算"], ["時效", "切點以國健署最新版手冊為準，請 AI 標出版本"], ["個別化", "只寫一般衛教；轉介與處置由專業人員判斷"]], { ...opts, x: 5.2, y: 1.7, w: 4.3, colW: [1.0, 3.3] });
 }
+// 6b 三個 AI
+{
+  const s = pres.addSlide({ masterName: "PAPER" });
+  header(s, "今天會用到的三個 AI", "Gemini、ChatGPT、Claude：挑最順手的那個", C.ink);
+  [["Gemini", "gemini.google.com", C.blue, ["跟 Google 連在一起：Chrome 側邊欄、YouTube、雲端硬碟", "建立圖像、Canvas 互動網頁", "NotebookLM 做簡報與語音摘要"], "讀 WHO 手冊、衛教圖、網頁型簡報、六力小問答"],
+   ["ChatGPT", "chatgpt.com", "10A37F", ["參考圖片做衛教圖，畫完可以局部修改", "上傳 Excel，寫程式幫你算統計", "直接產出 Word、Excel、簡報檔下載"], "參考風格做衛教圖、描述性統計＋Word 報告"],
+   ["Claude", "claude.ai", C.amber, ["長文整理、改寫、寫程式都很穩", "做好的網頁直接在旁邊預覽（Artifact）", "一鍵分享連結，或匯出 HTML 上架"], "參考設計做網頁型簡報（這份簡報就是用 Claude 做的）"]].forEach(([n, url, c, pts, today], i) => {
+    const x = M + i * 3.07, w = 2.86;
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: 1.4, w, h: 3.2, fill: { color: "FFFFFF" }, line: { color: C.line, width: 0.75 }, rectRadius: 0.08 });
+    s.addText(n, { x: x + 0.2, y: 1.55, w: w - 0.4, h: 0.45, fontFace: "Arial", fontSize: 20, bold: true, color: c, margin: 0, isTextBox: true });
+    s.addText(url, { x: x + 0.2, y: 2.0, w: w - 0.4, h: 0.25, fontFace: "Arial", fontSize: 9, color: C.muted, margin: 0, isTextBox: true });
+    s.addText(pts.map((t, k) => ({ text: t, options: { bullet: true, breakLine: k < pts.length - 1 } })), { x: x + 0.2, y: 2.35, w: w - 0.4, h: 1.35, fontFace: F, fontSize: 10.5, color: C.ink, margin: 0, valign: "top", isTextBox: true, paraSpaceAfter: 3 });
+    s.addText([{ text: "今天做：", options: { bold: true } }, { text: today }], { x: x + 0.2, y: 3.8, w: w - 0.4, h: 0.7, fontFace: F, fontSize: 10, color: C.ink, margin: 0, valign: "top", isTextBox: true });
+  });
+  s.addText("三家都會出錯。上傳前先去識別化；數字、出處、醫療說法，交出去前自己核對。", { x: M, y: 4.75, w: W - 2 * M, h: 0.3, fontFace: F, fontSize: 11, bold: true, color: C.mag, margin: 0, isTextBox: true });
+}
 stepSlides(by("三不原則與去識別化"));
 stepSlides(by("實作① 語音輸入"));
 stepSlides(by("實作② Chrome 問問 Gemini"));
@@ -213,9 +233,11 @@ stepSlides(by("實作② Chrome 問問 Gemini"));
 stepSlides(by("實作③ ChatGPT 參考風格做衛教圖"));
 stepSlides(by("實作③ 免費版：Gemini 建立圖像"));
 stepSlides(by("實作④ 參考設計做網頁型簡報"));
+stepSlides(by("實作④ Claude 做網頁型簡報"));
 stepSlides(by("實作④ 做互動網頁"));
 stepSlides(by("實作⑤ NotebookLM 做簡報"));
 stepSlides(by("實作⑥ 指標數據描述性統計"));
+stepSlides(by("實作⑥ ChatGPT 再算一次"));
 // 18 驗算
 {
   const d = by("驗算：AI 的數字對不對");
@@ -224,10 +246,11 @@ stepSlides(by("實作⑥ 指標數據描述性統計"));
   const red = (t) => ({ text: t, options: { color: C.mag, bold: true, align: "right" } });
   const ok = (t) => ({ text: t, options: { bold: true, align: "right" } });
   const hdr = (t, a) => ({ text: t, options: { bold: true, color: C.muted, fontSize: 10, fill: { color: C.soft }, align: a || "left" } });
-  s.addTable([[hdr("項目"), hdr("Gemini 第一次", "right"), hdr("正確答案", "right")],
-    ["女／男", red("71／49"), ok("77／43")], ["平均年齡", red("76.2"), ok("80.0")], ["85 歲以上", red("23"), ok("43")], ["認知異常", red("51"), ok("25（20.8%）")], ["行動異常", red("58"), ok("42（35.0%）")], ["視力異常", red("46"), ok("42（35.0%）")], ["聽力異常", red("39"), ok("36（30.0%）")]],
-    { x: M, y: 1.35, w: 4.6, colW: [1.4, 1.5, 1.7], fontFace: F, fontSize: 11.5, color: C.ink, border: { type: "solid", color: C.line, pt: 0.5 }, margin: 0.06, rowH: 0.36 });
-  s.addText("分母皆為 120 位初評。紅字＝和檔案不符（2026/11/11 實測，Gemini Flash）。", { x: M, y: 4.4, w: 4.6, h: 0.4, fontFace: F, fontSize: 10, color: C.muted, margin: 0, isTextBox: true });
+  const grn = (t) => ({ text: t, options: { color: "10A37F", bold: true, align: "right" } });
+  s.addTable([[hdr("項目"), hdr("Gemini", "right"), hdr("ChatGPT", "right"), hdr("正確答案", "right")],
+    ["女／男", red("71／49"), grn("77／43"), ok("77／43")], ["平均年齡", red("76.2"), grn("80.0"), ok("80.0")], ["85 歲以上", red("23"), grn("43"), ok("43")], ["認知異常", red("51"), grn("25"), ok("25")], ["行動異常", red("58"), grn("42"), ok("42")], ["視力異常", red("46"), grn("42"), ok("42")], ["聽力異常", red("39"), grn("36"), ok("36")]],
+    { x: M, y: 1.35, w: 4.6, colW: [1.3, 1.05, 1.05, 1.2], fontFace: F, fontSize: 11.5, color: C.ink, border: { type: "solid", color: C.line, pt: 0.5 }, margin: 0.06, rowH: 0.36 });
+  s.addText("分母皆為 120 位初評。紅字＝不符、綠字＝正確（2026/11/11 實測）。", { x: M, y: 4.4, w: 4.6, h: 0.4, fontFace: F, fontSize: 10, color: C.muted, margin: 0, isTextBox: true });
   [["57.8%", "後測完成率＝59／102（分母：至少一項異常者）", C.mag], ["7.5→8.9", "SPPB 平均（n＝25，行動異常且完成後測）", C.blue]].forEach(([b, t, c], i) => {
     s.addText(b, { x: 5.4 + i * 2.1, y: 1.35, w: 2, h: 0.55, fontFace: "Arial", fontSize: 26, bold: true, color: c, margin: 0, isTextBox: true });
     s.addText(t, { x: 5.4 + i * 2.1, y: 1.9, w: 2, h: 0.55, fontFace: F, fontSize: 10, color: C.muted, margin: 0, isTextBox: true, valign: "top" });
@@ -269,13 +292,13 @@ worksSlide("延伸工具", "回去還可以試的工具與範例", [
 {
   const s = pres.addSlide({ masterName: "PAPER" });
   s.addText("謝謝聆聽", { x: M, y: 0.6, w: 5, h: 0.3, fontFace: F, fontSize: 12, bold: true, color: C.muted, margin: 0, isTextBox: true });
-  s.addText("Happiness is not a goal…\nit’s a by-product of a life well lived.", { x: M, y: 1.1, w: 5.6, h: 1.5, fontFace: "Arial", fontSize: 24, bold: true, color: C.ink, margin: 0, isTextBox: true, valign: "top" });
-  s.addText("快樂不是一個目標，它是踏實人生的副產品。（Eleanor Roosevelt）", { x: M, y: 2.7, w: 5.6, h: 0.4, fontFace: F, fontSize: 12, color: C.muted, margin: 0, isTextBox: true });
-  s.addText("臉書：facebook.com/chungmenghsiu\n設計｜愛迪樂 鍾孟修 職能治療師　練習資料皆為虛擬資料", { x: M, y: 4.2, w: 5.6, h: 0.6, fontFace: F, fontSize: 10, color: C.muted, margin: 0, isTextBox: true });
-  [["img/qr-line.png", "加入 LINE 學員社群"], ["img/qr-deck.png", "網頁版簡報"]].forEach(([p, t], i) => {
-    const x = 6.4 + i * 1.6;
-    s.addImage({ path: IMG(p), x, y: 1.4, w: 1.4, h: 1.4, altText: t });
-    s.addText(t, { x: x - 0.1, y: 2.85, w: 1.6, h: 0.3, fontFace: F, fontSize: 10.5, bold: true, color: C.ink, align: "center", margin: 0, isTextBox: true });
+  s.addText("Happiness is not a goal…\nit's a by-product of a life well lived.", { x: M, y: 1.1, w: 4.9, h: 1.5, fontFace: "Arial", fontSize: 22, bold: true, color: C.ink, margin: 0, isTextBox: true, valign: "top" });
+  s.addText("快樂不是一個目標，它是踏實人生的副產品。（Eleanor Roosevelt）", { x: M, y: 2.7, w: 4.9, h: 0.4, fontFace: F, fontSize: 12, color: C.muted, margin: 0, isTextBox: true });
+  s.addText("粉絲專頁：鍾孟修Matt-職能治療師\n設計｜愛迪樂 鍾孟修 職能治療師　練習資料皆為虛擬資料", { x: M, y: 4.2, w: 5.6, h: 0.6, fontFace: F, fontSize: 10, color: C.muted, margin: 0, isTextBox: true });
+  [["img/qr-fb.png", "粉絲專頁 看更多作品"], ["img/qr-line.png", "加入 LINE 學員社群"], ["img/qr-deck.png", "網頁版簡報"]].forEach(([p, t], i) => {
+    const x = 5.6 + i * 1.35;
+    s.addImage({ path: IMG(p), x, y: 1.4, w: 1.2, h: 1.2, altText: t });
+    s.addText(t, { x: x - 0.1, y: 2.65, w: 1.4, h: 0.5, fontFace: F, fontSize: 10.5, bold: true, color: C.ink, align: "center", margin: 0, isTextBox: true });
   });
 }
 

@@ -88,6 +88,32 @@ p{margin:0}
 .cover .meta small{display:block;font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.08em}
 .cover .meta strong{font-size:20px}
 
+.intro{display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,2fr) minmax(0,0.78fr);gap:36px;align-items:center;flex:1;min-height:0;max-height:600px}
+.intro-photo{width:100%;aspect-ratio:1;object-fit:cover;object-position:60% 30%;border-radius:14px;border:1px solid var(--line);max-width:100%}
+.intro-bio{display:flex;flex-direction:column;gap:16px;min-width:0}
+.intro-bio h2{font-size:36px}
+.intro-cols{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px}
+.intro-cols h3{font-size:15px;color:var(--muted);letter-spacing:.08em;margin-bottom:8px}
+.bio{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px;font-size:15.5px;line-height:1.45}
+.bio li{padding-left:16px;position:relative}.bio li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:2px;background:var(--blue)}
+.intro-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.fbcard{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:22px 18px;border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:0 6px 20px rgba(60,50,30,.10);text-decoration:none;color:var(--ink)}
+.fbcard img{width:100%;max-width:200px;aspect-ratio:1;background:#fff}
+.fbcard b{font-size:21px;line-height:1.35}
+.fbcard span{font-size:14px;color:var(--muted)}
+.fbcard .fbbtn{background:#1877F2;color:#fff;border-radius:999px;padding:8px 16px;font-weight:900;font-size:14px}
+.fbcard:hover .fbbtn{background:#0E5FD0}
+.ai3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;flex:1;min-height:0;max-height:440px}
+.ai3 .box{display:flex;flex-direction:column;gap:10px;padding:22px 24px}
+.ai3 h3{font-size:28px;font-family:var(--f-display)}
+.ai3 .bio{font-size:16.5px;gap:8px}
+.ai3-today{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);font-size:15.5px}
+.dl{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--paper)}
+.dl b{font-size:15px}
+.dl a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:15.5px;padding:6px 4px;border-radius:8px}
+.dl a:hover{background:var(--soft)}
+.ext{font-family:var(--f-display);font-size:11px;font-weight:900;color:#fff;border-radius:5px;padding:3px 7px;min-width:46px;text-align:center}
+.ext.w{background:#2B579A}.ext.i{background:var(--mag)}.ext.x{background:#217346}
 /* ── generic grids ── */
 .cols{display:grid;gap:24px;grid-template-columns:repeat(var(--n,2),minmax(0,1fr))}
 .box{border:1px solid var(--line);border-radius:10px;padding:18px 20px;background:var(--paper)}
@@ -176,6 +202,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
 .lightbox{position:fixed;inset:0;z-index:60;background:rgba(10,10,12,.88);display:none;place-items:center;padding:24px;cursor:zoom-out}
 .lightbox.on{display:grid}.lightbox img{max-width:100%;max-height:100%;border-radius:8px}
 
+.endqrs{display:flex;gap:20px}.endqrs .fbcard{width:240px}
 .qr{width:150px;height:150px;background:#fff;border-radius:10px;padding:6px;flex:none}
 .big-poster{height:100%;max-height:560px;border-radius:8px;border:1px solid var(--line)}
 
@@ -190,6 +217,8 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   .cover .meta{gap:10px 24px}.cover .meta strong{font-size:16px}
   .ctas .cta{padding:9px 14px;font-size:13px}
   .cover .confetti{display:none}
+  .ai3{grid-template-columns:minmax(0,1fr);max-height:none}
+  .intro{grid-template-columns:minmax(0,1fr);max-height:none}.intro-cols{grid-template-columns:minmax(0,1fr)}.intro-photo{max-width:320px}.intro-bio h2{font-size:26px}.fbcard{max-width:320px}
   .cover h1{font-size:36px}
   body.scroll .steps{overflow:visible}
   body.scroll .steps li{cursor:default;border-color:var(--line);background:var(--paper)}
@@ -199,7 +228,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   body.scroll .stepper .shot{display:none}
   body.scroll .stepper>*{min-height:auto}
   body.scroll .stepper .prompt{max-height:none}
-  .cover-grid{grid-template-columns:minmax(0,1fr);gap:24px}.coverqr{justify-self:start;padding:16px}.coverqr img{width:180px;height:180px}
+  .cover-grid{grid-template-columns:minmax(0,1fr);gap:24px}.endqrs{flex-wrap:wrap}.endqrs .fbcard{width:100%;max-width:280px}.coverqr{justify-self:start;padding:16px}.coverqr img{width:180px;height:180px}
 }
 @media (max-width:520px){.works{grid-template-columns:minmax(0,1fr)}.ctas .cta.o{display:none}}
 </style>
@@ -247,21 +276,48 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
 <!-- 2 講師 -->
 <section class="slide" data-title="講師介紹">
   <div class="eyebrow" style="--c:var(--blue)"><span class="sq"></span>講師</div>
-  <div class="cols" style="--n:2;grid-template-columns:260px minmax(0,1fr);align-items:start">
-    <img src="img/speaker.jpg" alt="鍾孟修 職能治療師" style="width:100%;max-width:260px;border-radius:10px;border:1px solid var(--line)">
-    <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
-      <h2>鍾孟修 職能治療師</h2>
-      <p class="lede">社團法人台灣生活復能健康促進協會 理事長｜愛迪樂居家職能治療所、物理治療所、長照機構、失智據點、巷弄長照站</p>
-      <div style="display:flex;flex-wrap:wrap;gap:8px">
-        <span class="tag">長照復能</span><span class="tag">銀髮體適能</span><span class="tag">認知及體智</span><span class="tag">遊戲化教學</span><span class="tag">簡報遊戲化教學設計</span><span class="tag">MAT 功能性評估國際認證</span>
+  <div class="intro">
+    <img class="intro-photo" src="img/speaker.jpg" alt="鍾孟修 職能治療師">
+    <div class="intro-bio">
+      <h2>大家好！我是鍾孟修 職能治療師</h2>
+      <div class="intro-cols">
+        <div>
+          <h3>協會與機構</h3>
+          <ul class="bio">
+            <li>社團法人台灣生活復能健康促進協會 理事長</li>
+            <li>愛迪樂有限公司（105/08）</li>
+            <li>愛迪樂居家職能治療所（107/01）</li>
+            <li>愛迪樂物理治療所（107/12）</li>
+            <li>愛迪樂中山聯合治療所（111/12）</li>
+            <li>愛迪樂新北長期照顧服務機構（108/01）</li>
+            <li>愛迪樂三重失智症據點（111/01）</li>
+            <li>新北市私立愛迪樂東湖國小社區長照機構（112/05）</li>
+            <li>銀光復能咖啡館 C 單位巷弄長照站（108/11）</li>
+            <li>五股日間照顧中心及身障日間照顧中心（籌備中）</li>
+          </ul>
+        </div>
+        <div>
+          <h3>角色與專長</h3>
+          <ul class="bio">
+            <li>職能治療師／執行長</li>
+            <li>Homeseen 失智症遊戲包 共同創辦人</li>
+            <li>關懷小丑協會 監事</li>
+            <li>長庚大學職能治療系系友會 監事</li>
+            <li>銀髮體適能教練、皮拉提斯教練 ABC 級</li>
+            <li>認知桌遊活動遊戲設計</li>
+            <li>MAT 功能性評估國際認證</li>
+            <li>簡報遊戲化教學設計</li>
+          </ul>
+          <div class="intro-tags"><span class="tag">長照復能</span><span class="tag">銀髮體適能</span><span class="tag">認知及體智</span><span class="tag">遊戲化教學</span></div>
+        </div>
       </div>
-      <div class="stats" style="margin-top:6px">
-        <div><b style="color:var(--mag)">11</b><span>經營與籌備的服務單位</span></div>
-        <div><b style="color:var(--blue)">30+</b><span>用 AI 做出的教學網頁</span></div>
-        <div><b style="color:var(--amber)">4</b><span>專長領域</span></div>
-      </div>
-      <p class="muted" style="font-size:14px">今天分享的工具與網頁，都是平常在長照現場用 AI 做出來、真的在用的東西。</p>
     </div>
+    <a class="fbcard" href="https://www.facebook.com/profile.php?id=100063748491881" target="_blank" rel="noopener">
+      <img src="img/qr-fb.svg" alt="鍾孟修Matt-職能治療師 粉絲專頁 QR code">
+      <b>加入粉絲專頁<br>看更多作品</b>
+      <span>鍾孟修Matt-職能治療師</span>
+      <span class="fbbtn">前往粉絲專頁 ↗</span>
+    </a>
   </div>
 </section>
 
@@ -272,17 +328,17 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   <p class="lede">從評估現場到成果分享，每一站都有實作。點任何一項直接跳過去。</p>
   <nav class="agenda" aria-label="課程地圖">
     <a href="#s5"><span class="no" style="--c:var(--mag)">0</span><span><strong>暖身：AI 做出的 ICOPE 工具</strong><small>先看成品，知道做得到什麼</small></span><em>10′</em></a>
-    <a href="#s7"><span class="no" style="--c:var(--ink)">1</span><span><strong>守住界線：三不原則＋去識別化</strong><small>個案資料交給 AI 前的第一步</small></span><em>10′</em></a>
-    <a href="#s8"><span class="no" style="--c:var(--blue)">2</span><span><strong>實作①　用說的：語音輸入</strong><small>評估後口述，AI 整理成紀錄</small></span><em>15′</em></a>
-    <a href="#s9"><span class="no" style="--c:var(--blue)">3</span><span><strong>實作②　讀資料：Chrome 問問 Gemini</strong><small>WHO 手冊、YouTube 影片重點整理</small></span><em>15′</em></a>
-    <a href="#s10"><span class="no dk" style="--c:var(--amber)">4</span><span><strong>方法＋實作③　參考風格做衛教圖</strong><small>ChatGPT，Gemini 免費版</small></span><em>25′</em></a>
-    <a href="#s13"><span class="no dk" style="--c:var(--amber)">5</span><span><strong>實作④　參考設計做網頁型簡報</strong><small>丟截圖進去，再做團康互動網頁</small></span><em>25′</em></a>
+    <a href="#s7"><span class="no" style="--c:var(--ink)">1</span><span><strong>三個 AI 怎麼選＋守住界線</strong><small>Gemini／ChatGPT／Claude、三不原則、去識別化練習</small></span><em>15′</em></a>
+    <a href="#s9"><span class="no" style="--c:var(--blue)">2</span><span><strong>實作①　用說的：語音輸入</strong><small>評估後口述，AI 整理成紀錄</small></span><em>10′</em></a>
+    <a href="#s10"><span class="no" style="--c:var(--blue)">3</span><span><strong>實作②　讀資料：Chrome 問問 Gemini</strong><small>WHO 手冊、YouTube 影片重點整理</small></span><em>15′</em></a>
+    <a href="#s11"><span class="no dk" style="--c:var(--amber)">4</span><span><strong>實作③　參考風格做衛教圖</strong><small>ChatGPT 做圖，Gemini 免費版</small></span><em>25′</em></a>
+    <a href="#s14"><span class="no dk" style="--c:var(--amber)">5</span><span><strong>實作④　參考設計做網頁型簡報</strong><small>Gemini、Claude，再做團康互動網頁</small></span><em>30′</em></a>
     <div class="brk">休息 10 分鐘</div>
-    <a href="#s15"><span class="no" style="--c:var(--mag)">6</span><span><strong>實作⑤　做簡報：NotebookLM</strong><small>來源→簡報→可編輯 PPT</small></span><em>15′</em></a>
-    <a href="#s16"><span class="no" style="--c:var(--mag)">7</span><span><strong>實作⑥　看數據：指標描述性統計</strong><small>虛擬 120 筆練習檔＋驗算</small></span><em>25′</em></a>
-    <a href="#s18"><span class="no dk" style="--c:var(--lime)">8</span><span><strong>Napkin：文字秒變圖表</strong><small>報告、簡報用的流程圖</small></span><em>5′</em></a>
-    <a href="#s19"><span class="no dk" style="--c:var(--lime)">9</span><span><strong>實作⑦　上架：GitHub Pages</strong><small>做好的網頁變成一個網址</small></span><em>15′</em></a>
-    <a href="#s21"><span class="no" style="--c:var(--sky)">10</span><span><strong>提示詞庫＋課後任務</strong><small>帶回單位直接用</small></span><em>10′</em></a>
+    <a href="#s17"><span class="no" style="--c:var(--mag)">6</span><span><strong>實作⑤　做簡報：NotebookLM</strong><small>來源→簡報→可編輯 PPT</small></span><em>10′</em></a>
+    <a href="#s18"><span class="no" style="--c:var(--mag)">7</span><span><strong>實作⑥　看數據：Gemini 與 ChatGPT 對照</strong><small>虛擬 120 筆練習檔＋驗算</small></span><em>30′</em></a>
+    <a href="#s21"><span class="no dk" style="--c:var(--lime)">8</span><span><strong>Napkin：文字秒變圖表</strong><small>報告、簡報用的流程圖</small></span><em>5′</em></a>
+    <a href="#s22"><span class="no dk" style="--c:var(--lime)">9</span><span><strong>實作⑦　上架：GitHub Pages</strong><small>做好的網頁變成一個網址</small></span><em>15′</em></a>
+    <a href="#s24"><span class="no" style="--c:var(--sky)">10</span><span><strong>提示詞庫＋課後任務</strong><small>帶回單位直接用</small></span><em>5′</em></a>
   </nav>
 </section>
 
@@ -296,13 +352,18 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
       <li><label><input type="checkbox" id="p2"><span><b>打開 gemini.google.com 能對話</b><br><small class="muted">免費帳號就能完成今天全部實作。</small></span></label></li>
       <li><label><input type="checkbox" id="p3"><span><b>手機裝 Gemini App</b><br><small class="muted">App Store／Google Play 搜尋「Gemini」。</small></span></label></li>
       <li><label><input type="checkbox" id="p4"><span><b>加入 LINE 學員社群</b><br><small class="muted">右下角綠色按鈕，課後問題在這裡問。</small></span></label></li>
-      <li><label><input type="checkbox" id="p5"><span><b>下載練習檔：ICOPE 虛擬 120 筆</b><br><small class="muted">實作⑥會用到，全是隨機產生的假資料。</small></span></label></li>
+      <li><label><input type="checkbox" id="p5"><span><b>下載三個練習檔</b><br><small class="muted">去識別化用 Word 與照片，統計用 Excel，全部是虛構資料。</small></span></label></li>
     </ul>
     <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
       <div class="note" style="--c:var(--blue)"><b>電腦教室</b><span>教室電腦多半不能安裝軟體。今天的實作都用<b>瀏覽器</b>完成；需要安裝的 Typeless，請用自己的手機或筆電試。</span></div>
       <div class="note"><b>操作方式</b><span>按 <span class="kbd">→</span> 下一頁、<span class="kbd">↓</span> 下一個步驟、<span class="kbd">T</span> 目錄、<span class="kbd">F</span> 全螢幕。截圖點一下可以放大。</span></div>
       <div class="note" style="--c:var(--mag)"><b>今天的原則</b><span>AI 產出的是<b>草稿</b>。凡是要交到長輩或家屬手上的內容，都由專業人員覆核。</span></div>
-      <a class="cta o" style="align-self:flex-start" href="https://mattsue1003.github.io/keelung-icope-ai/files/ICOPE練習資料_虛擬120筆.xlsx" target="_blank" rel="noopener">下載練習檔 .xlsx</a>
+      <div class="dl">
+        <b>練習檔下載（全部為虛擬資料）</b>
+        <a href="https://mattsue1003.github.io/keelung-icope-ai/files/練習-個案訪視紀錄_含虛擬個資.docx" target="_blank" rel="noopener"><span class="ext w">DOCX</span>個案訪視紀錄（去識別化練習）</a>
+        <a href="https://mattsue1003.github.io/keelung-icope-ai/files/練習-轉介單照片_含虛擬個資.jpg" target="_blank" rel="noopener"><span class="ext i">JPG</span>轉介單照片（圖片遮蓋練習）</a>
+        <a href="https://mattsue1003.github.io/keelung-icope-ai/files/ICOPE練習資料_虛擬120筆.xlsx" target="_blank" rel="noopener"><span class="ext x">XLSX</span>ICOPE 初評 120 筆（統計練習）</a>
+      </div>
     </div>
   </div>
 </section>
@@ -353,6 +414,24 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   </div>
 </section>
 
+<!-- 6b 三個 AI 怎麼選 -->
+<section class="slide" data-title="Gemini、ChatGPT、Claude 怎麼選">
+  <div class="eyebrow" style="--c:var(--ink)"><span class="sq"></span>今天會用到的三個 AI</div>
+  <h2>Gemini、ChatGPT、Claude：同一件事，挑最順手的那個</h2>
+  <div class="ai3">
+    <div class="box"><h3 style="color:var(--blue)">Gemini</h3><p class="muted">gemini.google.com</p>
+      <ul class="bio"><li>跟 Google 連在一起：Chrome 側邊欄、YouTube、雲端硬碟</li><li>建立圖像、Canvas 互動網頁</li><li>NotebookLM 做簡報與語音摘要</li></ul>
+      <p class="ai3-today"><b>今天做：</b>讀 WHO 手冊、衛教圖、網頁型簡報、六力小問答</p></div>
+    <div class="box"><h3 style="color:var(--green)">ChatGPT</h3><p class="muted">chatgpt.com</p>
+      <ul class="bio"><li>參考圖片做衛教圖，畫完可以局部修改</li><li>上傳 Excel，寫程式幫你算統計</li><li>直接產出 Word、Excel、簡報檔下載</li></ul>
+      <p class="ai3-today"><b>今天做：</b>參考風格做衛教圖、描述性統計＋Word 報告</p></div>
+    <div class="box"><h3 style="color:var(--amber)">Claude</h3><p class="muted">claude.ai</p>
+      <ul class="bio"><li>長文整理、改寫、寫程式都很穩</li><li>做好的網頁直接在旁邊預覽（Artifact）</li><li>一鍵分享連結，或匯出 HTML 上架</li></ul>
+      <p class="ai3-today"><b>今天做：</b>參考設計做網頁型簡報。這份簡報就是用 Claude 做的</p></div>
+  </div>
+  <div class="note" style="--c:var(--mag)"><b>共同規則</b><span>三家都會出錯。上傳前先去識別化；數字、出處、醫療說法，交出去前自己核對。</span></div>
+</section>
+
 <!-- 7 三不原則 + 去識別化 -->
 <section class="slide" data-title="三不原則與去識別化">
   <div class="eyebrow" style="--c:var(--ink)"><span class="sq"></span>守住界線</div>
@@ -362,7 +441,8 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
       <li data-img="img/w_deid.jpg" data-cap="長照資料去識別化工作台：全程在你的電腦裡完成"><span class="n">1</span><div><b>三不原則</b><p>不放姓名、身分證、病歷號、電話、地址；不放可以認出是誰的組合（罕見疾病＋住址）；不在個人帳號留存原始個案檔。</p></div></li>
       <li data-img="img/r_deid-home.jpg" data-cap="上傳 Word／Excel／PDF，或直接貼上紀錄文字"><span class="n">2</span><div><b>打開去識別化工作台</b><p>網址 mattsue1003.github.io/ltc-deid-workbench。檔案不會上傳，關掉網頁就消失。</p></div></li>
       <li data-img="img/r_deid-marked.jpg" data-cap="系統用顏色標出姓名、電話、地址、日期等個資"><span class="n">3</span><div><b>檢查顏色標記</b><p>姓名換成「個案A」、生日換成年齡層、地址只留縣市＋區。自動偵測一定有遺漏，下載前自己看一遍。</p></div></li>
-      <li data-img="img/r_deid-marked.jpg" data-cap="去識別化後的版本，才交給 AI"><span class="n">4</span><div><b>下載乾淨版本，再交給 AI</b><p>評估時口述也一樣：用「個案A、80 多歲女性」代稱，不要唸出姓名與身分證。</p></div></li>
+      <li data-img="img/p_form.jpg" data-cap="練習檔：轉介單照片（姓名、證號、電話、地址、簽名都是虛構的）"><span class="n">4</span><div><b>用練習檔試一次</b><p>三個練習檔：個案訪視紀錄（Word）、轉介單照片（圖片）、ICOPE 120 筆（Excel）。照片要用黑框把姓名、證號、簽名框起來。下載見「開始前的準備」頁。</p></div></li>
+      <li data-img="img/r_deid-marked.jpg" data-cap="去識別化後的版本，才交給 AI"><span class="n">5</span><div><b>下載乾淨版本，再交給 AI</b><p>評估時口述也一樣：用「個案A、80 多歲女性」代稱，不要唸出姓名與身分證。</p></div></li>
     </ol>
     <figure class="shot"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
   </div>
@@ -489,6 +569,24 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   </div>
 </section>
 
+<!-- 11b Claude 網頁型簡報 -->
+<section class="slide" data-title="實作④ Claude 做網頁型簡報">
+  <div class="eyebrow" style="--c:var(--amber)"><span class="sq"></span>實作④　做網頁型簡報：Claude</div>
+  <h2>Claude：同樣丟參考設計，做完直接分享網址</h2>
+  <div class="stepper" data-stepper>
+    <ol class="steps">
+      <li data-img="img/k01_upload.jpg" data-cap="claude.ai → 選「對話」→ 兩張參考截圖拖進輸入框"><span class="n">1</span><div><b>打開 claude.ai，上傳參考截圖</b><p>下方選「對話」。把剛剛那兩張網站截圖直接拖進輸入框。</p></div></li>
+      <li data-img="img/k02_result.jpg" data-cap="實際產出（11/11 實測）：右邊直接出現可以操作的簡報"><span class="n">2</span><div><b>貼上提示詞，等它做完</b><p>約 1～2 分鐘。成品出現在右邊，可以直接按「下一頁」試用。不滿意就在左邊說「字再大一點」「第 3 頁改成…」。</p></div></li>
+      <li data-img="img/k03_stats.jpg" data-cap="它自己寫了「4 位就有 1 位」「36 萬位長輩」，還標了國健署來源，這些數字要自己查證"><span class="n">3</span><div><b>數字和出處一定要查</b><p>Claude 自己加了統計數字和「資料來源：國民健康署」。上課前請到國健署網站確認，查不到就改掉或刪掉。</p></div></li>
+      <li data-img="img/k04_share.jpg" data-cap="右上「分享」：一般存取權改成知道連結的人，再複製連結；也可以切到「匯出」下載 HTML"><span class="n">4</span><div><b>分享或匯出</b><p>右上「分享」→ 一般存取權改成「知道連結的人」→ 複製連結傳到 LINE。要放自己網址，就按「匯出」下載 HTML，再用實作⑦上架。</p></div></li>
+    </ol>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+      <div class="prompt"><div class="lab">提示詞・Claude 網頁型簡報<button class="copy">複製</button></div>參考這兩張網站截圖的設計風格（白底、粗黑字、彩色小方塊、數字統計列、膠囊按鈕），做一份 6 頁的網頁型簡報「長者量六力：社區衛教版」，對象是長輩。字要大、每頁一個重點、用左右鍵換頁；最後一頁寫「65 歲以上可以到哪裡免費評估」。繁體中文，不要用截圖裡的人和商標。</div>
+    </div>
+  </div>
+</section>
+
 <!-- 11 Canvas 互動網頁 -->
 <section class="slide" data-title="實作④ 做互動網頁">
   <div class="eyebrow" style="--c:var(--amber)"><span class="sq"></span>實作④　做互動網頁</div>
@@ -537,7 +635,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
       <li data-img="img/d01_prompt.jpg" data-cap="提示詞寫清楚：要哪些統計、要列分母、要觀察"><span class="n">3</span><div><b>貼上統計提示詞</b><p>關鍵是「列出分母」。百分比沒有分母，主管問「是誰的幾成」就答不出來。</p></div></li>
       <li data-img="img/d02_result.jpg" data-cap="Gemini 實際產出（11/11 實測）：女 71、男 49。正確答案是 77／43"><span class="n">4</span><div><b>看結果：表格很漂亮</b><p>有分母、有百分比，看起來很專業。但性別人數已經和檔案不一樣了。</p></div></li>
       <li data-img="img/d04_six.jpg" data-cap="實測：行動異常 58 人、認知 51 人。正確是 42、25"><span class="n">5</span><div><b>六力異常數也不對</b><p>認知異常多算了一倍。直接拿去報告，結論會完全錯。這就是為什麼一定要驗算。</p></div></li>
-      <li data-img="img/d05_verify.jpg" data-cap="追問：請它用程式重算、列出程式碼並比對"><span class="n">6</span><div><b>追問：叫它重算、列出程式碼</b><p>用下一頁的「驗算提示詞」。數字對了，再請它做成 Word／PDF／簡報下載。</p></div></li>
+      <li data-img="img/d05_verify.jpg" data-cap="追問：請它用程式重算、列出程式碼並比對"><span class="n">6</span><div><b>追問：叫它重算、列出程式碼</b><p>用「驗算」頁的提示詞追問。下一頁看同一份資料交給 ChatGPT 的結果。</p></div></li>
     </ol>
     <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
       <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
@@ -546,25 +644,44 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   </div>
 </section>
 
+<!-- 13b ChatGPT 統計 -->
+<section class="slide" data-title="實作⑥ ChatGPT 再算一次">
+  <div class="eyebrow" style="--c:var(--mag)"><span class="sq"></span>實作⑥　看數據：ChatGPT</div>
+  <h2>同一份資料交給 ChatGPT：這次數字對了</h2>
+  <div class="stepper" data-stepper>
+    <ol class="steps">
+      <li data-img="img/o01_prompt.jpg" data-cap="chatgpt.com：上傳同一份練習檔，貼同一段提示詞，最後加「整理成 Word 報告提供下載」"><span class="n">1</span><div><b>上傳同一份 Excel，貼同一段提示詞</b><p>chatgpt.com →「＋」或直接拖檔案進輸入框。提示詞最後加一句「整理成 Word 報告提供下載」。</p></div></li>
+      <li data-img="img/o02_summary.jpg" data-cap="實際產出（11/11 實測）：女 77、男 43，後測完成率 57.8%＝59／102"><span class="n">2</span><div><b>先看總覽和分母</b><p>它主動讀了「說明」工作表，知道是虛擬資料；後測完成率用 102 當分母，和參考答案一樣。</p></div></li>
+      <li data-img="img/o03_six.jpg" data-cap="六力異常：認知 25、行動 42、營養 23、視力 42、聽力 36、情緒 14，全部正確"><span class="n">3</span><div><b>六力異常數全部正確</b><p>還附了長條圖，並提醒「同一人可能多項異常，比例不應加總為 100%」。</p></div></li>
+      <li data-img="img/o04_sppb.jpg" data-cap="SPPB：7.48 → 8.92（n＝25），並提醒有 17 位沒有後測資料"><span class="n">4</span><div><b>連限制都寫出來了</b><p>「平均上升不能直接歸因於介入效果，因為 17 位行動異常者沒有後測」。這段可以直接放進共學報告。</p></div></li>
+      <li data-img="img/o05_word.jpg" data-cap="右邊直接預覽 Word 報告：統計表、給主管的三點觀察、資料限制；右上角下載"><span class="n">5</span><div><b>Word 報告直接下載</b><p>右邊預覽報告內容（表格、三點觀察、資料限制），右上角箭頭下載 .docx，再自己改字、加單位名稱。</p></div></li>
+    </ol>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+      <div class="note" style="--c:var(--blue)"><b>重點</b><span>不是 ChatGPT 比較聰明。同一個工具，每次結果也可能不同；所以不管用哪一家，都要挑一項自己驗算。</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- 14 驗算 -->
 <section class="slide" data-title="驗算：AI 的數字對不對">
   <div class="eyebrow" style="--c:var(--mag)"><span class="sq"></span>實作⑥　驗算</div>
-  <h2>AI 算錯了：今天實測的真實案例</h2>
-  <p class="lede">同一份練習檔，Gemini 第一次給的數字和正確答案對照如下。挑一項用 Excel 的 COUNTIF 自己算一次。</p>
+  <h2>同一份資料，兩家 AI 的答案不一樣</h2>
+  <p class="lede">分母都是 120 位初評。紅字＝和檔案不符，綠字＝正確。不管用哪一家，都挑一項用 Excel 的 COUNTIF 自己算一次。</p>
   <div class="cols" style="--n:2">
     <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
     <div class="tbl"><table>
-      <tr><th>項目</th><th style="text-align:right">Gemini 第一次</th><th style="text-align:right">正確答案</th><th>分母</th></tr>
-      <tr><td>女／男</td><td class="num" style="color:var(--mag)">71／49</td><td class="num">77／43</td><td>120 位初評</td></tr>
-      <tr><td>平均年齡</td><td class="num" style="color:var(--mag)">76.2</td><td class="num">80.0</td><td>120</td></tr>
-      <tr><td>85 歲以上</td><td class="num" style="color:var(--mag)">23</td><td class="num">43</td><td>120</td></tr>
-      <tr><td>認知異常</td><td class="num" style="color:var(--mag)">51</td><td class="num">25（20.8%）</td><td>120</td></tr>
-      <tr><td>行動異常</td><td class="num" style="color:var(--mag)">58</td><td class="num">42（35.0%）</td><td>120</td></tr>
-      <tr><td>視力異常</td><td class="num" style="color:var(--mag)">46</td><td class="num">42（35.0%）</td><td>120</td></tr>
-      <tr><td>聽力異常</td><td class="num" style="color:var(--mag)">39</td><td class="num">36（30.0%）</td><td>120</td></tr>
-      <tr><td>營養／情緒異常</td><td class="num">–</td><td class="num">23／14</td><td>120</td></tr>
+      <tr><th>項目</th><th style="text-align:right">Gemini</th><th style="text-align:right">ChatGPT</th><th style="text-align:right">正確答案</th></tr>
+      <tr><td>女／男</td><td class="num" style="color:var(--mag)">71／49</td><td class="num" style="color:var(--green)">77／43</td><td class="num">77／43</td></tr>
+      <tr><td>平均年齡</td><td class="num" style="color:var(--mag)">76.2</td><td class="num" style="color:var(--green)">80.0</td><td class="num">80.0</td></tr>
+      <tr><td>85 歲以上</td><td class="num" style="color:var(--mag)">23</td><td class="num" style="color:var(--green)">43</td><td class="num">43</td></tr>
+      <tr><td>認知異常</td><td class="num" style="color:var(--mag)">51</td><td class="num" style="color:var(--green)">25</td><td class="num">25（20.8%）</td></tr>
+      <tr><td>行動異常</td><td class="num" style="color:var(--mag)">58</td><td class="num" style="color:var(--green)">42</td><td class="num">42（35.0%）</td></tr>
+      <tr><td>視力異常</td><td class="num" style="color:var(--mag)">46</td><td class="num" style="color:var(--green)">42</td><td class="num">42（35.0%）</td></tr>
+      <tr><td>聽力異常</td><td class="num" style="color:var(--mag)">39</td><td class="num" style="color:var(--green)">36</td><td class="num">36（30.0%）</td></tr>
+      <tr><td>營養／情緒異常</td><td class="num">–</td><td class="num" style="color:var(--green)">23／14</td><td class="num">23／14</td></tr>
     </table></div>
-    <p class="muted" style="font-size:13px">紅字＝和檔案不符。實測日期 2026/11/11，Gemini Flash。每次結果可能不同，所以每次都要驗。</p>
+    <p class="muted" style="font-size:13px">實測日期 2026/11/11（Gemini Flash、ChatGPT）。每次結果可能不同，所以每次都要驗。</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
       <div class="stats">
@@ -671,24 +788,24 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
 <section class="slide cover" data-title="謝謝聆聽">
   <div class="confetti" aria-hidden="true">
     <i style="left:6%;top:10%;width:30px;height:30px;background:var(--mag)"></i>
-    <i style="left:14%;top:78%;width:22px;height:22px;background:var(--lime);animation-delay:-2s"></i>
+    <i style="left:4%;top:88%;width:22px;height:22px;background:var(--lime);animation-delay:-2s"></i>
     <i style="left:48%;top:6%;width:18px;height:18px;background:var(--sky);animation-delay:-1s"></i>
     <i style="left:56%;top:84%;width:40px;height:40px;background:var(--amber);animation-delay:-3s"></i>
   </div>
   <div class="eyebrow"><span class="sq"></span>謝謝聆聽</div>
   <div class="cols" style="--n:2;grid-template-columns:minmax(0,1fr) auto;align-items:center;position:relative">
     <div style="display:flex;flex-direction:column;gap:18px;min-width:0">
-      <h2 style="font-size:44px">Happiness is not a goal…<br>it’s a by-product of a life well lived.</h2>
+      <h2 style="font-size:44px;font-family:var(--f-display)">Happiness is not a goal…<br>it's a by-product of a life well lived.</h2>
       <p class="lede">快樂不是一個目標，它是踏實人生的副產品。（Eleanor Roosevelt）</p>
       <div style="display:flex;flex-wrap:wrap;gap:10px">
         <a class="pill" href="https://www.facebook.com/chungmenghsiu" target="_blank" rel="noopener" style="text-decoration:none;color:var(--ink)">鍾孟修 臉書</a>
-        <a class="pill" href="https://www.facebook.com/profile.php?id=100063748491881" target="_blank" rel="noopener" style="text-decoration:none;color:var(--ink)">愛迪樂 粉專</a>
+        <a class="pill" href="https://www.facebook.com/profile.php?id=100063748491881" target="_blank" rel="noopener" style="text-decoration:none;color:var(--ink)">粉絲專頁</a>
         <a class="pill" href="https://mattsue1003.github.io/keelung-icope-ai/基隆ICOPE_AI工作坊_講義.pptx" target="_blank" rel="noopener" style="text-decoration:none;color:var(--ink)">下載講義 PPT</a>
       </div>
     </div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
-      <img class="qr" src="img/qr-line.svg" alt="LINE 學員社群 QR code">
-      <b>掃描加入 LINE 學員社群</b>
+    <div class="endqrs">
+      <a class="fbcard" href="https://www.facebook.com/profile.php?id=100063748491881" target="_blank" rel="noopener"><img src="img/qr-fb.svg" alt="粉絲專頁 QR code"><b>加入粉絲專頁<br>看更多作品</b><span class="fbbtn">前往粉絲專頁 ↗</span></a>
+      <a class="fbcard" href="https://line.me/ti/g2/HTz-kWvRyDZhYRKHEDjXISFfEyb3xxPlGT16hA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener"><img src="img/qr-line.svg" alt="LINE 學員社群 QR code"><b>加入 LINE<br>學員社群</b><span class="fbbtn" style="background:var(--green)">加入 LINE 社群 ↗</span></a>
     </div>
   </div>
   <p class="muted" style="font-size:13px;position:relative">設計｜愛迪樂 鍾孟修 職能治療師　練習資料皆為虛擬資料</p>
@@ -699,7 +816,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
 <button class="navbtn prev" id="prev" aria-label="上一頁">←</button>
 <button class="navbtn next" id="next" aria-label="下一頁">→</button>
 <div class="ctas">
-  <a class="cta o" href="https://mattsue1003.github.io/keelung-icope-ai/files/ICOPE練習資料_虛擬120筆.xlsx" target="_blank" rel="noopener">練習檔</a>
+  <a class="cta o" href="#s4">練習檔</a>
   <a class="cta g" href="https://line.me/ti/g2/HTz-kWvRyDZhYRKHEDjXISFfEyb3xxPlGT16hA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener">LINE 社群</a>
 </div>
 <nav class="toc" id="toc" aria-label="目錄"><ol id="tocList"></ol></nav>
