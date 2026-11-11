@@ -105,17 +105,34 @@ p{margin:0}
 .fbcard span{font-size:14px;color:var(--muted)}
 .fbcard .fbbtn{background:#1877F2;color:#fff;border-radius:999px;padding:8px 16px;font-weight:900;font-size:14px}
 .fbcard:hover .fbbtn{background:#0E5FD0}
-.ai3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;flex:1;min-height:0;max-height:440px}
-.ai3 .box{display:flex;flex-direction:column;gap:10px;padding:22px 24px}
-.ai3 h3{font-size:28px;font-family:var(--f-display)}
-.ai3 .bio{font-size:16.5px;gap:8px}
-.ai3-today{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);font-size:15.5px}
+.ai3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;flex:1;min-height:0;max-height:600px}
+.ai3 .ai{display:flex;flex-direction:column;justify-content:space-between;gap:18px;padding:28px 30px}
+.ai-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.ai-h h3{font-size:36px;font-family:var(--f-display);color:var(--c)}
+.ai-h span{font-size:15px;color:var(--muted);font-family:var(--f-display)}
+.ai-best{font-size:21px;font-weight:900;line-height:1.4}
+.ai3 .bio{font-size:18.5px;gap:14px;line-height:1.5}
+.ai3 .bio li::before{background:var(--c);top:.6em}
+.ai3-today{font-size:17px;line-height:1.55;background:color-mix(in srgb,var(--c) 10%,var(--paper));border-radius:10px;padding:12px 16px}
+.ai3-today b{display:block;font-size:13px;letter-spacing:.1em;color:var(--c);margin-bottom:2px}
 .dl{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--paper)}
 .dl b{font-size:15px}
+.dl-row{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:10px 14px}.dl-row b{margin-right:4px}
+
 .dl a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:15.5px;padding:6px 4px;border-radius:8px}
 .dl a:hover{background:var(--soft)}
 .ext{font-family:var(--f-display);font-size:11px;font-weight:900;color:#fff;border-radius:5px;padding:3px 7px;min-width:46px;text-align:center}
 .ext.w{background:#2B579A}.ext.i{background:var(--mag)}.ext.x{background:#217346}
+/* balance: two-column slides fill the height and spread their items */
+.slide>.cols{flex:1;min-height:0;max-height:660px;align-items:stretch}
+.slide>.cols>div,.slide>.cols>ul{display:flex;flex-direction:column;justify-content:space-between;gap:14px;min-height:0}
+.slide>.cols>.box{display:flex;flex-direction:column;justify-content:center;gap:12px}
+.slide>.cols>.tbl{justify-content:center}
+.note{font-size:16px;padding:16px 20px;line-height:1.6}
+.check label{font-size:18px}
+.slide>.cols>div>.note{flex:1;align-items:center}
+.slide>.cols>.check>li{flex:1;display:flex}.slide>.cols>.check>li>label{flex:1;align-items:center}
+.slide>.cols>.check>li>label input{margin-top:0}
 /* ── generic grids ── */
 .cols{display:grid;gap:24px;grid-template-columns:repeat(var(--n,2),minmax(0,1fr))}
 .box{border:1px solid var(--line);border-radius:10px;padding:18px 20px;background:var(--paper)}
@@ -219,6 +236,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   .cover .meta{gap:10px 24px}.cover .meta strong{font-size:16px}
   .ctas .cta{padding:9px 14px;font-size:13px}
   .cover .confetti{display:none}
+  .slide>.cols{max-height:none}.slide>.cols>div,.slide>.cols>ul{justify-content:flex-start}.slide>.cols>div>.note,.slide>.cols>.check>li{flex:none}
   .ai3{grid-template-columns:minmax(0,1fr);max-height:none}
   .intro{grid-template-columns:minmax(0,1fr);max-height:none}.intro-cols{grid-template-columns:minmax(0,1fr)}.intro-photo{max-width:320px}.intro-bio h2{font-size:26px}.fbcard{max-width:320px}
   .cover h1{font-size:36px}
@@ -351,22 +369,16 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   <div class="cols" style="--n:2">
     <ul class="check" id="prep">
       <li><label><input type="checkbox" id="p1"><span><b>電腦 Chrome 登入自己的 Google 帳號</b><br><small class="muted">右上角頭像 → 新增使用者 → 登入。上課電腦用完記得登出。</small></span></label></li>
-      <li><label><input type="checkbox" id="p2"><span><b>打開 gemini.google.com 能對話</b><br><small class="muted">免費帳號就能完成今天全部實作。</small></span></label></li>
-      <li><label><input type="checkbox" id="p3"><span><b>手機裝 Gemini App</b><br><small class="muted">App Store／Google Play 搜尋「Gemini」。</small></span></label></li>
-      <li><label><input type="checkbox" id="p4"><span><b>加入 LINE 學員社群</b><br><small class="muted">右下角綠色按鈕，課後問題在這裡問。</small></span></label></li>
-      <li><label><input type="checkbox" id="p5"><span><b>下載三個練習檔</b><br><small class="muted">去識別化用 Word 與照片，統計用 Excel，全部是虛構資料。</small></span></label></li>
+      <li><label><input type="checkbox" id="p2"><span><b>登入 ChatGPT：chatgpt.com</b><br><small class="muted">用 Google 帳號就能登入。今天做衛教圖、算統計、出 Word 報告都用它。</small></span></label></li>
+      <li><label><input type="checkbox" id="p3"><span><b>打開 Gemini 與 Claude：gemini.google.com、claude.ai</b><br><small class="muted">一樣用 Google 帳號登入。免費額度用完，可以換另一家繼續做。</small></span></label></li>
+      <li><label><input type="checkbox" id="p4"><span><b>手機裝 ChatGPT、Gemini App</b><br><small class="muted">App Store／Google Play 搜尋「ChatGPT」「Gemini」，Claude 可選裝。</small></span></label></li>
+      <li><label><input type="checkbox" id="p5"><span><b>加入 LINE 學員社群</b><br><small class="muted">右下角綠色按鈕，課後問題在這裡問。</small></span></label></li>
     </ul>
     <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
       <div class="note" style="--c:var(--blue)"><b>電腦教室</b><span>教室電腦多半不能安裝軟體。今天的實作都用<b>瀏覽器</b>完成；需要安裝的 Typeless，請用自己的手機或筆電試。</span></div>
       <div class="note"><b>操作方式</b><span>按 <span class="kbd">→</span> 下一頁、<span class="kbd">↓</span> 下一個步驟、<span class="kbd">T</span> 目錄、<span class="kbd">F</span> 全螢幕。截圖點一下可以放大。</span></div>
       <div class="note" style="--c:var(--mag)"><b>今天的原則</b><span>AI 產出的是<b>草稿</b>。凡是要交到長輩或家屬手上的內容，都由專業人員覆核。</span></div>
-      <div class="dl">
-        <b>練習檔下載（全部為虛擬資料）</b>
-        <a href="https://mattsue1003.github.io/keelung-icope-ai/files/練習-個案訪視紀錄_含虛擬個資.docx" target="_blank" rel="noopener"><span class="ext w">DOCX</span>個案訪視紀錄（去識別化練習）</a>
-        <a href="https://mattsue1003.github.io/keelung-icope-ai/files/練習-轉介單照片_含虛擬個資.jpg" target="_blank" rel="noopener"><span class="ext i">JPG</span>轉介單照片（圖片遮蓋練習）</a>
-        <a href="https://mattsue1003.github.io/keelung-icope-ai/files/ICOPE練習資料_虛擬120筆.xlsx" target="_blank" rel="noopener"><span class="ext x">XLSX</span>ICOPE 初評 120 筆（統計練習）</a>
-      </div>
-    </div>
+      <div class="note" style="--c:var(--lime)"><b>練習檔</b><span>都放在用到的那一頁：去識別化練習在「三不原則與去識別化」，統計練習在「實作⑥」。全部是虛構資料。</span></div>    </div>
   </div>
 </section>
 
@@ -421,15 +433,18 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   <div class="eyebrow" style="--c:var(--ink)"><span class="sq"></span>今天會用到的三個 AI</div>
   <h2>Gemini、ChatGPT、Claude：同一件事，挑最順手的那個</h2>
   <div class="ai3">
-    <div class="box"><h3 style="color:var(--blue)">Gemini</h3><p class="muted">gemini.google.com</p>
-      <ul class="bio"><li>跟 Google 連在一起：Chrome 側邊欄、YouTube、雲端硬碟</li><li>建立圖像、Canvas 互動網頁</li><li>NotebookLM 做簡報與語音摘要</li></ul>
-      <p class="ai3-today"><b>今天做：</b>讀 WHO 手冊、衛教圖、網頁型簡報、六力小問答</p></div>
-    <div class="box"><h3 style="color:var(--green)">ChatGPT</h3><p class="muted">chatgpt.com</p>
-      <ul class="bio"><li>參考圖片做衛教圖，畫完可以局部修改</li><li>上傳 Excel，寫程式幫你算統計</li><li>直接產出 Word、Excel、簡報檔下載</li></ul>
-      <p class="ai3-today"><b>今天做：</b>參考風格做衛教圖、描述性統計＋Word 報告</p></div>
-    <div class="box"><h3 style="color:var(--amber)">Claude</h3><p class="muted">claude.ai</p>
+    <div class="box ai" style="--c:#10A37F"><div class="ai-h"><h3>ChatGPT</h3><span>chatgpt.com</span></div>
+      <p class="ai-best">最適合：做圖、算數字、出檔案</p>
+      <ul class="bio"><li>參考喜歡的圖片做衛教圖，畫完可以局部修改</li><li>上傳 Excel，自己寫程式算統計</li><li>直接產出 Word、Excel、簡報檔下載</li></ul>
+      <p class="ai3-today"><b>今天做</b>參考風格做衛教圖、描述性統計＋Word 報告</p></div>
+    <div class="box ai" style="--c:var(--blue)"><div class="ai-h"><h3>Gemini</h3><span>gemini.google.com</span></div>
+      <p class="ai-best">最適合：讀網頁、讀影片、Google 生態</p>
+      <ul class="bio"><li>Chrome 側邊欄直接讀網頁、PDF、YouTube</li><li>建立圖像、Canvas 互動網頁</li><li>NotebookLM 做簡報與語音摘要</li></ul>
+      <p class="ai3-today"><b>今天做</b>讀 WHO 手冊、衛教圖、網頁型簡報、六力小問答</p></div>
+    <div class="box ai" style="--c:var(--amber)"><div class="ai-h"><h3>Claude</h3><span>claude.ai</span></div>
+      <p class="ai-best">最適合：長文、網頁、可分享的成品</p>
       <ul class="bio"><li>長文整理、改寫、寫程式都很穩</li><li>做好的網頁直接在旁邊預覽（Artifact）</li><li>一鍵分享連結，或匯出 HTML 上架</li></ul>
-      <p class="ai3-today"><b>今天做：</b>參考設計做網頁型簡報。這份簡報就是用 Claude 做的</p></div>
+      <p class="ai3-today"><b>今天做</b>參考設計做網頁型簡報。這份簡報就是用 Claude 做的</p></div>
   </div>
   <div class="note" style="--c:var(--mag)"><b>共同規則</b><span>三家都會出錯。上傳前先去識別化；數字、出處、醫療說法，交出去前自己核對。</span></div>
 </section>
@@ -443,10 +458,16 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
       <li data-img="img/w_deid.jpg" data-cap="長照資料去識別化工作台：全程在你的電腦裡完成"><span class="n">1</span><div><b>三不原則</b><p>不放姓名、身分證、病歷號、電話、地址；不放可以認出是誰的組合（罕見疾病＋住址）；不在個人帳號留存原始個案檔。</p></div></li>
       <li data-img="img/r_deid-home.jpg" data-cap="上傳 Word／Excel／PDF，或直接貼上紀錄文字"><span class="n">2</span><div><b>打開去識別化工作台</b><p>網址 mattsue1003.github.io/ltc-deid-workbench。檔案不會上傳，關掉網頁就消失。</p></div></li>
       <li data-img="img/r_deid-marked.jpg" data-cap="系統用顏色標出姓名、電話、地址、日期等個資"><span class="n">3</span><div><b>檢查顏色標記</b><p>姓名換成「個案A」、生日換成年齡層、地址只留縣市＋區。自動偵測一定有遺漏，下載前自己看一遍。</p></div></li>
-      <li data-img="img/p_form.jpg" data-cap="練習檔：轉介單照片（姓名、證號、電話、地址、簽名都是虛構的）"><span class="n">4</span><div><b>用練習檔試一次</b><p>三個練習檔：個案訪視紀錄（Word）、轉介單照片（圖片）、ICOPE 120 筆（Excel）。照片要用黑框把姓名、證號、簽名框起來。下載見「開始前的準備」頁。</p></div></li>
+      <li data-img="img/p_form.jpg" data-cap="練習檔：轉介單照片（姓名、證號、電話、地址、簽名都是虛構的）"><span class="n">4</span><div><b>用練習檔試一次</b><p>下方兩個練習檔：個案訪視紀錄（Word）、轉介單照片（圖片）。照片要用黑框把姓名、證號、簽名框起來。</p></div></li>
       <li data-img="img/r_deid-marked.jpg" data-cap="去識別化後的版本，才交給 AI"><span class="n">5</span><div><b>下載乾淨版本，再交給 AI</b><p>評估時口述也一樣：用「個案A、80 多歲女性」代稱，不要唸出姓名與身分證。</p></div></li>
     </ol>
-    <figure class="shot"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+      <div class="dl dl-row"><b>去識別化練習檔（虛構資料）</b>
+        <a href="https://mattsue1003.github.io/keelung-icope-ai/files/練習-個案訪視紀錄_含虛擬個資.docx" target="_blank" rel="noopener"><span class="ext w">DOCX</span>個案訪視紀錄</a>
+        <a href="https://mattsue1003.github.io/keelung-icope-ai/files/練習-轉介單照片_含虛擬個資.jpg" target="_blank" rel="noopener"><span class="ext i">JPG</span>轉介單照片</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -633,7 +654,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   <div class="stepper" data-stepper>
     <ol class="steps">
       <li data-img="img/cv_40_hpa.jpg" data-cap="國健署整合平台：個案查詢與管理 → 指標報表作業、歷史資料專區"><span class="n">1</span><div><b>從平台下載報表</b><p>登入整合平台 →「個案查詢與管理」→ 指標報表作業。下載的檔案先做去識別化（實作前一站）。今天用虛擬練習檔。</p></div></li>
-      <li data-img="img/d00_attached.jpg" data-cap="Gemini 輸入框「＋」→ 檔案，選練習檔 .xlsx"><span class="n">2</span><div><b>上傳練習檔到 Gemini</b><p>「＋」→ 檔案 → 選「ICOPE練習資料_虛擬120筆.xlsx」。ChatGPT 一樣可以，上傳後貼同一段提示詞。</p></div></li>
+      <li data-img="img/d00_attached.jpg" data-cap="Gemini 輸入框「＋」→ 檔案，選練習檔 .xlsx"><span class="n">2</span><div><b>上傳練習檔到 Gemini</b><p>先下載右下方的練習檔，再到 Gemini「＋」→ 檔案 → 選「ICOPE練習資料_虛擬120筆.xlsx」。ChatGPT 一樣可以（下一頁）。</p></div></li>
       <li data-img="img/d01_prompt.jpg" data-cap="提示詞寫清楚：要哪些統計、要列分母、要觀察"><span class="n">3</span><div><b>貼上統計提示詞</b><p>關鍵是「列出分母」。百分比沒有分母，主管問「是誰的幾成」就答不出來。</p></div></li>
       <li data-img="img/d02_result.jpg" data-cap="Gemini 實際產出（11/11 實測）：女 71、男 49。正確答案是 77／43"><span class="n">4</span><div><b>看結果：表格很漂亮</b><p>有分母、有百分比，看起來很專業。但性別人數已經和檔案不一樣了。</p></div></li>
       <li data-img="img/d04_six.jpg" data-cap="實測：行動異常 58 人、認知 51 人。正確是 42、25"><span class="n">5</span><div><b>六力異常數也不對</b><p>認知異常多算了一倍。直接拿去報告，結論會完全錯。這就是為什麼一定要驗算。</p></div></li>
@@ -641,6 +662,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
     </ol>
     <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
       <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+      <div class="dl dl-row"><b>統計練習檔（虛構資料）</b><a href="https://mattsue1003.github.io/keelung-icope-ai/files/ICOPE練習資料_虛擬120筆.xlsx" target="_blank" rel="noopener"><span class="ext x">XLSX</span>ICOPE 初評 120 筆</a></div>
       <div class="prompt"><div class="lab">提示詞・描述性統計<button class="copy">複製</button></div>這是我們單位 ICOPE 初評的去識別化資料。請幫我做描述性統計：1. 性別與年齡分布 2. 六力各項異常人數與異常率 3. 後測完成率 4. 行動異常者初評與後測 SPPB 平均變化。用表格呈現並列出分母，最後寫 3 點給主管的觀察。</div>
     </div>
   </div>
@@ -818,7 +840,6 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
 <button class="navbtn prev" id="prev" aria-label="上一頁">←</button>
 <button class="navbtn next" id="next" aria-label="下一頁">→</button>
 <div class="ctas">
-  <a class="cta o" href="#s4">練習檔</a>
   <a class="cta g" href="https://line.me/ti/g2/HTz-kWvRyDZhYRKHEDjXISFfEyb3xxPlGT16hA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener">LINE 社群</a>
 </div>
 <nav class="toc" id="toc" aria-label="目錄"><ol id="tocList"></ol></nav>

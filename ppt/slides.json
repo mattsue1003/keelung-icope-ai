@@ -83,7 +83,7 @@
     "img": "img/p_form.jpg",
     "cap": "練習檔：轉介單照片（姓名、證號、電話、地址、簽名都是虛構的）",
     "title": "用練習檔試一次",
-    "desc": "三個練習檔：個案訪視紀錄（Word）、轉介單照片（圖片）、ICOPE 120 筆（Excel）。照片要用黑框把姓名、證號、簽名框起來。下載見「開始前的準備」頁。"
+    "desc": "下方兩個練習檔：個案訪視紀錄（Word）、轉介單照片（圖片）。照片要用黑框把姓名、證號、簽名框起來。"
    },
    {
     "img": "img/r_deid-marked.jpg",
@@ -470,7 +470,7 @@
     "img": "img/d00_attached.jpg",
     "cap": "Gemini 輸入框「＋」→ 檔案，選練習檔 .xlsx",
     "title": "上傳練習檔到 Gemini",
-    "desc": "「＋」→ 檔案 → 選「ICOPE練習資料_虛擬120筆.xlsx」。ChatGPT 一樣可以，上傳後貼同一段提示詞。"
+    "desc": "先下載右下方的練習檔，再到 Gemini「＋」→ 檔案 → 選「ICOPE練習資料_虛擬120筆.xlsx」。ChatGPT 一樣可以（下一頁）。"
    },
    {
     "img": "img/d01_prompt.jpg",

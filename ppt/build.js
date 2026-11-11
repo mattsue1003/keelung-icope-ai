@@ -153,17 +153,17 @@ const by = (t) => D.find((d) => d.title === t);
 {
   const s = pres.addSlide({ masterName: "PAPER" });
   header(s, "開始前 5 分鐘", "先把這五件事打勾", C.lime);
-  ["電腦 Chrome 登入自己的 Google 帳號（上課電腦用完記得登出）", "打開 gemini.google.com 能對話", "手機裝 Gemini App", "加入 LINE 學員社群（封底 QR code）", "下載三個練習檔：Word、照片、Excel（網頁版第 4 頁）"].forEach((t, i) => {
+  ["電腦 Chrome 登入自己的 Google 帳號（用完記得登出）", "登入 ChatGPT：chatgpt.com（用 Google 帳號）", "打開 Gemini 與 Claude：gemini.google.com、claude.ai", "手機裝 ChatGPT、Gemini App（Claude 可選裝）", "加入 LINE 學員社群（封底 QR code）"].forEach((t, i) => {
     const y = 1.45 + i * 0.6;
     s.addShape(pres.shapes.RECTANGLE, { x: M, y: y + 0.08, w: 0.28, h: 0.28, fill: { color: "FFFFFF" }, line: { color: C.ink, width: 1.25 } });
     s.addText(t, { x: M + 0.45, y, w: 4.5, h: 0.45, fontFace: F, fontSize: 13, color: C.ink, margin: 0, valign: "middle", isTextBox: true });
   });
-  [["電腦教室", "教室電腦多半不能安裝軟體。今天的實作都用瀏覽器完成；Typeless 請用自己的手機或筆電試。", C.blue], ["今天的原則", "AI 產出的是草稿。凡是要交到長輩或家屬手上的內容，都由專業人員覆核。", C.mag]].forEach(([h, t, c], i) => {
-    const y = 1.45 + i * 1.6;
-    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 5.6, y, w: 3.9, h: 1.4, fill: { color: C.soft }, rectRadius: 0.08 });
+  [["電腦教室", "教室電腦多半不能安裝軟體。今天的實作都用瀏覽器完成；Typeless 請用自己的手機或筆電試。", C.blue], ["今天的原則", "AI 產出的是草稿。凡是要交到長輩或家屬手上的內容，都由專業人員覆核。", C.mag], ["練習檔", "在網頁版的去識別化頁與實作⑥下載，全部是虛構資料。", C.lime]].forEach(([h, t, c], i) => {
+    const y = 1.4 + i * 1.22;
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 5.6, y, w: 3.9, h: 1.1, fill: { color: C.soft }, rectRadius: 0.08 });
     s.addShape(pres.shapes.RECTANGLE, { x: 5.8, y: y + 0.2, w: 0.14, h: 0.14, fill: { color: c } });
     s.addText(h, { x: 6.02, y: y + 0.12, w: 3.3, h: 0.3, fontFace: F, fontSize: 13, bold: true, color: C.ink, margin: 0, isTextBox: true });
-    s.addText(t, { x: 5.8, y: y + 0.48, w: 3.5, h: 0.85, fontFace: F, fontSize: 12, color: C.muted, margin: 0, isTextBox: true, valign: "top" });
+    s.addText(t, { x: 5.8, y: y + 0.45, w: 3.5, h: 0.6, fontFace: F, fontSize: 11, color: C.muted, margin: 0, isTextBox: true, valign: "top" });
   });
 }
 // 5 & 21 作品格
