@@ -9,7 +9,7 @@ const IMG = (p) => path.join(ROOT, p);
 
 const F = "Microsoft JhengHei";
 const C = { bg: "FFFEFA", ink: "1B1A18", muted: "66625B", line: "E4E0D6", soft: "F3F0E8",
-  mag: "D7306E", blue: "1773EA", lime: "C9E44A", amber: "FBA705", sky: "47B2E4", code: "F6F3EB" };
+  mag: "D7306E", blue: "1773EA", lime: "C9E44A", amber: "FBA705", sky: "47B2E4", green: "06A84A", code: "F6F3EB" };
 const W = 10, H = 5.625, M = 0.5;
 
 const pres = new pptxgen();
@@ -94,7 +94,7 @@ const by = (t) => D.find((d) => d.title === t);
 // 1 封面
 {
   const s = pres.addSlide({ masterName: "PAPER" });
-  [[6.6, 0.5, 0.45, C.blue], [7.6, 1.2, 0.22, C.lime], [8.4, 0.75, 0.3, C.mag], [7.1, 2.0, 0.55, C.amber], [8.8, 2.3, 0.18, C.sky], [6.3, 2.7, 0.2, C.lime]].forEach(([x, y, w, c]) =>
+  [[6.65, 0.55, 0.35, C.blue], [6.85, 1.45, 0.2, C.mag], [6.7, 2.2, 0.28, C.amber], [6.95, 2.75, 0.16, C.lime]].forEach(([x, y, w, c]) =>
     s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h: w, fill: { color: c }, rectRadius: 0.05 }));
   s.addText("基隆 ICOPE 培力實務工作坊", { x: M, y: 0.55, w: 6, h: 0.3, fontFace: F, fontSize: 12, bold: true, color: C.muted, margin: 0, isTextBox: true, charSpacing: 2 });
   s.addText([{ text: "ICOPE ", options: { color: C.ink } }, { text: "× ", options: { color: C.mag } }, { text: "AI", options: { color: C.ink } }], { x: M, y: 1.0, w: 6, h: 0.45, fontFace: "Arial", fontSize: 20, bold: true, margin: 0, isTextBox: true, charSpacing: 8 });
@@ -107,6 +107,10 @@ const by = (t) => D.find((d) => d.title === t);
     s.addText(k, { x, y: 4.1, w: 1.6, h: 0.22, fontFace: F, fontSize: 9, bold: true, color: C.muted, margin: 0, isTextBox: true });
     s.addText(v, { x, y: 4.32, w: 1.6, h: 0.5, fontFace: F, fontSize: 12, bold: true, color: C.ink, margin: 0, isTextBox: true, valign: "top" });
   });
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 7.35, y: 0.75, w: 2.15, h: 2.05, fill: { color: "FFFFFF" }, line: { color: C.green, width: 1.25 }, rectRadius: 0.1 });
+  s.addImage({ path: IMG("img/qr-linegroup.png"), x: 7.75, y: 0.82, w: 1.35, h: 1.35, altText: "11/18 培力實務工作坊 LINE 群組 QR code", hyperlink: { url: "https://line.me/ti/g/uLaUmgBmmh" } });
+  s.addText("加入 LINE 群組", { x: 7.35, y: 2.18, w: 2.15, h: 0.28, fontFace: F, fontSize: 11, bold: true, color: C.green, align: "center", margin: 0, isTextBox: true });
+  s.addText("11/18 培力實務工作坊", { x: 7.35, y: 2.44, w: 2.15, h: 0.25, fontFace: F, fontSize: 8, color: C.muted, align: "center", margin: 0, isTextBox: true });
   s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 7.35, y: 3.05, w: 2.15, h: 2.05, fill: { color: "FFFFFF" }, line: { color: C.line, width: 0.75 }, rectRadius: 0.1 });
   s.addImage({ path: IMG("img/qr-deck.png"), x: 7.75, y: 3.12, w: 1.35, h: 1.35, altText: "網頁型簡報 QR code" });
   s.addText("掃我開啟網頁版簡報", { x: 7.35, y: 4.48, w: 2.15, h: 0.28, fontFace: F, fontSize: 11, bold: true, color: C.ink, align: "center", margin: 0, isTextBox: true });

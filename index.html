@@ -71,7 +71,7 @@ p{margin:0}
 
 /* ── cover ── */
 .cover{justify-content:center;gap:22px;overflow:hidden}
-.cover-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:56px;align-items:center;position:relative}
+.cover-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center;position:relative}
 .cover-main{display:flex;flex-direction:column;gap:22px;min-width:0}
 .slide>:not(.confetti):first-child,.slide>.confetti+*{margin-top:auto}.slide>:last-child{margin-bottom:auto}
 .steps>li:first-child{margin-top:auto}.steps>li:last-child{margin-bottom:auto}
@@ -85,7 +85,8 @@ p{margin:0}
 .cover .meta{display:grid;grid-template-columns:repeat(2,minmax(0,max-content));gap:14px 48px;position:relative;border-top:1px solid var(--line);padding-top:20px;margin-top:6px}
 .cover .meta div{padding:0}
 .coverqr{position:relative;justify-self:center;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 16px 12px 12px;box-shadow:0 6px 20px rgba(60,50,30,.10)}
-.coverqr img{width:230px;height:230px}
+.coverqrs{display:flex;gap:18px;justify-self:center;align-items:stretch}.coverqrs .coverqr{justify-self:auto;text-decoration:none;flex:0 0 auto;width:200px;padding:12px}.coverqr.line{border-color:var(--green);box-shadow:0 6px 20px rgba(6,199,85,.18)}.coverqr.line b{color:var(--green)}.coverqrs .coverqr b{font-size:20px;white-space:nowrap}
+.coverqr img{width:170px;height:170px}.coverqr span{word-break:break-all}
 .coverqr span{font-size:14px;color:var(--muted);line-height:1.5}.coverqr b{display:block;margin-bottom:4px;font-size:22px;color:var(--ink)}
 .cover .meta small{display:block;font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.08em}
 .cover .meta strong{font-size:20px}
@@ -249,7 +250,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   body.scroll .stepper .shot{display:none}
   body.scroll .stepper>*{min-height:auto}
   body.scroll .stepper .prompt{max-height:none}
-  .cover-grid{grid-template-columns:minmax(0,1fr);gap:24px}.endqrs{flex-wrap:wrap}.endqrs .fbcard{width:100%;max-width:280px}.coverqr{justify-self:start;padding:16px}.coverqr img{width:180px;height:180px}
+  .cover-grid{grid-template-columns:minmax(0,1fr);gap:24px}.endqrs{flex-wrap:wrap}.endqrs .fbcard{width:100%;max-width:280px}.coverqr{justify-self:start;padding:16px}.coverqrs{justify-self:start;flex-wrap:wrap}.coverqr img{width:150px;height:150px}
 }
 @media (max-width:520px){.works{grid-template-columns:minmax(0,1fr)}.ctas .cta.o{display:none}}
 </style>
@@ -290,7 +291,10 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
     <div><small>講師</small><strong>鍾孟修 職能治療師</strong></div>
   </div>
   </div>
-  <div class="coverqr"><img src="img/qr-deck.svg" alt="掃描開啟本網頁型簡報"><span><b>掃我帶走簡報</b>mattsue1003.github.io/keelung-icope-ai</span></div>
+  <div class="coverqrs">
+  <a class="coverqr line" href="https://line.me/ti/g/uLaUmgBmmh" target="_blank" rel="noopener"><img src="img/qr-linegroup.png" alt="掃描加入 11/18 培力實務工作坊 LINE 群組"><span><b>加入 LINE 群組</b>11/18 培力實務工作坊</span></a>
+  <div class="coverqr"><img src="img/qr-deck.svg" alt="掃描開啟本網頁型簡報"><span><b>帶走簡報</b>mattsue1003.github.io/keelung-icope-ai</span></div>
+  </div>
   </div>
 </section>
 
