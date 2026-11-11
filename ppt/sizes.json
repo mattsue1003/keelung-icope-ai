@@ -1,1 +1,546 @@
-{"img/x04_cards.jpg": [1164, 630], "img/r_deid-marked.jpg": [800, 786], "img/cv_04_follow.jpg": [596, 336], "img/cv_32_deckedit.jpg": [596, 336], "img/q03_viewer.jpg": [1164, 630], "img/x02_cover.jpg": [1164, 630], "img/cv_28_notebooklm.jpg": [596, 336], "img/v06_gpt_lang.jpg": [1309, 707], "img/k04_share.jpg": [1440, 778], "img/v10_play_lt.jpg": [1503, 812], "img/w04_gpt_title.jpg": [1164, 630], "img/w_leaflets.jpg": [1280, 693], "img/nb05_upload.jpg": [1164, 681], "img/ref_webtech_stats.jpg": [1280, 749], "img/m04_result.jpg": [1164, 681], "img/x00_upload.jpg": [1164, 630], "img/m03_drawing.jpg": [698, 409], "img/h05_play_bigtext.jpg": [717, 1277], "img/g03_result.jpg": [885, 563], "img/h01_ios_hearing.jpg": [700, 1064], "img/cv_13_who.jpg": [596, 336], "img/c04_question.jpg": [885, 563], "img/w_six.jpg": [640, 347], "img/h04_play_lt.jpg": [930, 500], "img/r_gh-pages.jpg": [1400, 855], "img/w05_gpt_table.jpg": [1164, 630], "img/v05_gpt_voiceset.jpg": [1309, 707], "img/x01_prompt.jpg": [1164, 630], "img/cv_12_chrome_gemini.jpg": [596, 336], "img/cm07_final.jpg": [620, 872], "img/h03_ios_lc_lang.jpg": [1400, 719], "img/w_bodysore.jpg": [1280, 693], "img/d00_attached.jpg": [885, 563], "img/cv_36_guesswho.jpg": [596, 336], "img/w_dementia.jpg": [1280, 693], "img/k03_stats.jpg": [1440, 778], "img/c05_correct.jpg": [885, 563], "img/g04_editor.jpg": [885, 563], "img/cv_11_six.jpg": [596, 336], "img/r_gh-config.jpg": [1400, 732], "img/n_paste.jpg": [1400, 702], "img/d02_result.jpg": [885, 563], "img/w02_gem_title.jpg": [1164, 681], "img/w_deid.jpg": [1280, 693], "img/v02_gpt_voice.jpg": [1309, 707], "img/v08_google_lang.jpg": [1440, 778], "img/cv_30_canva_split.jpg": [596, 336], "img/v09_gem_personal.jpg": [1309, 707], "img/cv_03_leaflets.jpg": [596, 336], "img/nb04_page.jpg": [1164, 681], "img/m06_poster.jpg": [748, 1054], "img/cv_40_hpa.jpg": [596, 336], "img/q02_prompt.jpg": [1164, 630], "img/x03_stats.jpg": [1164, 630], "img/w_follow.jpg": [640, 347], "img/ref_hpa_poster.jpg": [452, 624], "img/o05_word.jpg": [1309, 707], "img/n_style_warm.jpg": [1400, 702], "img/cv_25_hearing.jpg": [596, 336], "img/cv_14_icope_pdf_side.jpg": [596, 336], "img/w03_gem_table.jpg": [1164, 681], "img/o03_six.jpg": [1309, 707], "img/nb03_topic.jpg": [1164, 681], "img/t_typeless.jpg": [1280, 693], "img/cv_06_reablepre.jpg": [596, 336], "img/cm02_picker.jpg": [1280, 749], "img/cv_48_gh_quick.jpg": [596, 336], "img/cv_09_typeless.jpg": [596, 336], "img/cv_21_gpt_excel.jpg": [596, 336], "img/r_gh-name.jpg": [1400, 903], "img/v01_gpt_mic.jpg": [1309, 707], "img/cv_34_order_diff.jpg": [596, 336], "img/cv_38_nutrition.jpg": [596, 336], "img/r_deid-home.jpg": [960, 1086], "img/v03_gem_mic.jpg": [1309, 707], "img/m05_editor.jpg": [1164, 681], "img/cv_20_gpt.jpg": [596, 336], "img/cm03_layers.jpg": [1280, 693], "img/cm05_select.jpg": [1280, 693], "img/cm04_text.jpg": [1280, 693], "img/cv_42_gpt_word.jpg": [596, 336], "img/g02b_ratio.jpg": [885, 563], "img/cv_10_typeless_steps.jpg": [596, 336], "img/r_gh-upload.jpg": [1400, 731], "img/nb01_sidebar.jpg": [1164, 681], "img/c03_full.jpg": [885, 563], "img/cv_18_gemini_tools.jpg": [596, 336], "img/cv_50_gh_paste.jpg": [596, 336], "img/cv_51_gh_pages.jpg": [596, 336], "img/cv_46_gh_new.jpg": [596, 336], "img/d05_verify.jpg": [885, 563], "img/o01_prompt.jpg": [1309, 707], "img/w01_gem_prompt.jpg": [1164, 681], "img/r_deckedit.jpg": [1400, 572], "img/m02_prompt.jpg": [1164, 681], "img/k01_upload.jpg": [1440, 778], "img/cv_17_yt_gemini.jpg": [596, 336], "img/g02_prompt.jpg": [885, 563], "img/g05_poster.jpg": [433, 579], "img/v07_gpt_custom.jpg": [1309, 707], "img/cv_05_mi.jpg": [596, 336], "img/w_mi.jpg": [1280, 693], "img/w_reablepre.jpg": [640, 347], "img/p_form.jpg": [549, 715], "img/o04_sppb.jpg": [1309, 707], "img/h02_ios_lc_guide.jpg": [1200, 1098], "img/q04_poster.jpg": [669, 942], "img/n_w01_home.jpg": [1400, 702], "img/o02_summary.jpg": [1309, 707], "img/cv_07_bodysore.jpg": [596, 336], "img/c02_toolbar.jpg": [885, 563], "img/k02_result.jpg": [1440, 778], "img/cv_24_health99.jpg": [596, 336], "img/n_15_export_dialog.jpg": [1400, 702], "img/d03_age.jpg": [885, 563], "img/d04_six.jpg": [885, 563], "img/cm06_color.jpg": [1280, 693], "img/cv_19_gemini_spark.jpg": [596, 336], "img/nb02_type.jpg": [1164, 681], "img/speaker.jpg": [900, 900], "img/cm01_home.jpg": [1280, 749], "img/c01_prompt.jpg": [885, 563], "img/d01_prompt.jpg": [885, 563], "img/m01_upload.jpg": [1164, 681], "img/ref_webtech_hero.jpg": [1280, 749], "img/n_generating.jpg": [1400, 702], "img/g01_menu.jpg": [885, 563], "img/qr-fb.png": [444, 444], "img/qr-deck.png": [444, 444], "img/qr-line.png": [636, 636]}
+{
+"img/c01_prompt.jpg": [
+885,
+563
+],
+"img/c02_toolbar.jpg": [
+885,
+563
+],
+"img/c03_full.jpg": [
+885,
+563
+],
+"img/c04_question.jpg": [
+885,
+563
+],
+"img/c05_correct.jpg": [
+885,
+563
+],
+"img/cg01_plugin.jpg": [
+951,
+630
+],
+"img/cg02_prompt.jpg": [
+951,
+630
+],
+"img/cg03_allow.jpg": [
+951,
+630
+],
+"img/cg04_result.jpg": [
+951,
+630
+],
+"img/cg05_layers.jpg": [
+1046,
+693
+],
+"img/cm01_home.jpg": [
+1280,
+749
+],
+"img/cm02_picker.jpg": [
+1280,
+749
+],
+"img/cm03_layers.jpg": [
+1280,
+693
+],
+"img/cm04_text.jpg": [
+1280,
+693
+],
+"img/cm05_select.jpg": [
+1280,
+693
+],
+"img/cm06_color.jpg": [
+1280,
+693
+],
+"img/cv_09_typeless.jpg": [
+596,
+336
+],
+"img/cv_10_typeless_steps.jpg": [
+596,
+336
+],
+"img/cv_12_chrome_gemini.jpg": [
+596,
+336
+],
+"img/cv_13_who.jpg": [
+596,
+336
+],
+"img/cv_14_icope_pdf_side.jpg": [
+596,
+336
+],
+"img/cv_17_yt_gemini.jpg": [
+596,
+336
+],
+"img/cv_18_gemini_tools.jpg": [
+596,
+336
+],
+"img/cv_19_gemini_spark.jpg": [
+596,
+336
+],
+"img/cv_21_gpt_excel.jpg": [
+596,
+336
+],
+"img/cv_24_health99.jpg": [
+596,
+336
+],
+"img/cv_25_hearing.jpg": [
+596,
+336
+],
+"img/cv_28_notebooklm.jpg": [
+596,
+336
+],
+"img/cv_34_order_diff.jpg": [
+596,
+336
+],
+"img/cv_36_guesswho.jpg": [
+596,
+336
+],
+"img/cv_38_nutrition.jpg": [
+596,
+336
+],
+"img/cv_40_hpa.jpg": [
+596,
+336
+],
+"img/cv_46_gh_new.jpg": [
+596,
+336
+],
+"img/cv_48_gh_quick.jpg": [
+596,
+336
+],
+"img/cv_50_gh_paste.jpg": [
+596,
+336
+],
+"img/cv_51_gh_pages.jpg": [
+596,
+336
+],
+"img/d00_attached.jpg": [
+885,
+563
+],
+"img/d01_prompt.jpg": [
+885,
+563
+],
+"img/d02_result.jpg": [
+885,
+563
+],
+"img/d04_six.jpg": [
+885,
+563
+],
+"img/d05_verify.jpg": [
+885,
+563
+],
+"img/g01_menu.jpg": [
+885,
+563
+],
+"img/g02_prompt.jpg": [
+885,
+563
+],
+"img/g02b_ratio.jpg": [
+885,
+563
+],
+"img/g04_editor.jpg": [
+885,
+563
+],
+"img/g05_poster.jpg": [
+433,
+579
+],
+"img/h01_ios_hearing.jpg": [
+700,
+1064
+],
+"img/h02_ios_lc_guide.jpg": [
+1200,
+1098
+],
+"img/h03_ios_lc_lang.jpg": [
+1400,
+719
+],
+"img/h04_play_lt.jpg": [
+930,
+500
+],
+"img/h05_play_bigtext.jpg": [
+717,
+1277
+],
+"img/k01_upload.jpg": [
+1440,
+778
+],
+"img/k02_result.jpg": [
+1440,
+778
+],
+"img/k03_stats.jpg": [
+1440,
+778
+],
+"img/k04_share.jpg": [
+1440,
+778
+],
+"img/m03_drawing.jpg": [
+698,
+409
+],
+"img/n_15_export_dialog.jpg": [
+1400,
+702
+],
+"img/n_generating.jpg": [
+1400,
+702
+],
+"img/n_paste.jpg": [
+1400,
+702
+],
+"img/n_style_warm.jpg": [
+1400,
+702
+],
+"img/n_w01_home.jpg": [
+1400,
+702
+],
+"img/nb01_sidebar.jpg": [
+1164,
+681
+],
+"img/nb02_type.jpg": [
+1164,
+681
+],
+"img/nb03_topic.jpg": [
+1164,
+681
+],
+"img/nb04_page.jpg": [
+1164,
+681
+],
+"img/nb05_upload.jpg": [
+1164,
+681
+],
+"img/nbg01_at.jpg": [
+951,
+630
+],
+"img/nbg02_prompt.jpg": [
+951,
+630
+],
+"img/nbg03_ask.jpg": [
+951,
+630
+],
+"img/nbg04_done.jpg": [
+951,
+630
+],
+"img/nbg05_slide1.jpg": [
+951,
+630
+],
+"img/nbg06_slide2.jpg": [
+951,
+630
+],
+"img/nlm01_studio.jpg": [
+951,
+630
+],
+"img/nlm02_custom.jpg": [
+951,
+630
+],
+"img/nlm05_pptx.jpg": [
+951,
+630
+],
+"img/nlm06_new.jpg": [
+951,
+630
+],
+"img/o01_prompt.jpg": [
+1309,
+707
+],
+"img/o02_summary.jpg": [
+1309,
+707
+],
+"img/o03_six.jpg": [
+1309,
+707
+],
+"img/o04_sppb.jpg": [
+1309,
+707
+],
+"img/o05_word.jpg": [
+1309,
+707
+],
+"img/p_form.jpg": [
+549,
+715
+],
+"img/q02_prompt.jpg": [
+1164,
+630
+],
+"img/q03_viewer.jpg": [
+1164,
+630
+],
+"img/q04_poster.jpg": [
+669,
+942
+],
+"img/r_deid-home.jpg": [
+960,
+1086
+],
+"img/r_deid-marked.jpg": [
+800,
+786
+],
+"img/r_gh-name.jpg": [
+1400,
+903
+],
+"img/r_gh-pages.jpg": [
+1400,
+855
+],
+"img/ref_hpa_poster.jpg": [
+452,
+624
+],
+"img/ref_webtech_hero.jpg": [
+1280,
+749
+],
+"img/ref_webtech_stats.jpg": [
+1280,
+749
+],
+"img/sl01_task_prompt.jpg": [
+951,
+681
+],
+"img/sl02_task_done.jpg": [
+951,
+681
+],
+"img/sl03_chat_plain.jpg": [
+951,
+630
+],
+"img/sl04_export.jpg": [
+951,
+630
+],
+"img/sl05_task_cover.jpg": [
+951,
+681
+],
+"img/sl06_task_slide.jpg": [
+951,
+681
+],
+"img/sl07_task_last.jpg": [
+951,
+681
+],
+"img/sl08_gpt_prompt.jpg": [
+951,
+630
+],
+"img/sl09_gpt_cover.jpg": [
+951,
+630
+],
+"img/sl10_gpt_list.jpg": [
+951,
+630
+],
+"img/sl11_gpt_last.jpg": [
+951,
+630
+],
+"img/speaker.jpg": [
+900,
+900
+],
+"img/t_typeless.jpg": [
+1280,
+693
+],
+"img/v01_gpt_mic.jpg": [
+1309,
+707
+],
+"img/v02_gpt_voice.jpg": [
+1309,
+707
+],
+"img/v03_gem_mic.jpg": [
+1309,
+707
+],
+"img/v05_gpt_voiceset.jpg": [
+1309,
+707
+],
+"img/v06_gpt_lang.jpg": [
+1309,
+707
+],
+"img/v07_gpt_custom.jpg": [
+1309,
+707
+],
+"img/v08_google_lang.jpg": [
+1440,
+778
+],
+"img/v09_gem_personal.jpg": [
+1309,
+707
+],
+"img/w01_gem_prompt.jpg": [
+1164,
+681
+],
+"img/w02_gem_title.jpg": [
+1164,
+681
+],
+"img/w03_gem_table.jpg": [
+1164,
+681
+],
+"img/w04_gpt_title.jpg": [
+1164,
+630
+],
+"img/w05_gpt_table.jpg": [
+1164,
+630
+],
+"img/w_bodysore.jpg": [
+1280,
+693
+],
+"img/w_deid.jpg": [
+1280,
+693
+],
+"img/w_dementia.jpg": [
+1280,
+693
+],
+"img/w_follow.jpg": [
+640,
+347
+],
+"img/w_leaflets.jpg": [
+1280,
+693
+],
+"img/w_mi.jpg": [
+1280,
+693
+],
+"img/w_reablepre.jpg": [
+640,
+347
+],
+"img/w_six.jpg": [
+640,
+347
+],
+"img/x00_upload.jpg": [
+1164,
+630
+],
+"img/x01_prompt.jpg": [
+1164,
+630
+],
+"img/x02_cover.jpg": [
+1164,
+630
+],
+"img/x03_stats.jpg": [
+1164,
+630
+],
+"img/x04_cards.jpg": [
+1164,
+630
+],
+"img/yt01_buttons.jpg": [
+951,
+681
+],
+"img/yt02_panel.jpg": [
+951,
+681
+],
+"img/yt03_summary.jpg": [
+951,
+681
+],
+"img/yt04_gemini.jpg": [
+951,
+681
+],
+"img/yt05_chatgpt.jpg": [
+951,
+630
+]
+}

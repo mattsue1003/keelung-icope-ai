@@ -298,6 +298,45 @@
   ]
  },
  {
+  "title": "實作② 讀影片：YouTube 摘要、Gemini 與 ChatGPT",
+  "eyebrow": "實作②　讀影片",
+  "h2": "影片交給 Gemini：都是 Google，讀得懂 YouTube",
+  "lede": "",
+  "steps": [
+   {
+    "img": "img/yt01_buttons.jpg",
+    "cap": "影片下方工具列：分享旁邊的「提問」（部分影片才有）",
+    "title": "YouTube 先找「提問」按鈕",
+    "desc": "影片下方，分享、下載旁邊。有這顆就能直接在 YouTube 裡問，不用另外開 AI。"
+   },
+   {
+    "img": "img/yt02_panel.jpg",
+    "cap": "右側跳出「問問影片」：生成影片摘要、推薦問題",
+    "title": "按「生成影片摘要」",
+    "desc": "右側跳出對話框，可以點建議問題，也能自己打字問。"
+   },
+   {
+    "img": "img/yt03_summary.jpg",
+    "cap": "摘要附時間碼，點下去直接跳到那一段",
+    "title": "摘要附時間碼",
+    "desc": "點時間碼直接跳到那一段，備課只看需要的片段。"
+   },
+   {
+    "img": "img/yt04_gemini.jpg",
+    "cap": "Gemini（3.1 Pro）：六力每一項都附時間碼，五次坐站、耳語測試都有抓到（11/11 實測）",
+    "title": "Gemini：貼影片網址就能讀",
+    "desc": "六力逐項整理，每項附時間碼。Flash 轉圈太久時，改用「深度研究（Pro）」重問一次。"
+   },
+   {
+    "img": "img/yt05_chatgpt.jpg",
+    "cap": "ChatGPT：同一支影片「無法取得影片畫面或字幕」，整張表都是「尚無法確認」",
+    "title": "ChatGPT：讀不到影片內容",
+    "desc": "它老實說拿不到畫面與字幕，表格全寫「尚無法確認」。影片的事交給 Gemini。"
+   }
+  ],
+  "prompts": []
+ },
+ {
   "title": "實作② 沒有問問 Gemini：直接丟給 Gemini、ChatGPT",
   "eyebrow": "實作②　沒有「問問 Gemini」怎麼辦",
   "h2": "直接把手冊網址丟給 Gemini、ChatGPT：結果差很多",
@@ -666,42 +705,221 @@
   ]
  },
  {
-  "title": "實作⑤ NotebookLM 做簡報",
+  "title": "實作⑤ Gemini 做 PPT：要用「任務」",
   "eyebrow": "實作⑤　做簡報",
-  "h2": "把手冊與衛教資料，變成社區衛教簡報",
+  "h2": "Gemini 做 PPT：切到「任務」，不要用「對話」",
   "lede": "",
   "steps": [
    {
-    "img": "img/cv_28_notebooklm.jpg",
-    "cap": "notebooklm.google.com：左邊來源、中間對話、右邊工作室",
-    "title": "新增筆記本，加入來源",
-    "desc": "notebooklm.google.com → 新增 → 上傳 PDF 或貼網址（WHO 手冊、健康九九＋單張）。只根據你給的來源回答。"
+    "img": "img/sl01_task_prompt.jpg",
+    "cap": "輸入框上方「對話｜任務」，點「任務」，提示詞框變成「說明要執行的任務」",
+    "title": "點輸入框上方的「任務」",
+    "desc": "同一段提示詞貼進去送出。任務模式會自己規劃、找資料、畫插圖、檢查版面。"
    },
    {
-    "img": "img/cv_28_notebooklm.jpg",
-    "cap": "右側「工作室」：簡報、資訊圖表、語音摘要、心智圖",
-    "title": "右側「工作室」選「簡報」",
-    "desc": "點簡報旁的筆形圖示，可以寫給它的要求（見下方提示詞）。資訊圖表、語音摘要也在這裡。"
+    "img": "img/sl03_chat_plain.jpg",
+    "cap": "同一段提示詞用「對話」：配圖位置只有灰色方框「點擊右鍵＞變更圖片」（11/11 實測）",
+    "title": "對照：用「對話」做出來很陽春",
+    "desc": "深色底、黃字，插圖全是灰色方框要你自己換。這就是「用對話做簡報很爛」的原因。"
    },
    {
-    "img": "img/r_deckedit.jpg",
-    "cap": "deckedit.com：把 NotebookLM 簡報 PDF 轉成可編輯 PPT",
-    "title": "轉成可以改字的 PPT",
-    "desc": "NotebookLM 簡報下載是 PDF（圖片）。丟到 deckedit.com/zh-Hant，轉成 .pptx，文字就能改。"
+    "img": "img/sl02_task_done.jpg",
+    "cap": "任務模式：約 5 分鐘，完成後給一個 presentation.pptx 檔",
+    "title": "任務完成，出現 PPTX 檔",
+    "desc": "過程會顯示「Using skill: presentation-designer」等，它在照設計規則排版。約 5 分鐘。"
    },
    {
-    "img": "img/cv_30_canva_split.jpg",
-    "cap": "Canva：選取圖片 → 右鍵「分離圖片」，文字和插圖分開",
-    "title": "或用 Canva「分離圖片」",
-    "desc": "把簡報頁圖片上傳 Canva → 右鍵 → 分離圖片，字和插圖會拆成可以移動、修改的圖層。"
+    "img": "img/sl05_task_cover.jpg",
+    "cap": "任務模式的封面：手繪風台灣長輩插圖，標題大、留白夠",
+    "title": "封面：每頁都有手繪插圖",
+    "desc": "插圖是它自己畫的，配色一致，字也夠大。"
+   },
+   {
+    "img": "img/sl06_task_slide.jpg",
+    "cap": "內頁：重點＋三條說明＋大數字「5 次」，左右排版",
+    "title": "內頁版面也排好了",
+    "desc": "左邊重點、右邊插圖。文字都是 PPT 文字框，下載後可以直接改。"
+   },
+   {
+    "img": "img/sl07_task_last.jpg",
+    "cap": "最後一頁：衛生所、特約醫療院所、社區據點、LINE @hpaicope，數字與帳號都要核對",
+    "title": "最後一頁：數字和帳號要核對",
+    "desc": "「400 家」「LINE ID」這類資料，上台前到國健署網站確認一次。"
+   },
+   {
+    "img": "img/sl04_export.jpg",
+    "cap": "右上角「匯出」→「下載」存成 .pptx，或「雲端硬碟」存成 Google 簡報",
+    "title": "匯出 → 下載 PPT",
+    "desc": "打開預覽，右上角「匯出」：下載 .pptx 用 PowerPoint 改，或存到雲端硬碟用 Google 簡報改。"
    }
   ],
   "prompts": [
    {
-    "lab": "提示詞・NotebookLM 簡報",
-    "text": "對象是社區長輩，做 8 頁簡報，主題「ICOPE 長者量六力」。每頁一個重點、字大、用生活例子；最後一頁寫「在哪裡可以做評估、評估後會怎麼幫你」。"
+    "lab": "提示詞・任務模式做簡報",
+    "text": "幫我做一份 6 頁的 PowerPoint 簡報（.pptx）：「長者量六力：社區衛教」，對象是社區長輩。每頁一個重點、字要大；每頁配一張溫暖插圖（台灣長輩）；最後一頁寫「65 歲以上可以到哪裡免費評估」。繁體中文，做好提供下載。"
    }
   ]
+ },
+ {
+  "title": "實作⑤ ChatGPT 工作模式：自己生圖放進簡報",
+  "eyebrow": "實作⑤　ChatGPT 也可以",
+  "h2": "ChatGPT「工作」模式：查官方資料、自己生圖，再排成 PPT",
+  "lede": "",
+  "steps": [
+   {
+    "img": "img/sl08_gpt_prompt.jpg",
+    "cap": "ChatGPT 上方「對話｜工作」，切到「工作」再貼提示詞",
+    "title": "切到上方的「工作」",
+    "desc": "同一段提示詞，多加一句「每頁配一張你自己生成的插圖」。"
+   },
+   {
+    "img": "img/sl10_gpt_list.jpg",
+    "cap": "完成後的 6 頁：每頁都有 ChatGPT 自己生成的照片風插圖（約 15 分鐘）",
+    "title": "等它查資料、生圖、排版",
+    "desc": "它先查國健署資料，再生成 6 張插圖。比較久，約 15 分鐘，可以先做別的事。"
+   },
+   {
+    "img": "img/sl09_gpt_cover.jpg",
+    "cap": "封面：照片風的台灣長輩，右上角 ⤓ 是下載",
+    "title": "插圖是照片風",
+    "desc": "Gemini 偏手繪，ChatGPT 偏照片。依對象挑你喜歡的風格。"
+   },
+   {
+    "img": "img/sl11_gpt_last.jpg",
+    "cap": "最後一頁：衛生所、縣市合作醫療機構、LINE「@hpaicope」，並提醒先打電話",
+    "title": "右上角 ⤓ 下載 .pptx",
+    "desc": "預覽右上角下載。檔案也會存在左側「檔案庫」，之後找得到。"
+   }
+  ],
+  "prompts": []
+ },
+ {
+  "title": "實作⑤ Gemini 任務＋筆記本做簡報",
+  "eyebrow": "實作⑤　有資料來源的簡報",
+  "h2": "Gemini 任務 ＋ 筆記本：內容照你的資料，版面照任務做",
+  "lede": "",
+  "steps": [
+   {
+    "img": "img/nbg01_at.jpg",
+    "cap": "任務模式輸入「@」：技能 presentation-designer、連接器 Gemini Notebook（就是 NotebookLM）",
+    "title": "任務模式打「@」→ Gemini Notebook",
+    "desc": "Gemini Notebook 就是 NotebookLM 改名後的樣子，你建過的筆記本都連得到。"
+   },
+   {
+    "img": "img/nbg02_prompt.jpg",
+    "cap": "@Gemini Notebook＋筆記本名稱＋簡報要求＋「內容只根據來源，備註寫出處」",
+    "title": "寫筆記本名稱和要求",
+    "desc": "加一句「內容只根據筆記本來源，每頁備註寫出處」，避免它自己補資料。"
+   },
+   {
+    "img": "img/nbg03_ask.jpg",
+    "cap": "選到只有對話紀錄、沒有來源的筆記本：Gemini 先停下來問，還列出有 11 個來源的筆記本",
+    "title": "來源不夠，它會先問你",
+    "desc": "實測選到空的筆記本，它沒有亂做，而是建議改用有 11 個來源的那本。"
+   },
+   {
+    "img": "img/nbg04_done.jpg",
+    "cap": "改用 11 個來源的筆記本：約 6 分鐘完成 presentation.pptx，備註附講者口語稿",
+    "title": "約 6 分鐘，出現 PPTX",
+    "desc": "每頁備註有出處和講者口語稿，上台照著講就好。"
+   },
+   {
+    "img": "img/nbg05_slide1.jpg",
+    "cap": "內頁：手繪插圖＋大字，記憶題用的是來源裡的三項物品",
+    "title": "插圖和版面一樣好看",
+    "desc": "文字是 PPT 文字框，下載後可直接改。"
+   },
+   {
+    "img": "img/nbg06_slide2.jpg",
+    "cap": "行動力寫「12 秒」：來自國健署來源的切點；沒接筆記本的版本沒有寫秒數。右下角文字超出框，下載後調一下",
+    "title": "數字跟著你的來源走",
+    "desc": "五次起坐寫「12 秒」，是國健署資料的標準。右下框文字超出，下載後拉大就好。"
+   }
+  ],
+  "prompts": [
+   {
+    "lab": "提示詞・任務＋筆記本",
+    "text": "@Gemini Notebook 用我的筆記本「（筆記本名稱）」裡的來源，做一份 6 頁 PowerPoint 簡報（.pptx）給社區長輩：每頁一個重點、字要大、配溫暖插圖；內容只根據筆記本來源，每頁備註寫出處。繁體中文。"
+   }
+  ]
+ },
+ {
+  "title": "實作⑤ NotebookLM 做簡報",
+  "eyebrow": "實作⑤　NotebookLM 自己做",
+  "h2": "NotebookLM 的簡報最漂亮，但字畫在圖上，很難改",
+  "lede": "",
+  "steps": [
+   {
+    "img": "img/nlm01_studio.jpg",
+    "cap": "NotebookLM（現在叫 Gemini Notebook）→ Studio → 簡報",
+    "title": "Studio → 簡報",
+    "desc": "notebooklm.google.com 打開筆記本，切到「Studio」，點「簡報」。"
+   },
+   {
+    "img": "img/nlm02_custom.jpg",
+    "cap": "自訂簡報：選「簡報投影片」、長度、語言，寫對象與要求",
+    "title": "選「簡報投影片」，寫要求",
+    "desc": "「詳細簡報」字多適合閱讀；上台用選「簡報投影片」。約 6 分鐘。"
+   },
+   {
+    "img": "img/nlm06_new.jpg",
+    "cap": "成品：整頁像海報一樣漂亮，但標題和插圖是同一張圖",
+    "title": "成品很美，但像一張張海報",
+    "desc": "標題、插圖都畫在同一張圖上，想改一個字很麻煩。"
+   },
+   {
+    "img": "img/nlm05_pptx.jpg",
+    "cap": "⋮ 選單：下載 PDF 文件、下載 PowerPoint (.pptx)（舊的簡報只有 PDF）",
+    "title": "⋮ → 下載 PowerPoint (.pptx)",
+    "desc": "新做的簡報可以下載 PPTX；以前做的只有 PDF，重做一次就有。"
+   },
+   {
+    "img": "img/cm03_layers.jpg",
+    "cap": "Canva 魔法圖層拆好後：每段字都變回文字框，插圖變成獨立圖片（實作③ 的示範）",
+    "title": "丟到 Canva「魔法圖層」拆開",
+    "desc": "把每頁圖片上傳 Canva → 魔法圖層，字變回可以改的文字框。比較慢，但改得動。"
+   }
+  ],
+  "prompts": []
+ },
+ {
+  "title": "實作⑤ ChatGPT＋Canva 外掛：記得檢查圖層",
+  "eyebrow": "實作⑤　ChatGPT 的 Canva 外掛",
+  "h2": "ChatGPT 叫 Canva 幫忙：做完一定要點開「圖層」看",
+  "lede": "",
+  "steps": [
+   {
+    "img": "img/cg01_plugin.jpg",
+    "cap": "ChatGPT 左側「外掛程式」→ 搜尋 Canva → 連結 Canva 帳號",
+    "title": "左側「外掛程式」裝 Canva",
+    "desc": "搜尋 Canva，按「＋」連結自己的 Canva 帳號（只要做一次）。"
+   },
+   {
+    "img": "img/cg02_prompt.jpg",
+    "cap": "附上圖片，輸入 @Canva 選外掛，再說要做什麼",
+    "title": "附圖，打「@Canva」再說要求",
+    "desc": "例：「把這張海報匯入 Canva，用魔法圖層把文字和插圖分開，給我編輯連結」。"
+   },
+   {
+    "img": "img/cg03_allow.jpg",
+    "cap": "「允許 ChatGPT 使用 Canva 嗎？」會呼叫 Canva 的 Image to Design 工具",
+    "title": "按「允許一次」",
+    "desc": "每次動到你的 Canva 都會先問。看清楚它要用哪個工具再按。"
+   },
+   {
+    "img": "img/cg04_result.jpg",
+    "cap": "約 1.5 分鐘：ChatGPT 說「文字與插圖已拆分為可編輯元素」，附「開啟 Canva 編輯海報」連結",
+    "title": "拿到 Canva 連結",
+    "desc": "按「開啟 Canva 編輯海報」，設計已經在你的 Canva 裡。"
+   },
+   {
+    "img": "img/cg05_layers.jpg",
+    "cap": "實際打開：「位置 → 圖層」只有一層，整張還是一張圖片，字不能改（11/11 實測）",
+    "title": "檢查：位置 → 圖層",
+    "desc": "這次 ChatGPT 說拆好了，打開只有一層圖片。遇到這樣，回到 Canva 首頁用「魔法圖層」自己拆（實作③ 那一頁）。"
+   }
+  ],
+  "prompts": []
  },
  {
   "title": "實作⑥ 指標數據描述性統計",
