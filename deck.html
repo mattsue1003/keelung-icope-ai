@@ -41,7 +41,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .viewport{position:fixed;inset:calc(59px + env(safe-area-inset-top,0px)) 0 calc(72px + env(safe-area-inset-bottom,0px)) 0;display:grid;place-items:center;overflow:hidden}
 .stage{width:1280px;height:720px;transform-origin:center center;position:relative}
 .slide{position:absolute;inset:0;background:var(--grain),var(--paper);border-radius:4px;box-shadow:0 1px 1px rgba(60,50,30,.08),0 2px 6px rgba(60,50,30,.06),0 18px 40px rgba(60,50,30,.10);
-  padding:44px 56px 40px;overflow:auto;display:none;flex-direction:column;gap:18px}
+  padding:40px 56px 36px;overflow:auto;display:none;flex-direction:column;gap:16px}
 .slide.on{display:flex}
 .navbtn{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:25;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;font-size:18px;display:grid;place-items:center}
 .navbtn.prev{left:max(16px,env(safe-area-inset-left,0px))}.navbtn.next{left:calc(max(16px,env(safe-area-inset-left,0px)) + 54px)}
@@ -56,9 +56,9 @@ body.scroll .navbtn{display:none}
 .eyebrow{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .eyebrow .sq{width:10px;height:10px;border-radius:2px;background:var(--c,var(--mag))}
 h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:.01em}
-h2{font-size:38px;line-height:1.2;font-weight:900}
+h2{font-size:42px;line-height:1.2;font-weight:900}
 h3{font-size:20px;font-weight:900}
-.lede{font-size:18px;color:var(--muted);margin:0;max-width:62ch}
+.lede{font-size:20px;color:var(--muted);margin:0;max-width:62ch}
 p{margin:0}
 .hl{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--lime) 85%,transparent) 62%)}
 .muted{color:var(--muted)}
@@ -66,21 +66,25 @@ p{margin:0}
 .kbd{display:inline-block;font-family:var(--f-mono);font-size:.85em;border:1.5px solid var(--line);border-bottom-width:3px;border-radius:6px;padding:0 7px;background:var(--paper)}
 
 /* ── cover ── */
-.cover{justify-content:center;gap:22px;position:relative;overflow:hidden}
+.cover{justify-content:center;gap:22px;overflow:hidden}
+.cover-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:56px;align-items:center;position:relative}
+.cover-main{display:flex;flex-direction:column;gap:22px;min-width:0}
+.slide>:not(.confetti):first-child,.slide>.confetti+*{margin-top:auto}.slide>:last-child{margin-bottom:auto}
+.steps>li:first-child{margin-top:auto}.steps>li:last-child{margin-bottom:auto}
 .cover .confetti{position:absolute;inset:0;pointer-events:none}
 .cover .confetti i{position:absolute;border-radius:4px;opacity:.95;animation:bob 6s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-10px)}}
 @media (prefers-reduced-motion:reduce){.cover .confetti i{animation:none}*{transition:none!important}}
-.cover h1{font-size:76px;line-height:1.08;font-weight:900;position:relative}
+.cover h1{font-size:84px;line-height:1.08;font-weight:900;position:relative}
 .cover h1 .en{display:block;font-family:var(--f-display);font-size:30px;letter-spacing:.32em;font-weight:900;margin-bottom:18px}
 .cover h1 .en b{color:var(--mag)}
-.cover .meta{display:flex;flex-wrap:wrap;gap:0;position:relative;border-top:1px solid var(--line);padding-top:20px;margin-top:6px}
-.cover .meta div{padding:0 26px;border-left:1px solid var(--line)}.cover .meta div:first-child{padding-left:0;border-left:0}
-.coverqr{position:absolute;right:56px;bottom:40px;display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 16px 12px 12px;box-shadow:0 6px 20px rgba(60,50,30,.10)}
-.coverqr img{width:132px;height:132px}
-.coverqr span{font-size:13px;color:var(--muted);line-height:1.5}.coverqr b{font-size:17px;color:var(--ink)}
+.cover .meta{display:grid;grid-template-columns:repeat(2,minmax(0,max-content));gap:14px 48px;position:relative;border-top:1px solid var(--line);padding-top:20px;margin-top:6px}
+.cover .meta div{padding:0}
+.coverqr{position:relative;justify-self:center;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 16px 12px 12px;box-shadow:0 6px 20px rgba(60,50,30,.10)}
+.coverqr img{width:230px;height:230px}
+.coverqr span{font-size:14px;color:var(--muted);line-height:1.5}.coverqr b{display:block;margin-bottom:4px;font-size:22px;color:var(--ink)}
 .cover .meta small{display:block;font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.08em}
-.cover .meta strong{font-size:18px}
+.cover .meta strong{font-size:20px}
 
 /* ── generic grids ── */
 .cols{display:grid;gap:24px;grid-template-columns:repeat(var(--n,2),minmax(0,1fr))}
@@ -94,7 +98,7 @@ p{margin:0}
 
 /* ── agenda ── */
 .agenda{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 28px;counter-reset:a}
-.agenda a{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.agenda a{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
 .agenda a:hover strong{color:var(--blue)}
 .agenda .no{width:30px;height:30px;border-radius:6px;display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:14px;background:var(--c);color:var(--on-acc)}
 .agenda .no.dk{color:#18181B}
@@ -104,7 +108,7 @@ p{margin:0}
 .agenda .brk::before,.agenda .brk::after{content:"";flex:1;border-top:1px dashed var(--line)}
 
 /* ── portfolio cards (webtech) ── */
-.works{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 18px}
+.works{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 18px}
 .work{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--ink)}
 .work .ph{aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:var(--soft);border:1px solid var(--line);max-width:100%}
 .work .ph img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
@@ -115,15 +119,18 @@ p{margin:0}
 .work .k span+span::before{content:"｜";color:var(--line);margin:0 2px}
 
 /* ── stepper ── */
-.stepper{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:26px;flex:1;min-height:0}
+.stepper{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:minmax(0,1fr);gap:26px;flex:1;min-height:0}
+.stepper>*{min-height:0}
+.stepper .prompt{max-height:40%;overflow:auto;flex:none}
 .steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;overflow:auto;min-width:0}
 .steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:10px 12px;border-radius:10px;cursor:pointer;border:1.5px solid transparent}
 .steps li .n{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:13px;color:var(--muted);background:var(--paper)}
-.steps li b{display:block;font-size:16px;line-height:1.4}
-.steps li p{font-size:14px;color:var(--muted);line-height:1.55;display:none;margin-top:4px}
+.steps li b{display:block;font-size:17.5px;line-height:1.4}
+.steps li p{font-size:15.5px;color:var(--muted);line-height:1.55;display:none;margin-top:4px}
 .steps li.cur{background:var(--soft);border-color:var(--ink)}
 .steps li.cur .n{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .steps li.cur p{display:block}
+.steps li .inl{display:none}
 .steps li.done .n{background:var(--lime);border-color:var(--lime);color:#18181B}
 .shot{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0;min-height:0}
 .shot .frame{flex:1;min-height:0;border-radius:10px;overflow:hidden;background:#0F1012;border:1px solid var(--line);display:grid;place-items:center;cursor:zoom-in;position:relative}
@@ -133,7 +140,7 @@ p{margin:0}
 .stepbar{display:flex;gap:4px}.stepbar i{height:4px;flex:1;border-radius:2px;background:var(--line)}.stepbar i.on{background:var(--ink)}
 
 /* ── prompt block ── */
-.prompt{position:relative;background:var(--code);border-radius:10px;padding:14px 16px 14px 16px;font-family:var(--f-body);font-size:14.5px;line-height:1.7;white-space:pre-wrap;border:1px solid var(--line);min-width:0}
+.prompt{position:relative;background:var(--code);border-radius:10px;padding:14px 16px 14px 16px;font-family:var(--f-body);font-size:15.5px;line-height:1.7;white-space:pre-wrap;border:1px solid var(--line);min-width:0}
 .prompt .lab{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:var(--f-display);font-weight:800;font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-bottom:6px;white-space:normal}
 .copy{border:1.5px solid var(--ink);background:var(--paper);border-radius:999px;font-size:12px;font-weight:700;padding:2px 12px;cursor:pointer;letter-spacing:0;text-transform:none;font-family:var(--f-body)}
 .copy.ok{background:var(--lime);border-color:var(--lime);color:#18181B}
@@ -141,14 +148,14 @@ p{margin:0}
 /* callouts */
 .note{display:flex;gap:12px;align-items:flex-start;border-radius:10px;padding:12px 16px;background:color-mix(in srgb,var(--c,var(--amber)) 14%,var(--paper));border:1px solid color-mix(in srgb,var(--c,var(--amber)) 40%,var(--paper));font-size:14.5px}
 .note b:first-child{flex:none;font-weight:900}
-table{border-collapse:collapse;width:100%;font-size:14.5px}
-th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table{border-collapse:collapse;width:100%;font-size:15.5px}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:800}
 td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular-nums;text-align:right}
 .tbl{overflow-x:auto}
 
 .check{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.check label{display:flex;gap:12px;align-items:flex-start;padding:10px 14px;border:1px solid var(--line);border-radius:10px;cursor:pointer}
+.check label{display:flex;gap:12px;align-items:flex-start;padding:12px 16px;font-size:17px;border:1px solid var(--line);border-radius:10px;cursor:pointer}
 .check input{width:20px;height:20px;accent-color:var(--blue);margin-top:3px;flex:none}
 .check input:checked+span{color:var(--muted);text-decoration:line-through}
 
@@ -178,10 +185,19 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   .shot .frame{min-height:200px}
   .brand span,.prog{display:none}
   .stats b{font-size:30px}.stats div{padding:4px 14px}
-  .cover .meta div{padding:6px 14px 6px 0;border-left:0}
+  .cover .meta{gap:10px 24px}.cover .meta strong{font-size:16px}
   .ctas .cta{padding:9px 14px;font-size:13px}
   .cover .confetti{display:none}
-  .coverqr{position:static;align-self:flex-start}
+  .cover h1{font-size:36px}
+  body.scroll .steps{overflow:visible}
+  body.scroll .steps li{cursor:default;border-color:var(--line);background:var(--paper)}
+  body.scroll .steps li p{display:block}
+  body.scroll .steps li .n{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  body.scroll .steps li .inl{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line);margin-top:10px;cursor:zoom-in}
+  body.scroll .stepper .shot{display:none}
+  body.scroll .stepper>*{min-height:auto}
+  body.scroll .stepper .prompt{max-height:none}
+  .cover-grid{grid-template-columns:minmax(0,1fr);gap:24px}.coverqr{justify-self:start;padding:16px}.coverqr img{width:180px;height:180px}
 }
 @media (max-width:520px){.works{grid-template-columns:minmax(0,1fr)}.ctas .cta.o{display:none}}
 </style>
@@ -201,15 +217,17 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
 <!-- 1 封面 -->
 <section class="slide cover" data-title="封面">
   <div class="confetti" aria-hidden="true">
-    <i style="left:70%;top:8%;width:46px;height:46px;background:var(--blue)"></i>
-    <i style="left:82%;top:24%;width:22px;height:22px;background:var(--lime);animation-delay:-2s"></i>
-    <i style="left:90%;top:12%;width:30px;height:30px;background:var(--mag);animation-delay:-1s"></i>
-    <i style="left:76%;top:46%;width:64px;height:64px;background:var(--amber);animation-delay:-3s"></i>
-    <i style="left:92%;top:56%;width:18px;height:18px;background:var(--sky);animation-delay:-4s"></i>
-    <i style="left:66%;top:70%;width:26px;height:26px;background:var(--lime);animation-delay:-5s"></i>
-    <i style="left:86%;top:78%;width:40px;height:40px;background:var(--mag);animation-delay:-2.5s"></i>
-    <i style="left:58%;top:16%;width:14px;height:14px;background:var(--sky);animation-delay:-1.5s"></i>
+    <i style="left:66%;top:7%;width:46px;height:46px;background:var(--blue)"></i>
+    <i style="left:80%;top:12%;width:20px;height:20px;background:var(--lime);animation-delay:-2s"></i>
+    <i style="left:92%;top:8%;width:30px;height:30px;background:var(--mag);animation-delay:-1s"></i>
+    <i style="left:94%;top:44%;width:22px;height:22px;background:var(--sky);animation-delay:-4s"></i>
+    <i style="left:58%;top:52%;width:16px;height:16px;background:var(--mag);animation-delay:-2.5s"></i>
+    <i style="left:62%;top:84%;width:56px;height:56px;background:var(--amber);animation-delay:-3s"></i>
+    <i style="left:80%;top:88%;width:18px;height:18px;background:var(--lime);animation-delay:-5s"></i>
+    <i style="left:91%;top:80%;width:34px;height:34px;background:var(--blue);animation-delay:-1.5s"></i>
   </div>
+  <div class="cover-grid">
+  <div class="cover-main">
   <div class="eyebrow"><span class="sq"></span>基隆 ICOPE 培力實務工作坊</div>
   <h1><span class="en">ICOPE <b>×</b> AI</span>AI 工作流<br>ICOPE 實戰應用</h1>
   <p class="lede">評估做完之後的事，交給 AI 打草稿：口述紀錄、讀手冊、做衛教圖、做團康網頁、整理指標數據。今天每一招都一步一步做完。</p>
@@ -219,7 +237,9 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
     <div><small>地點</small><strong>巨匠電腦 基隆分校 9F</strong></div>
     <div><small>講師</small><strong>鍾孟修 職能治療師</strong></div>
   </div>
-  <div class="coverqr"><img src="img/qr-deck.svg" alt="掃描開啟本網頁型簡報"><span><b>掃我帶走簡報</b><br>mattsue1003.github.io/keelung-icope-ai</span></div>
+  </div>
+  <div class="coverqr"><img src="img/qr-deck.svg" alt="掃描開啟本網頁型簡報"><span><b>掃我帶走簡報</b>mattsue1003.github.io/keelung-icope-ai</span></div>
+  </div>
 </section>
 
 <!-- 2 講師 -->
@@ -702,7 +722,11 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   let scroll=mq.matches||store.get('icopeai-mode')==='scroll';
   function applyMode(){document.body.classList.toggle('scroll',scroll);document.getElementById('btnMode').textContent=scroll?'逐頁簡報':'捲動閱讀';fit();if(!scroll)show(cur,false)}
   document.getElementById('btnMode').onclick=()=>{scroll=!scroll;store.set('icopeai-mode',scroll?'scroll':'deck');applyMode();if(scroll)slides[cur].scrollIntoView()};
-  function fit(){if(scroll){stage.style.transform='';return}const r=vp.getBoundingClientRect();const s=Math.min((r.width-32)/1280,(r.height-24)/720);stage.style.transform=`scale(${s})`}
+  function fit(){if(scroll){stage.style.transform='';vp.style.bottom='';return}
+    const calc=()=>{const r=vp.getBoundingClientRect();return [r,Math.min((r.width-40)/1280,(r.height-28)/720)]};
+    vp.style.bottom='0px';let [r,s]=calc();
+    if((r.width-1280*s)/2<120){vp.style.bottom='calc(72px + env(safe-area-inset-bottom,0px))';[r,s]=calc()}
+    stage.style.transform=`scale(${s})`}
   addEventListener('resize',fit);
   function show(i,push=true){cur=Math.max(0,Math.min(slides.length-1,i));
     slides.forEach((s,j)=>s.classList.toggle('on',j===cur||scroll));
@@ -722,6 +746,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
     const o={i:0,n:lis.length,go(k){o.i=Math.max(0,Math.min(lis.length-1,k));lis.forEach((li,j)=>{li.classList.toggle('cur',j===o.i);li.classList.toggle('done',j<o.i)});
       [...bar.children].forEach((b,j)=>b.classList.toggle('on',j<=o.i));
       const L=lis[o.i];img.src=L.dataset.img;img.alt=L.dataset.cap;cap.textContent=`步驟 ${o.i+1}／${lis.length}　${L.dataset.cap}`;}};
+    lis.forEach(li=>{const im=document.createElement('img');im.className='inl';im.loading='lazy';im.src=li.dataset.img;im.alt=li.dataset.cap;im.addEventListener('click',e=>{e.stopPropagation();lb.querySelector('img').src=im.src;lb.classList.add('on')});li.querySelector('div').appendChild(im)});
     lis.forEach((li,j)=>{li.tabIndex=0;li.addEventListener('click',()=>o.go(j));li.addEventListener('keydown',e=>{if(e.key==='Enter')o.go(j)})});
     o.go(0);return o});
   // keys
