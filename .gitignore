@@ -1,2 +1,4 @@
 img/raw/
 .DS_Store
+ppt/node_modules/
+ppt/qa.*
