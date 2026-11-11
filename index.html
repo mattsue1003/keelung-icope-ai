@@ -18,7 +18,7 @@
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;background:var(--grain),var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--grain),var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:var(--blue)}
 button{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--blue);outline-offset:2px}
@@ -40,10 +40,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .progress{position:fixed;top:calc(56px + env(safe-area-inset-top,0px));left:0;height:3px;background:linear-gradient(90deg,var(--mag),var(--amber),var(--lime),var(--sky),var(--blue));z-index:30;transition:width .3s}
 
 /* ── stage ── */
-.viewport{position:fixed;inset:calc(59px + env(safe-area-inset-top,0px)) 0 calc(72px + env(safe-area-inset-bottom,0px)) 0;display:grid;place-items:center;overflow:hidden}
-.stage{width:1280px;height:720px;transform-origin:center center;position:relative}
-.slide{position:absolute;inset:0;background:var(--grain),var(--paper);border-radius:4px;box-shadow:0 1px 1px rgba(60,50,30,.08),0 2px 6px rgba(60,50,30,.06),0 18px 40px rgba(60,50,30,.10);
-  padding:40px 56px 36px;overflow:auto;display:none;flex-direction:column;gap:16px}
+.viewport{position:fixed;inset:calc(59px + env(safe-area-inset-top,0px)) 0 0 0;overflow:hidden}
+.stage{width:1280px;height:720px;transform-origin:0 0;position:relative}
+.slide{position:absolute;inset:0;background:var(--grain),var(--paper);
+  padding:36px 64px 72px;overflow:auto;display:none;flex-direction:column;gap:16px}
 .slide.on{display:flex}
 .navbtn{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:25;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;font-size:18px;display:grid;place-items:center}
 .navbtn.prev{left:max(16px,env(safe-area-inset-left,0px))}.navbtn.next{left:calc(max(16px,env(safe-area-inset-left,0px)) + 54px)}
@@ -52,6 +52,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 body.scroll .viewport{position:static;display:block;overflow:visible;padding:calc(72px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 120px max(16px,env(safe-area-inset-left,0px))}
 body.scroll .stage{width:auto;height:auto;transform:none!important;display:flex;flex-direction:column;gap:22px;max-width:1180px;margin:0 auto}
 body.scroll .slide{position:relative;display:flex;overflow:visible;padding:28px clamp(16px,4vw,48px)}
+body.scroll{background:var(--grain),var(--bg)}
+body.scroll .slide{border-radius:10px;box-shadow:0 1px 2px rgba(60,50,30,.08),0 10px 28px rgba(60,50,30,.08)}
 body.scroll .navbtn{display:none}
 
 /* ── type ── */
@@ -60,7 +62,7 @@ body.scroll .navbtn{display:none}
 h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:.01em}
 h2{font-size:42px;line-height:1.2;font-weight:900}
 h3{font-size:20px;font-weight:900}
-.lede{font-size:20px;color:var(--muted);margin:0;max-width:62ch}
+.lede{font-size:20px;color:var(--muted);margin:0;max-width:80ch}
 p{margin:0}
 .hl{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--lime) 85%,transparent) 62%)}
 .muted{color:var(--muted)}
@@ -110,9 +112,9 @@ p{margin:0}
 .agenda .brk::before,.agenda .brk::after{content:"";flex:1;border-top:1px dashed var(--line)}
 
 /* ── portfolio cards (webtech) ── */
-.works{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 18px}
-.work{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--ink)}
-.work .ph{aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:var(--soft);border:1px solid var(--line);max-width:100%}
+.works{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:minmax(0,1fr);gap:16px 18px;flex:1;min-height:0;max-height:620px}
+.work{display:flex;flex-direction:column;gap:8px;min-height:0;text-decoration:none;color:var(--ink)}
+.work .ph{flex:1;min-height:90px;border-radius:8px;overflow:hidden;background:var(--soft);border:1px solid var(--line);max-width:100%}
 .work .ph img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
 .work:hover .ph img{transform:scale(1.05)}
 .work .t{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;font-weight:900;font-size:15px;line-height:1.35}
@@ -182,7 +184,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
 @media (max-width:900px){
   h2{font-size:28px}.cover h1{font-size:44px}.cover h1 .en{font-size:18px;letter-spacing:.2em}
   .cols,.stepper{grid-template-columns:minmax(0,1fr)!important}
-  .works{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .works{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;max-height:none}.work .ph{flex:none;aspect-ratio:16/9}
   .agenda{grid-template-columns:minmax(0,1fr)}
   .shot .frame{min-height:200px}
   .brand span,.prog{display:none}
@@ -418,8 +420,8 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   <div class="eyebrow" style="--c:var(--amber)"><span class="sq"></span>今天做圖、做網頁的共同方法</div>
   <h2>先找一個你喜歡的設計，丟給 AI 參考</h2>
   <p class="lede">不用自己想配色和版面。找一個好看的網站或海報，截圖給 AI，說清楚「參考什麼、不要什麼、換成我的內容」。</p>
-  <div class="cols" style="--n:2;grid-template-columns:minmax(0,6fr) minmax(0,5fr)">
-    <figure class="shot" style="margin:0"><div class="frame" style="background:var(--soft)"><img src="img/ref_webtech_hero.jpg" alt="參考網站截圖：米洛科技首頁"></div><figcaption><span>參考範例：米洛科技 webtech.com.tw 首頁截圖</span></figcaption></figure>
+  <div class="cols" style="--n:2;grid-template-columns:minmax(0,6fr) minmax(0,5fr);flex:1;min-height:0;max-height:560px">
+    <figure class="shot" style="margin:0;height:100%"><div class="frame" style="background:var(--soft)"><img src="img/ref_webtech_hero.jpg" alt="參考網站截圖：米洛科技首頁"></div><figcaption><span>參考範例：米洛科技 webtech.com.tw 首頁截圖</span></figcaption></figure>
     <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
       <div class="box"><h3><span class="tag" style="background:var(--mag);color:#fff">1</span>　找參考</h3><p class="muted" style="margin-top:6px">喜歡的網站、Pinterest、Dribbble、別單位的海報。截 1～2 張最有代表性的畫面（Mac：<span class="kbd">⌘</span><span class="kbd">⇧</span><span class="kbd">4</span>，Windows：<span class="kbd">Win</span><span class="kbd">⇧</span><span class="kbd">S</span>）。</p></div>
       <div class="box"><h3><span class="tag" style="background:var(--blue);color:#fff">2</span>　說出你看到的風格</h3><p class="muted" style="margin-top:6px">白底、粗黑字、彩色小方塊、圓角卡片、膠囊按鈕、數字統計列。講得越具體，AI 越像。</p></div>
@@ -724,11 +726,9 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   let scroll=mq.matches||store.get('icopeai-mode')==='scroll';
   function applyMode(){document.body.classList.toggle('scroll',scroll);document.getElementById('btnMode').textContent=scroll?'逐頁簡報':'捲動閱讀';fit();if(!scroll)show(cur,false)}
   document.getElementById('btnMode').onclick=()=>{scroll=!scroll;store.set('icopeai-mode',scroll?'scroll':'deck');applyMode();if(scroll)slides[cur].scrollIntoView()};
-  function fit(){if(scroll){stage.style.transform='';vp.style.bottom='';return}
-    const calc=()=>{const r=vp.getBoundingClientRect();return [r,Math.min((r.width-40)/1280,(r.height-28)/720)]};
-    vp.style.bottom='0px';let [r,s]=calc();
-    if((r.width-1280*s)/2<120){vp.style.bottom='calc(72px + env(safe-area-inset-bottom,0px))';[r,s]=calc()}
-    stage.style.transform=`scale(${s})`}
+  function fit(){if(scroll){stage.style.transform='';stage.style.width='';stage.style.height='';return}
+    const r=vp.getBoundingClientRect();const s=Math.min(r.width/1280,r.height/720);
+    stage.style.width=(r.width/s)+'px';stage.style.height=(r.height/s)+'px';stage.style.transform=`scale(${s})`}
   addEventListener('resize',fit);
   function show(i,push=true){cur=Math.max(0,Math.min(slides.length-1,i));
     slides.forEach((s,j)=>s.classList.toggle('on',j===cur||scroll));
