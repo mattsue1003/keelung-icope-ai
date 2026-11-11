@@ -211,20 +211,6 @@ stepSlides(by("實作② Chrome 問問 Gemini"));
   });
 }
 stepSlides(by("實作③ ChatGPT 參考風格做衛教圖"));
-// 12 Midjourney
-{
-  const d = by("實作③ Midjourney 風格參考");
-  const s = pres.addSlide({ masterName: "PAPER" });
-  header(s, d.eyebrow, d.h2, C.amber);
-  [["登入 midjourney.com", "付費方案才能生成，用 Google 或 Discord 登入，進入 Create。"], ["參考截圖拖進輸入框，選 Style Reference", "只學配色與畫風（--sref），不是照抄畫面。"], ["英文寫畫面，加比例", "--ar 3:4 直式、--ar 16:9 簡報。"], ["記下 sref 代碼", "同一個代碼，整套六力插圖風格一致。"], ["中文字到 Canva 或 ChatGPT 加", "Midjourney 擅長插圖，不擅長中文字。"]].forEach(([h, t], i) => {
-    const y = 1.35 + i * 0.66;
-    numBadge(s, i + 1, M, y + 0.02, C.amber);
-    s.addText(h, { x: M + 0.42, y, w: 4.2, h: 0.32, fontFace: F, fontSize: 13, bold: true, color: C.ink, margin: 0, valign: "middle", isTextBox: true });
-    s.addText(t, { x: M + 0.42, y: y + 0.3, w: 4.3, h: 0.36, fontFace: F, fontSize: 10.5, color: C.muted, margin: 0, isTextBox: true });
-  });
-  imgFit(s, "img/mj_login.jpg", 5.3, 1.35, 4.2, 1.6);
-  promptBox(s, d.prompts[0].lab, d.prompts[0].text, 5.3, 3.1, 4.2, 1.95, 11);
-}
 stepSlides(by("實作③ 免費版：Gemini 建立圖像"));
 stepSlides(by("實作④ 參考設計做網頁型簡報"));
 stepSlides(by("實作④ 做互動網頁"));

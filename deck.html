@@ -253,14 +253,14 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
     <a href="#s7"><span class="no" style="--c:var(--ink)">1</span><span><strong>守住界線：三不原則＋去識別化</strong><small>個案資料交給 AI 前的第一步</small></span><em>10′</em></a>
     <a href="#s8"><span class="no" style="--c:var(--blue)">2</span><span><strong>實作①　用說的：語音輸入</strong><small>評估後口述，AI 整理成紀錄</small></span><em>15′</em></a>
     <a href="#s9"><span class="no" style="--c:var(--blue)">3</span><span><strong>實作②　讀資料：Chrome 問問 Gemini</strong><small>WHO 手冊、YouTube 影片重點整理</small></span><em>15′</em></a>
-    <a href="#s10"><span class="no dk" style="--c:var(--amber)">4</span><span><strong>方法＋實作③　參考風格做衛教圖</strong><small>ChatGPT、Midjourney，Gemini 免費版</small></span><em>25′</em></a>
-    <a href="#s14"><span class="no dk" style="--c:var(--amber)">5</span><span><strong>實作④　參考設計做網頁型簡報</strong><small>丟截圖進去，再做團康互動網頁</small></span><em>25′</em></a>
+    <a href="#s10"><span class="no dk" style="--c:var(--amber)">4</span><span><strong>方法＋實作③　參考風格做衛教圖</strong><small>ChatGPT，Gemini 免費版</small></span><em>25′</em></a>
+    <a href="#s13"><span class="no dk" style="--c:var(--amber)">5</span><span><strong>實作④　參考設計做網頁型簡報</strong><small>丟截圖進去，再做團康互動網頁</small></span><em>25′</em></a>
     <div class="brk">休息 10 分鐘</div>
-    <a href="#s16"><span class="no" style="--c:var(--mag)">6</span><span><strong>實作⑤　做簡報：NotebookLM</strong><small>來源→簡報→可編輯 PPT</small></span><em>15′</em></a>
-    <a href="#s17"><span class="no" style="--c:var(--mag)">7</span><span><strong>實作⑥　看數據：指標描述性統計</strong><small>虛擬 120 筆練習檔＋驗算</small></span><em>25′</em></a>
-    <a href="#s19"><span class="no dk" style="--c:var(--lime)">8</span><span><strong>Napkin：文字秒變圖表</strong><small>報告、簡報用的流程圖</small></span><em>5′</em></a>
-    <a href="#s20"><span class="no dk" style="--c:var(--lime)">9</span><span><strong>實作⑦　上架：GitHub Pages</strong><small>做好的網頁變成一個網址</small></span><em>15′</em></a>
-    <a href="#s22"><span class="no" style="--c:var(--sky)">10</span><span><strong>提示詞庫＋課後任務</strong><small>帶回單位直接用</small></span><em>10′</em></a>
+    <a href="#s15"><span class="no" style="--c:var(--mag)">6</span><span><strong>實作⑤　做簡報：NotebookLM</strong><small>來源→簡報→可編輯 PPT</small></span><em>15′</em></a>
+    <a href="#s16"><span class="no" style="--c:var(--mag)">7</span><span><strong>實作⑥　看數據：指標描述性統計</strong><small>虛擬 120 筆練習檔＋驗算</small></span><em>25′</em></a>
+    <a href="#s18"><span class="no dk" style="--c:var(--lime)">8</span><span><strong>Napkin：文字秒變圖表</strong><small>報告、簡報用的流程圖</small></span><em>5′</em></a>
+    <a href="#s19"><span class="no dk" style="--c:var(--lime)">9</span><span><strong>實作⑦　上架：GitHub Pages</strong><small>做好的網頁變成一個網址</small></span><em>15′</em></a>
+    <a href="#s21"><span class="no" style="--c:var(--sky)">10</span><span><strong>提示詞庫＋課後任務</strong><small>帶回單位直接用</small></span><em>10′</em></a>
   </nav>
 </section>
 
@@ -422,25 +422,6 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
     <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
       <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
       <div class="prompt"><div class="lab">提示詞・參考風格做衛教圖<button class="copy">複製</button></div>請參考這張網站截圖的 UI 風格（白底、粗黑字、彩色小方塊點綴、圓角卡片、膠囊按鈕），只參考配色與版面，不要畫截圖裡的人和商標。幫我做一張 A4 直式衛教圖：「長者量六力 ICOPE」，六格卡片分別是認知、行動、營養、視力、聽力、情緒，每格一個圖示加一句說明，最下方放「65 歲以上免費評估」膠囊按鈕。繁體中文、字要大、不要錯字。</div>
-    </div>
-  </div>
-</section>
-
-<!-- 10c Midjourney -->
-<section class="slide" data-title="實作③ Midjourney 風格參考">
-  <div class="eyebrow" style="--c:var(--amber)"><span class="sq"></span>實作③　做衛教圖：Midjourney</div>
-  <h2>Midjourney：用「風格參考」做出一整套同風格插圖</h2>
-  <div class="cols" style="--n:2;grid-template-columns:minmax(0,5fr) minmax(0,6fr)">
-    <ol class="steps" style="overflow:visible">
-      <li class="cur"><span class="n">1</span><div><b>登入 midjourney.com</b><p style="display:block">付費方案才能生成。用 Google 或 Discord 帳號登入，進入「Create」。</p></div></li>
-      <li class="cur"><span class="n">2</span><div><b>把參考截圖拖到輸入框，選「Style Reference」</b><p style="display:block">圖片放進來後有三種用法：當底圖、當風格、當角色。選<b>風格參考（--sref）</b>，只學配色與畫風。</p></div></li>
-      <li class="cur"><span class="n">3</span><div><b>用英文寫畫面，加比例</b><p style="display:block">Midjourney 英文最穩。<span class="kbd">--ar 3:4</span> 直式、<span class="kbd">--ar 16:9</span> 簡報。</p></div></li>
-      <li class="cur"><span class="n">4</span><div><b>挑一張，記下 sref 代碼</b><p style="display:block">喜歡的風格會有一串代碼，下次加上同一個 <span class="kbd">--sref</span>，整套六力插圖就會長得一樣。</p></div></li>
-      <li class="cur"><span class="n">5</span><div><b>中文字到 Canva 或 ChatGPT 加</b><p style="display:block">Midjourney 擅長插圖，不擅長中文字。插圖做好，標題與說明到 Canva 排版。</p></div></li>
-    </ol>
-    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
-      <figure class="shot" style="margin:0;flex:1"><div class="frame"><img src="img/mj_login.jpg" alt="Midjourney 登入畫面"></div><figcaption><span>midjourney.com：先登入（Sign up／Log in）</span></figcaption></figure>
-      <div class="prompt"><div class="lab">提示詞・Midjourney（英文）<button class="copy">複製</button></div>flat illustration of a smiling Taiwanese grandmother walking in a park, clean white background, bold rounded shapes, small colorful floating squares in pink, lime, blue and orange, friendly health education style --ar 3:4 --sref（貼上參考圖網址或代碼）</div>
     </div>
   </div>
 </section>

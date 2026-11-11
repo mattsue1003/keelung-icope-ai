@@ -215,19 +215,6 @@
   ]
  },
  {
-  "title": "實作③ Midjourney 風格參考",
-  "eyebrow": "實作③　做衛教圖：Midjourney",
-  "h2": "Midjourney：用「風格參考」做出一整套同風格插圖",
-  "lede": "",
-  "steps": [],
-  "prompts": [
-   {
-    "lab": "提示詞・Midjourney（英文）",
-    "text": "flat illustration of a smiling Taiwanese grandmother walking in a park, clean white background, bold rounded shapes, small colorful floating squares in pink, lime, blue and orange, friendly health education style --ar 3:4 --sref（貼上參考圖網址或代碼）"
-   }
-  ]
- },
- {
   "title": "實作③ 免費版：Gemini 建立圖像",
   "eyebrow": "實作③　免費替代：Gemini",
   "h2": "沒有付費帳號？Gemini 免費也做得到",
