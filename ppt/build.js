@@ -313,11 +313,15 @@ worksSlide("延伸工具", "回去還可以試的工具與範例", [
   s.addText("謝謝聆聽", { x: M, y: 0.6, w: 5, h: 0.3, fontFace: F, fontSize: 12, bold: true, color: C.muted, margin: 0, isTextBox: true });
   s.addText("Happiness is not a goal…\nit's a by-product of a life well lived.", { x: M, y: 1.1, w: 4.9, h: 1.5, fontFace: "Arial", fontSize: 22, bold: true, color: C.ink, margin: 0, isTextBox: true, valign: "top" });
   s.addText("快樂不是一個目標，它是踏實人生的副產品。（Eleanor Roosevelt）", { x: M, y: 2.7, w: 4.9, h: 0.4, fontFace: F, fontSize: 12, color: C.muted, margin: 0, isTextBox: true });
-  s.addText("粉絲專頁：鍾孟修Matt-職能治療師\n設計｜愛迪樂 鍾孟修 職能治療師　練習資料皆為虛擬資料", { x: M, y: 4.2, w: 5.6, h: 0.6, fontFace: F, fontSize: 10, color: C.muted, margin: 0, isTextBox: true });
-  [["img/qr-fb.png", "粉絲專頁 看更多作品"], ["img/qr-line.png", "加入 LINE 學員社群"], ["img/qr-deck.png", "網頁版簡報"]].forEach(([p, t], i) => {
-    const x = 5.6 + i * 1.35;
-    s.addImage({ path: IMG(p), x, y: 1.4, w: 1.2, h: 1.2, altText: t });
-    s.addText(t, { x: x - 0.1, y: 2.65, w: 1.4, h: 0.5, fontFace: F, fontSize: 10.5, bold: true, color: C.ink, align: "center", margin: 0, isTextBox: true });
+  s.addText("粉絲專頁：鍾孟修Matt-職能治療師\n設計｜愛迪樂 鍾孟修 職能治療師　練習資料皆為虛擬資料", { x: M, y: 4.2, w: 4.9, h: 0.6, fontFace: F, fontSize: 10, color: C.muted, margin: 0, isTextBox: true });
+  s.addShape(pres.shapes.RECTANGLE, { x: 5.6, y: 0.6, w: 3.95, h: 2.05, fill: { color: "FFFFFF" }, line: { color: C.mag, width: 2 } });
+  s.addImage({ path: IMG("img/qr-survey.png"), x: 5.75, y: 0.75, w: 1.75, h: 1.75, altText: "115年基隆市衛生局ICOPE培力實務工作坊滿意度問卷 QR code", hyperlink: { url: "https://docs.google.com/forms/d/e/1FAIpQLSfgRelbIF1rN4DunBg3wTqtG6urcFCW9Yflqlg5NNILO7IzxA/viewform?usp=send_form" } });
+  s.addText("填寫滿意度問卷", { x: 7.65, y: 0.85, w: 1.8, h: 0.4, fontFace: F, fontSize: 15, bold: true, color: C.ink, margin: 0, isTextBox: true });
+  s.addText("115年基隆市衛生局\nICOPE培力實務工作坊\n滿意度", { x: 7.65, y: 1.35, w: 1.8, h: 0.9, fontFace: F, fontSize: 10.5, color: C.muted, margin: 0, isTextBox: true, valign: "top" });
+  [["img/qr-fb.png", "粉絲專頁\n看更多作品"], ["img/qr-line.png", "加入 LINE\n學員社群"], ["img/qr-deck.png", "網頁版簡報"]].forEach(([p, t], i) => {
+    const x = 5.75 + i * 1.3;
+    s.addImage({ path: IMG(p), x, y: 2.95, w: 1.05, h: 1.05, altText: t.replace("\n", " ") });
+    s.addText(t, { x: x - 0.15, y: 4.05, w: 1.35, h: 0.45, fontFace: F, fontSize: 10, bold: true, color: C.ink, align: "center", margin: 0, isTextBox: true });
   });
 }
 

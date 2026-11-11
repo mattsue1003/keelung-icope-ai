@@ -223,7 +223,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
 .lightbox{position:fixed;inset:0;z-index:60;background:rgba(10,10,12,.88);display:none;place-items:center;padding:24px;cursor:zoom-out}
 .lightbox.on{display:grid}.lightbox img{max-width:100%;max-height:100%;border-radius:8px}
 
-.endqrs{display:flex;gap:20px}.endqrs .fbcard{width:240px}
+.endqrs,.slide>.cols>.endqrs{display:flex;flex-direction:row;justify-content:flex-start;gap:16px}.endqrs .fbcard{width:210px;padding:18px 14px}.endqrs .fbcard.survey{border:2px solid var(--mag)}
 .qr{width:150px;height:150px;background:#fff;border-radius:10px;padding:6px;flex:none}
 .big-poster{height:100%;max-height:560px;border-radius:8px;border:1px solid var(--line)}
 
@@ -1125,6 +1125,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
       </div>
     </div>
     <div class="endqrs">
+      <a class="fbcard survey" href="https://docs.google.com/forms/d/e/1FAIpQLSfgRelbIF1rN4DunBg3wTqtG6urcFCW9Yflqlg5NNILO7IzxA/viewform?usp=send_form" target="_blank" rel="noopener" title="115年基隆市衛生局ICOPE培力實務工作坊滿意度"><img src="img/qr-survey.svg" alt="115年基隆市衛生局ICOPE培力實務工作坊滿意度問卷 QR code"><b>填寫<br>滿意度問卷</b><span class="fbbtn" style="background:var(--mag)">填寫問卷 ↗</span></a>
       <a class="fbcard" href="https://www.facebook.com/profile.php?id=100063748491881" target="_blank" rel="noopener"><img src="img/qr-fb.svg" alt="粉絲專頁 QR code"><b>加入粉絲專頁<br>看更多作品</b><span class="fbbtn">前往粉絲專頁 ↗</span></a>
       <a class="fbcard" href="https://line.me/ti/g2/HTz-kWvRyDZhYRKHEDjXISFfEyb3xxPlGT16hA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener"><img src="img/qr-line.svg" alt="LINE 學員社群 QR code"><b>加入 LINE<br>學員社群</b><span class="fbbtn" style="background:var(--green)">加入 LINE 社群 ↗</span></a>
     </div>
