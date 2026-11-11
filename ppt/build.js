@@ -137,8 +137,8 @@ const by = (t) => D.find((d) => d.title === t);
 {
   const s = pres.addSlide({ masterName: "PAPER" });
   header(s, "今天的地圖", "一個下午，跑完 ICOPE 的 AI 工作流", C.amber);
-  const rows = [["0", "暖身：AI 做出的 ICOPE 工具", "10′", C.mag], ["1", "三個 AI 怎麼選＋守住界線", "15′", C.ink], ["2", "實作① 語音轉文字＋手機即時字幕", "20′", C.blue], ["3", "實作② 讀資料：手冊、影片、筆記本", "20′", C.blue], ["4", "實作③ 衛教圖＋Canva 魔法圖層", "20′", C.amber], ["5", "實作④ 參考設計做網頁型簡報", "20′", C.amber],
-    ["6", "實作⑤ 做 PPT：任務模式、筆記本、Canva", "25′", C.mag], ["7", "實作⑥ 看數據：Gemini 與 ChatGPT 對照", "20′", C.mag], ["8", "Napkin：文字變圖表", "5′", C.lime], ["9", "實作⑦ 上架：GitHub Pages", "10′", C.lime], ["10", "提示詞庫＋課後任務", "5′", C.sky]];
+  const rows = [["0", "暖身：AI 做出的 ICOPE 工具", "5′", C.mag], ["1", "三個 AI 怎麼選＋守住界線", "15′", C.ink], ["2", "實作① 語音轉文字＋手機即時字幕", "15′", C.blue], ["3", "實作② 讀資料：手冊、影片、筆記本", "20′", C.blue], ["4", "實作③ 衛教圖＋Canva 魔法圖層", "20′", C.amber], ["5", "實作④ 參考設計做網頁型簡報", "20′", C.amber],
+    ["6", "實作⑤ 做 PPT：任務模式、筆記本、Canva", "25′", C.mag], ["7", "實作⑥ 看數據：Gemini 與 ChatGPT 對照", "15′", C.mag], ["8", "Napkin：文字變圖表", "5′", C.lime], ["9", "實作⑦ 上架：GitHub Pages", "10′", C.lime], ["10", "實作⑧ AI 代理人：OpenCode", "15′", C.ink], ["11", "提示詞庫＋課後任務", "5′", C.sky]];
   rows.forEach(([n, t, m, c], i) => {
     const col = i < 6 ? 0 : 1, r = i < 6 ? i : i - 6, x = M + col * 4.6, y = 1.4 + r * 0.6;
     s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: y + 0.06, w: 0.36, h: 0.36, fill: { color: c }, rectRadius: 0.05 });
@@ -147,7 +147,7 @@ const by = (t) => D.find((d) => d.title === t);
     s.addText(m, { x: x + 3.8, y, w: 0.5, h: 0.48, fontFace: "Arial", fontSize: 11, bold: true, color: C.muted, align: "right", margin: 0, valign: "middle", isTextBox: true });
     s.addShape(pres.shapes.LINE, { x, y: y + 0.54, w: 4.3, h: 0, line: { color: C.line, width: 0.5 } });
   });
-  s.addText("── 休息 10 分鐘 ──", { x: M + 4.6, y: 5.0 - 0.25, w: 4.3, h: 0.25, fontFace: F, fontSize: 10, color: C.muted, align: "center", margin: 0, isTextBox: true });
+  s.addText("── 第 5、6 項之間休息 10 分鐘 ──", { x: M, y: 5.02, w: 8.9, h: 0.25, fontFace: F, fontSize: 10, color: C.muted, align: "center", margin: 0, isTextBox: true });
 }
 // 4 準備
 {
@@ -271,6 +271,10 @@ stepSlides(by("實作⑥ ChatGPT 再算一次"));
 }
 stepSlides(by("Napkin：文字變圖表"));
 stepSlides(by("實作⑦ 上架 GitHub Pages"));
+stepSlides(by("實作⑧ OpenCode：選資料夾、選模型"));
+stepSlides(by("實作⑧ OpenCode 代理人做 Google 表單"));
+stepSlides(by("實作⑧ OpenCode 代理人整理資料夾"));
+stepSlides(by("實作⑧ OpenCode 代理人蒐集資料"));
 worksSlide("延伸工具", "回去還可以試的工具與範例", [
   ["img/cv_34_order_diff.jpg", "長者遊戲簡報生成器", "mattsue1003.github.io/order-different-slides"],
   ["img/cv_36_guesswho.jpg", "猜猜我是誰（Gemini 分享）", "gemini.google.com/share/9b73f8a57909"],

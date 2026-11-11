@@ -346,18 +346,19 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   <h2>一個下午，跑完 ICOPE 的 AI 工作流</h2>
   <p class="lede">從評估現場到成果分享，每一站都有實作。點任何一項直接跳過去。</p>
   <nav class="agenda" aria-label="課程地圖">
-    <a href="#s5"><span class="no" style="--c:var(--mag)">0</span><span><strong>暖身：AI 做出的 ICOPE 工具</strong><small>先看成品，知道做得到什麼</small></span><em>10′</em></a>
+    <a href="#s5"><span class="no" style="--c:var(--mag)">0</span><span><strong>暖身：AI 做出的 ICOPE 工具</strong><small>先看成品，知道做得到什麼</small></span><em>5′</em></a>
     <a href="#s7"><span class="no" style="--c:var(--ink)">1</span><span><strong>三個 AI 怎麼選＋守住界線</strong><small>ChatGPT／Gemini／Claude、三不原則、去識別化練習</small></span><em>15′</em></a>
-    <a href="#s9"><span class="no" style="--c:var(--blue)">2</span><span><strong>實作①　用說的：語音轉文字</strong><small>Typeless、ChatGPT／Gemini 麥克風、繁體設定、手機即時字幕</small></span><em>20′</em></a>
+    <a href="#s9"><span class="no" style="--c:var(--blue)">2</span><span><strong>實作①　用說的：語音轉文字</strong><small>Typeless、ChatGPT／Gemini 麥克風、繁體設定、手機即時字幕</small></span><em>15′</em></a>
     <a href="#s13"><span class="no" style="--c:var(--blue)">3</span><span><strong>實作②　讀資料：手冊與影片</strong><small>Chrome 問問 Gemini、YouTube 提問、Gemini 與 ChatGPT 讀影片、筆記本</small></span><em>20′</em></a>
     <a href="#s17"><span class="no dk" style="--c:var(--amber)">4</span><span><strong>實作③　參考風格做衛教圖</strong><small>ChatGPT 做圖、Canva 魔法圖層改字改圖</small></span><em>20′</em></a>
     <a href="#s21"><span class="no dk" style="--c:var(--amber)">5</span><span><strong>實作④　參考設計做網頁型簡報</strong><small>Gemini、Claude，再做團康互動網頁</small></span><em>20′</em></a>
     <div class="brk">休息 10 分鐘</div>
     <a href="#s24"><span class="no" style="--c:var(--mag)">6</span><span><strong>實作⑤　做 PPT：任務模式最好看</strong><small>Gemini 任務、ChatGPT 工作、接筆記本、Canva 拆圖層</small></span><em>25′</em></a>
-    <a href="#s29"><span class="no" style="--c:var(--mag)">7</span><span><strong>實作⑥　看數據：Gemini 與 ChatGPT 對照</strong><small>虛擬 120 筆練習檔＋驗算</small></span><em>20′</em></a>
+    <a href="#s29"><span class="no" style="--c:var(--mag)">7</span><span><strong>實作⑥　看數據：Gemini 與 ChatGPT 對照</strong><small>虛擬 120 筆練習檔＋驗算</small></span><em>15′</em></a>
     <a href="#s32"><span class="no dk" style="--c:var(--lime)">8</span><span><strong>Napkin：文字秒變圖表</strong><small>報告、簡報用的流程圖</small></span><em>5′</em></a>
     <a href="#s33"><span class="no dk" style="--c:var(--lime)">9</span><span><strong>實作⑦　上架：GitHub Pages</strong><small>做好的網頁變成一個網址</small></span><em>10′</em></a>
-    <a href="#s35"><span class="no" style="--c:var(--sky)">10</span><span><strong>提示詞庫＋課後任務</strong><small>帶回單位直接用</small></span><em>5′</em></a>
+    <a href="#s34"><span class="no" style="--c:var(--ink)">10</span><span><strong>實作⑧　AI 代理人：OpenCode</strong><small>選模型、做 Google 表單、整理資料夾、蒐集資料</small></span><em>15′</em></a>
+    <a href="#s39"><span class="no" style="--c:var(--sky)">11</span><span><strong>提示詞庫＋課後任務</strong><small>帶回單位直接用</small></span><em>5′</em></a>
   </nav>
 </section>
 
@@ -964,6 +965,83 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
     <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
       <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
       <div class="prompt"><div class="lab">提示詞・整理成可上架的檔案<button class="copy">複製</button></div>請把這個網頁整理成一個完整的 index.html 單一檔案（CSS、JavaScript 都放在同一個檔案），可以直接上傳到 GitHub Pages。不要放任何個資。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 16b OpenCode 選模型 -->
+<section class="slide" data-title="實作⑧ OpenCode：選資料夾、選模型">
+  <div class="eyebrow" style="--c:var(--ink)"><span class="sq"></span>實作⑧　AI 代理人 OpenCode</div>
+  <h2>OpenCode：給它一個資料夾，它自己動手做事</h2>
+  <div class="stepper" data-stepper>
+    <ol class="steps">
+      <li data-img="img/oc00_home.jpg" data-cap="OpenCode 桌面版首頁：左邊「專案」就是電腦裡的資料夾，右上「新增工作階段」"><span class="n">1</span><div><b>先開一個資料夾當「專案」</b><p>opencode.ai 下載桌面版（免費）。「專案」旁的資料夾圖示 → 選資料夾。它做的檔案和對話都跟著這個資料夾，練習請開一個新的空資料夾。</p></div></li>
+      <li data-img="img/oc04_session.jpg" data-cap="新增工作階段：下方是目前的專案資料夾，輸入框左下是模型"><span class="n">2</span><div><b>新增工作階段，像聊天一樣打字</b><p>它和 ChatGPT 不同：會真的建資料夾、改檔名、開瀏覽器操作網頁。</p></div></li>
+      <li data-img="img/oc01_models.jpg" data-cap="模型選單：標「免費」的 Big Pickle、Beam Free 等；下面是 Claude、GPT、Gemini 等付費模型（11/11 實機畫面）"><span class="n">3</span><div><b>點輸入框左下選模型</b><p>標「免費」的可以先練習。今天示範全用免費的 Big Pickle。</p></div></li>
+      <li data-img="img/oc03_variant.jpg" data-cap="思考強度 Default／Low／Medium／High／Xhigh／Max：越高越仔細，也越慢"><span class="n">4</span><div><b>思考強度：一般用 Default</b><p>整理檔案用 Default 就好；寫程式、做網頁再調高。越高越慢、用量越多。</p></div></li>
+      <li data-img="img/oc02_providers.jpg" data-cap="連線提供者：OpenCode Go（低成本訂閱）、OpenAI、Google、Anthropic 等"><span class="n">5</span><div><b>想用更強的模型：連線提供者</b><p>OpenCode Go 約每月 10 美元；ChatGPT Plus 可以直接登入連線；Claude 訂閱不能接，要另買 API。價格以官網為準。</p></div></li>
+    </ol>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+      <div class="note" style="--c:var(--ink)"><b>模型怎麼選</b><span>練習、公開資料：<b>免費模型</b>就夠。真的個案資料：先去識別化，而且不要用免費模型，有些免費模型會拿對話去改進模型。要穩定好用：<b>OpenCode Go</b> 或連你的 ChatGPT 帳號。</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 16c OpenCode 做 Google 表單 -->
+<section class="slide" data-title="實作⑧ OpenCode 代理人做 Google 表單">
+  <div class="eyebrow" style="--c:var(--ink)"><span class="sq"></span>實作⑧　代理人幫你操作網頁</div>
+  <h2>出題 → 它自己開瀏覽器，把 Google 表單建好</h2>
+  <div class="stepper" data-stepper>
+    <ol class="steps">
+      <li data-img="img/oc10_form_q.jpg" data-cap="「幫我設計五題去調查活動滿意度的問卷問題」：四點量表＋笑臉，長輩好選"><span class="n">1</span><div><b>先請它設計題目</b><p>它出了 5 題四點量表（不放「普通」），還加笑臉符號方便長輩圈選。</p></div></li>
+      <li data-img="img/oc11_form_ask.jpg" data-cap="「幫我透過瀏覽器的方式到 Google 表單，把這些問題輸入到 Google 表單…」"><span class="n">2</span><div><b>叫它「用瀏覽器」做成表單</b><p>它會在右邊開內建瀏覽器，自己到 Google 表單。</p></div></li>
+      <li data-img="img/oc12_form_login.jpg" data-cap="遇到登入頁：它停下來請你自己登入，並提醒「不用把帳號密碼貼給我」"><span class="n">3</span><div><b>登入你自己來</b><p>密碼在瀏覽器裡自己輸入，不要打在對話框。登入好按「繼續」。</p></div></li>
+      <li data-img="img/oc13_form_done.jpg" data-cap="它自己點了 111 個步驟：建表單、打題目、設選項、設必填；右邊就是建好的表單"><span class="n">4</span><div><b>它自己點完 111 個步驟</b><p>標題、說明、5 題單選、1 題簡答、必填都設好了。</p></div></li>
+      <li data-img="img/oc14_form_table.jpg" data-cap="完成後列出每一題、選項、是否必填，附編輯連結"><span class="n">5</span><div><b>回報清單，對照檢查</b><p>它把做了什麼列成表，對照右邊的表單看一次。</p></div></li>
+      <li data-img="img/oc15_form_publish.jpg" data-cap="卡在最後「發布」：內建瀏覽器的發布視窗跑不出來，請使用者自己按；並提醒「每人限填一次」會要求填寫者登入"><span class="n">6</span><div><b>最後的「發布」自己按</b><p>它老實說卡住的地方。還提醒：設「每人限填一次」，長輩就得登入 Google 才能填。</p></div></li>
+    </ol>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+      <div class="prompt"><div class="lab">提示詞・代理人做表單<button class="copy">複製</button></div>幫我透過瀏覽器到 Google 表單，把上面的題目做成一份表單：標題「（活動名稱）滿意度調查」，第 1–5 題單選必填，第 6 題簡答選填。需要登入時停下來讓我自己登入；做完把每一題列成表，附編輯連結。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 16d OpenCode 整理資料夾 -->
+<section class="slide" data-title="實作⑧ OpenCode 代理人整理資料夾">
+  <div class="eyebrow" style="--c:var(--ink)"><span class="sq"></span>實作⑧　代理人幫你整理檔案</div>
+  <h2>亂七八糟的資料夾，交給它分類、改檔名、做清單</h2>
+  <div class="stepper" data-stepper>
+    <ol class="steps">
+      <li data-img="img/oc20_prompt.jpg" data-cap="開一個放了 20 個雜亂檔案的資料夾（虛擬資料），說清楚分類方式和規則"><span class="n">1</span><div><b>說清楚分類和規則</b><p>要分哪幾類、檔名格式、重複檔怎麼處理，最後一句「動手前先列計畫給我確認」。</p></div></li>
+      <li data-img="img/oc21_plan.jpg" data-cap="動手前先列出計畫：每個檔案 → 哪一類 → 新檔名"><span class="n">2</span><div><b>它先列計畫，還沒動檔案</b><p>每個檔案要搬去哪、改成什麼名字，一目了然。</p></div></li>
+      <li data-img="img/oc22_ask.jpg" data-cap="拿不定的地方用選擇題問你：日期格式要 20251105 還是 2025-11-05"><span class="n">3</span><div><b>拿不定的地方，它用選擇題問</b><p>共問了 4 題，每題都有建議選項，點一點就好。</p></div></li>
+      <li data-img="img/oc23_privacy.jpg" data-cap="第 4 題主動提醒：「通訊錄含個資，建議另行保管」"><span class="n">4</span><div><b>主動提醒個資</b><p>它看到「長輩通訊錄」，提醒含個資要另外保管。</p></div></li>
+      <li data-img="img/oc24_done.jpg" data-cap="完成：8 個資料夾＋整理清單.md，20 個檔案全部歸位；舊版海報放進「_舊版」沒有刪（約 4 分鐘）"><span class="n">5</span><div><b>完成：8 類資料夾＋整理清單</b><p>20 個檔案都在，舊版海報放「_舊版」沒刪。每個檔案「原檔名 → 新位置」都記在清單裡。</p></div></li>
+    </ol>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+      <div class="prompt"><div class="lab">提示詞・整理資料夾<button class="copy">複製</button></div>這個資料夾很亂，請幫我整理：依用途分成子資料夾（活動照片、簽到表、個案評估、核銷單據、會議記錄、海報、參考資料、其他）；檔名統一成「日期_內容」；重複的版本只留最新版，舊版放進「_舊版」不要刪；最後做一份「整理清單.md」寫每個檔案搬到哪裡。動手前先列計畫給我確認。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 16e OpenCode 蒐集資料 -->
+<section class="slide" data-title="實作⑧ OpenCode 代理人蒐集資料">
+  <div class="eyebrow" style="--c:var(--ink)"><span class="sq"></span>實作⑧　代理人幫你上網蒐集資料</div>
+  <h2>上網查、逐頁核對，整理成 Excel，每一項附來源</h2>
+  <div class="stepper" data-stepper>
+    <ol class="steps">
+      <li data-img="img/oc30_prompt.jpg" data-cap="說清楚要查哪些欄位、只用 gov.tw、附來源網址、查不到寫「查無資料」"><span class="n">1</span><div><b>說清楚：查什麼、去哪查、查不到怎麼辦</b><p>「只用政府網站」「每項附來源」「查不到寫查無資料，不要猜」這三句最重要。</p></div></li>
+      <li data-img="img/oc31_search.jpg" data-cap="它在右邊的內建瀏覽器自己搜尋，打開衛福部國健署、基隆市衛生局的網頁和 PDF"><span class="n">2</span><div><b>它自己開瀏覽器搜尋、讀網頁</b><p>一次開十幾個分頁，連 PDF 計畫書都會打開讀。</p></div></li>
+      <li data-img="img/oc32_verify.jpg" data-cap="寫檔案前先核對：哪些是計畫明文、哪些查不到、分機出自哪一份公告"><span class="n">3</span><div><b>寫之前，先逐項核對</b><p>例如分機號碼出自 114 年活動公告，它會註明「如有異動請撥總機」。</p></div></li>
+      <li data-img="img/oc33_result.jpg" data-cap="五項核心資訊：1 年 1 次、32 家合作院所、衛生局 (02) 2423-0181；「要帶什麼」寫查無資料"><span class="n">4</span><div><b>查不到的，老實寫「查無資料」</b><p>「要帶什麼」官方沒寫，它就不編。32 家院所名單、電話都抄自衛生局網頁。</p></div></li>
+      <li data-img="img/oc34_excel.jpg" data-cap="Excel 4 個工作表：服務資訊、32 家評估院所（可篩選）、行政區統計、10 個官方來源（約 15 分鐘）"><span class="n">5</span><div><b>交出 Excel＋說明檔</b><p>院所名單可以依行政區篩選，來源網址點了就開。交出去前，挑兩三筆自己點來源對一下。</p></div></li>
+    </ol>
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+      <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
+      <div class="prompt"><div class="lab">提示詞・代理人蒐集資料<button class="copy">複製</button></div>幫我上網蒐集「（縣市）」65 歲以上長者功能評估（ICOPE 長者量六力）的官方資訊：誰可以做、多久一次、在哪裡做、要帶什麼、聯絡電話。只用政府網站（gov.tw），每一項附來源網址。整理成「資料蒐集/（縣市）ICOPE資訊.md」和一份 Excel 表。查不到的寫「查無資料」，不要猜。</div>
     </div>
   </div>
 </section>
