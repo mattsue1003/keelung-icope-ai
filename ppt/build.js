@@ -132,10 +132,11 @@ const by = (t) => D.find((d) => d.title === t);
   };
   list("協會與機構", ["社團法人台灣生活復能健康促進協會 理事長", "愛迪樂有限公司（105/08）", "愛迪樂居家職能治療所（107/01）", "愛迪樂物理治療所（107/12）", "愛迪樂中山聯合治療所（111/12）", "愛迪樂新北長期照顧服務機構（108/01）", "愛迪樂三重失智症據點（111/01）", "新北市私立愛迪樂東湖國小社區長照機構（112/05）", "銀光復能咖啡館 C 單位巷弄長照站（108/11）", "五股日間照顧中心及身障日間照顧中心（籌備中）"], 3.05, 3.05);
   list("角色與專長", ["職能治療師／執行長", "Homeseen 失智症遊戲包 共同創辦人", "關懷小丑協會 監事", "長庚大學職能治療系系友會 監事", "銀髮體適能教練、皮拉提斯教練 ABC 級", "認知桌遊活動遊戲設計", "MAT 功能性評估國際認證", "簡報遊戲化教學設計"], 6.25, 1.75);
-  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 8.12, y: 1.45, w: 1.38, h: 2.55, fill: { color: "FFFFFF" }, line: { color: C.line, width: 0.75 }, rectRadius: 0.08 });
-  s.addImage({ path: IMG("img/qr-fb.png"), x: 8.2, y: 1.55, w: 1.22, h: 1.22, altText: "粉絲專頁 QR code" });
-  s.addText("加入粉絲專頁\n看更多作品", { x: 8.12, y: 2.82, w: 1.38, h: 0.5, fontFace: F, fontSize: 10.5, bold: true, color: C.ink, align: "center", margin: 0, isTextBox: true });
-  s.addText("鍾孟修Matt-職能治療師", { x: 8.12, y: 3.36, w: 1.38, h: 0.5, fontFace: F, fontSize: 8, color: C.blue, align: "center", margin: 0, isTextBox: true, hyperlink: { url: "https://www.facebook.com/profile.php?id=100063748491881" } });
+  [["img/qr-intro.png", "認識我\n自我介紹網站", "https://mattsue1003.github.io/matt-intro/", C.ink, 1.4], ["img/qr-fb.png", "加入粉絲專頁\n看更多作品", "https://www.facebook.com/profile.php?id=100063748491881", C.line, 3.32]].forEach(([p, t, u, lc, y]) => {
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 8.12, y, w: 1.38, h: 1.8, fill: { color: "FFFFFF" }, line: { color: lc, width: lc === C.ink ? 1.5 : 0.75 }, rectRadius: 0.08 });
+    s.addImage({ path: IMG(p), x: 8.26, y: y + 0.08, w: 1.1, h: 1.1, altText: t.replace("\n", " ") + " QR code", hyperlink: { url: u } });
+    s.addText(t, { x: 8.12, y: y + 1.22, w: 1.38, h: 0.48, fontFace: F, fontSize: 10.5, bold: true, color: C.ink, align: "center", margin: 0, isTextBox: true, hyperlink: { url: u } });
+  });
 }
 // 3 地圖
 {

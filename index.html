@@ -99,6 +99,7 @@ p{margin:0}
 .intro-cols h3{font-size:15px;color:var(--muted);letter-spacing:.08em;margin-bottom:8px}
 .bio{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px;font-size:15.5px;line-height:1.45}
 .bio li{padding-left:16px;position:relative}.bio li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:2px;background:var(--blue)}
+.introqrs{display:flex;flex-direction:column;gap:12px;min-width:0}.introqrs .fbcard{padding:12px 10px;gap:6px}.introqrs .fbcard img{max-width:118px}.introqrs .fbcard b{font-size:16px}.introqrs .fbcard .fbbtn{font-size:13px;padding:6px 12px}.introqrs .fbcard.site{border:2px solid var(--ink)}
 .intro-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .fbcard{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:22px 18px;border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:0 6px 20px rgba(60,50,30,.10);text-decoration:none;color:var(--ink)}
 .fbcard img{width:100%;max-width:200px;aspect-ratio:1;background:#fff}
@@ -240,7 +241,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   .cover .confetti{display:none}
   .slide>.cols{max-height:none}.slide>.cols>div,.slide>.cols>ul{justify-content:flex-start}.slide>.cols>div>.note,.slide>.cols>.check>li{flex:none}
   .ai3{grid-template-columns:minmax(0,1fr);max-height:none}
-  .intro{grid-template-columns:minmax(0,1fr);max-height:none}.intro-cols{grid-template-columns:minmax(0,1fr)}.intro-photo{max-width:320px}.intro-bio h2{font-size:26px}.fbcard{max-width:320px}
+  .intro{grid-template-columns:minmax(0,1fr);max-height:none}.intro-cols{grid-template-columns:minmax(0,1fr)}.intro-photo{max-width:320px}.introqrs{flex-direction:row;flex-wrap:wrap}.introqrs .fbcard{flex:1 1 140px}.intro-bio h2{font-size:26px}.fbcard{max-width:320px}
   .cover h1{font-size:36px}
   body.scroll .steps{overflow:visible}
   body.scroll .steps li{cursor:default;border-color:var(--line);background:var(--paper)}
@@ -337,12 +338,18 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
         </div>
       </div>
     </div>
-    <a class="fbcard" href="https://www.facebook.com/profile.php?id=100063748491881" target="_blank" rel="noopener">
-      <img src="img/qr-fb.svg" alt="鍾孟修Matt-職能治療師 粉絲專頁 QR code">
-      <b>加入粉絲專頁<br>看更多作品</b>
-      <span>鍾孟修Matt-職能治療師</span>
-      <span class="fbbtn">前往粉絲專頁 ↗</span>
-    </a>
+    <div class="introqrs">
+      <a class="fbcard site" href="https://mattsue1003.github.io/matt-intro/" target="_blank" rel="noopener">
+        <img src="img/qr-intro.svg" alt="鍾孟修 自我介紹網站 QR code">
+        <b>認識我<br>自我介紹網站</b>
+        <span class="fbbtn" style="background:var(--ink)">開啟網站 ↗</span>
+      </a>
+      <a class="fbcard" href="https://www.facebook.com/profile.php?id=100063748491881" target="_blank" rel="noopener">
+        <img src="img/qr-fb.svg" alt="鍾孟修Matt-職能治療師 粉絲專頁 QR code">
+        <b>加入粉絲專頁<br>看更多作品</b>
+        <span class="fbbtn">前往粉絲專頁 ↗</span>
+      </a>
+    </div>
   </div>
 </section>
 
