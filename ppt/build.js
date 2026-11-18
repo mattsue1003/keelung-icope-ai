@@ -158,7 +158,7 @@ const by = (t) => D.find((d) => d.title === t);
 {
   const s = pres.addSlide({ masterName: "PAPER" });
   header(s, "開始前 5 分鐘", "先把這五件事打勾", C.lime);
-  ["電腦 Chrome 登入自己的 Google 帳號（用完記得登出）", "登入 ChatGPT：chatgpt.com（用 Google 帳號）", "打開 Gemini 與 Claude：gemini.google.com、claude.ai", "手機裝 ChatGPT、Gemini App（Claude 可選裝）", "加入 LINE 學員社群（封底 QR code）"].forEach((t, i) => {
+  ["電腦 Chrome 登入自己的 Google 帳號（用完記得登出）", "登入 ChatGPT：chatgpt.com（用 Google 帳號）", "打開 Gemini 與 Claude：gemini.google.com、claude.ai", "手機裝 ChatGPT、Gemini App（Claude 可選裝）", "加入 LINE 群組（封面 QR＝今天的課程群組）"].forEach((t, i) => {
     const y = 1.45 + i * 0.6;
     s.addShape(pres.shapes.RECTANGLE, { x: M, y: y + 0.08, w: 0.28, h: 0.28, fill: { color: "FFFFFF" }, line: { color: C.ink, width: 1.25 } });
     s.addText(t, { x: M + 0.45, y, w: 4.5, h: 0.45, fontFace: F, fontSize: 13, color: C.ink, margin: 0, valign: "middle", isTextBox: true });

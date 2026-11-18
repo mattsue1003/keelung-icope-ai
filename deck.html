@@ -239,7 +239,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   .cover .confetti{display:none}
   .slide>.cols{max-height:none}.slide>.cols>div,.slide>.cols>ul{justify-content:flex-start}.slide>.cols>div>.note,.slide>.cols>.check>li{flex:none}
   .ai3{grid-template-columns:minmax(0,1fr);max-height:none}
-  .intro{grid-template-columns:minmax(0,1fr);max-height:none}.intro-cols{grid-template-columns:minmax(0,1fr)}.intro-photo{max-width:320px}.introqrs{flex-direction:row;flex-wrap:wrap}.introqrs .fbcard{flex:1 1 140px}.intro-bio h2{font-size:26px}.fbcard{max-width:320px}
+  .intro{grid-template-columns:minmax(0,1fr);max-height:none}.intro-cols{grid-template-columns:minmax(0,1fr)}.intro-photo{max-width:320px}.endquote{font-size:28px!important}.copy{min-height:36px;padding:6px 14px!important}.introqrs{flex-direction:row;flex-wrap:wrap}.introqrs .fbcard{flex:1 1 140px}.intro-bio h2{font-size:26px}.fbcard{max-width:320px}
   .cover h1{font-size:36px}
   body.scroll .steps{overflow:visible}
   body.scroll .steps li{cursor:default;border-color:var(--line);background:var(--paper)}
@@ -272,8 +272,8 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
     <i style="left:66%;top:7%;width:46px;height:46px;background:var(--blue)"></i>
     <i style="left:80%;top:12%;width:20px;height:20px;background:var(--lime);animation-delay:-2s"></i>
     <i style="left:92%;top:8%;width:30px;height:30px;background:var(--mag);animation-delay:-1s"></i>
-    <i style="left:94%;top:44%;width:22px;height:22px;background:var(--sky);animation-delay:-4s"></i>
-    <i style="left:58%;top:52%;width:16px;height:16px;background:var(--mag);animation-delay:-2.5s"></i>
+    <i style="left:91%;top:72%;width:22px;height:22px;background:var(--sky);animation-delay:-4s"></i>
+    <i style="left:55%;top:13%;width:16px;height:16px;background:var(--mag);animation-delay:-2.5s"></i>
     <i style="left:62%;top:84%;width:56px;height:56px;background:var(--amber);animation-delay:-3s"></i>
     <i style="left:80%;top:88%;width:18px;height:18px;background:var(--lime);animation-delay:-5s"></i>
     <i style="left:91%;top:80%;width:34px;height:34px;background:var(--blue);animation-delay:-1.5s"></i>
@@ -383,7 +383,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
       <li><label><input type="checkbox" id="p2"><span><b>登入 ChatGPT：chatgpt.com</b><br><small class="muted">用 Google 帳號就能登入。今天做衛教圖、算統計、出 Word 報告都用它。</small></span></label></li>
       <li><label><input type="checkbox" id="p3"><span><b>打開 Gemini 與 Claude：gemini.google.com、claude.ai</b><br><small class="muted">一樣用 Google 帳號登入。免費額度用完，可以換另一家繼續做。</small></span></label></li>
       <li><label><input type="checkbox" id="p4"><span><b>手機裝 ChatGPT、Gemini App</b><br><small class="muted">App Store／Google Play 搜尋「ChatGPT」「Gemini」，Claude 可選裝。</small></span></label></li>
-      <li><label><input type="checkbox" id="p5"><span><b>加入 LINE 學員社群</b><br><small class="muted">右下角綠色按鈕，課後問題在這裡問。</small></span></label></li>
+      <li><label><input type="checkbox" id="p5"><span><b>加入 LINE 群組</b><br><small class="muted">封面 QR 是今天的課程群組；右下角綠色按鈕是學員社群，課後問題在這裡問。</small></span></label></li>
     </ul>
     <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
       <div class="note" style="--c:var(--blue)"><b>電腦教室</b><span>教室電腦多半不能安裝軟體。今天的實作都用<b>瀏覽器</b>完成；需要安裝的 Typeless，請用自己的手機或筆電試。</span></div>
@@ -495,7 +495,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
     </ol>
     <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
       <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
-      <div class="prompt"><div class="lab">提示詞・口述變評估紀錄<button class="copy">複製</button></div>以下是我剛完成的 ICOPE 評估口述內容，請整理成：
+      <div class="prompt" style="font-size:14.5px;line-height:1.5;max-height:46%"><div class="lab">提示詞・口述變評估紀錄<button class="copy">複製</button></div>以下是我剛完成的 ICOPE 評估口述內容，請整理成：
 1. 個案代號／性別年齡層
 2. 六力結果表（認知、行動、營養、視力、聽力、情緒：正常或異常）
 3. 異常項目的衛教重點與轉介建議
@@ -672,7 +672,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
     </ol>
     <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
       <figure class="shot" style="flex:1"><div class="stepbar"></div><div class="frame" style="background:var(--soft)"><img alt=""></div><figcaption><span class="cap"></span><span class="hint">↓ 下一步</span></figcaption></figure>
-      <div class="prompt"><div class="lab">提示詞・參考海報風格<button class="copy">複製</button></div>請參考這張海報的 UI 設計（右側直排大標題、粉彩粉橘配淡藍、手繪線條人物、彩色小標籤標題、左下圓角「溫馨提醒」框），只參考版面與配色，不要複製它的文字、QR code 和標誌。幫我做一張 A4 直式衛教海報：右側直排標題「長者量六力 從篩檢到轉介」，副標「家屬指南」。三個標籤段落：篩檢：65 歲以上每年量一次六力；複評：有一項異常，由醫事人員再仔細評估；轉介：依結果連結復能、營養、眼科或耳鼻喉科。溫馨提醒：按時篩檢，及早發現、及早介入。繁體中文、字要大、不要錯字。</div>
+      <div class="prompt" style="font-size:15px;line-height:1.55"><div class="lab">提示詞・參考海報風格<button class="copy">複製</button></div>請參考這張海報的 UI 設計（右側直排大標題、粉彩粉橘配淡藍、手繪線條人物、彩色小標籤標題、左下圓角「溫馨提醒」框），只參考版面與配色，不要複製它的文字、QR code 和標誌。幫我做一張 A4 直式衛教海報：右側直排標題「長者量六力 從篩檢到轉介」，副標「家屬指南」。三個標籤段落：篩檢：65 歲以上每年量一次六力；複評：有一項異常，由醫事人員再仔細評估；轉介：依結果連結復能、營養、眼科或耳鼻喉科。溫馨提醒：按時篩檢，及早發現、及早介入。繁體中文、字要大、不要錯字。</div>
     </div>
   </div>
 </section>
@@ -878,7 +878,7 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
   <h2>指標報表下載後，交給 AI 做描述性統計</h2>
   <div class="stepper" data-stepper>
     <ol class="steps">
-      <li data-img="img/cv_40_hpa.jpg" data-cap="國健署整合平台：個案查詢與管理 → 指標報表作業、歷史資料專區"><span class="n">1</span><div><b>從平台下載報表</b><p>登入整合平台 →「個案查詢與管理」→ 指標報表作業。下載的檔案先做去識別化（實作前一站）。今天用虛擬練習檔。</p></div></li>
+      <li data-img="img/cv_40_hpa.jpg" data-cap="國健署整合平台：個案查詢與管理 → 指標報表作業、歷史資料專區"><span class="n">1</span><div><b>從平台下載報表</b><p>登入整合平台 →「個案查詢與管理」→ 指標報表作業。下載的檔案先做去識別化（「三不原則與去識別化」那一頁）。今天用虛擬練習檔。</p></div></li>
       <li data-img="img/d00_attached.jpg" data-cap="Gemini 輸入框「＋」→ 檔案，選練習檔 .xlsx"><span class="n">2</span><div><b>上傳練習檔到 Gemini</b><p>先下載右下方的練習檔，再到 Gemini「＋」→ 檔案 → 選「ICOPE練習資料_虛擬120筆.xlsx」。ChatGPT 一樣可以（下一頁）。</p></div></li>
       <li data-img="img/d01_prompt.jpg" data-cap="提示詞寫清楚：要哪些統計、要列分母、要觀察"><span class="n">3</span><div><b>貼上統計提示詞</b><p>關鍵是「列出分母」。百分比沒有分母，主管問「是誰的幾成」就答不出來。</p></div></li>
       <li data-img="img/d02_result.jpg" data-cap="Gemini 實際產出（11/11 實測）：女 71、男 49。正確答案是 77／43"><span class="n">4</span><div><b>看結果：表格很漂亮</b><p>有分母、有百分比，看起來很專業。但性別人數已經和檔案不一樣了。</p></div></li>
@@ -1114,14 +1114,14 @@ td.num{font-family:var(--f-display);font-weight:800;font-variant-numeric:tabular
 <section class="slide cover" data-title="謝謝聆聽">
   <div class="confetti" aria-hidden="true">
     <i style="left:6%;top:10%;width:30px;height:30px;background:var(--mag)"></i>
-    <i style="left:4%;top:88%;width:22px;height:22px;background:var(--lime);animation-delay:-2s"></i>
+    <i style="left:38%;top:12%;width:22px;height:22px;background:var(--lime);animation-delay:-2s"></i>
     <i style="left:48%;top:6%;width:18px;height:18px;background:var(--sky);animation-delay:-1s"></i>
     <i style="left:56%;top:84%;width:40px;height:40px;background:var(--amber);animation-delay:-3s"></i>
   </div>
   <div class="eyebrow"><span class="sq"></span>謝謝聆聽</div>
   <div class="cols" style="--n:2;grid-template-columns:minmax(0,1fr) auto;align-items:center;position:relative">
     <div style="display:flex;flex-direction:column;gap:18px;min-width:0">
-      <h2 style="font-size:44px;font-family:var(--f-display)">Happiness is not a goal…<br>it's a by-product of a life well lived.</h2>
+      <h2 class="endquote" style="font-size:44px;font-family:var(--f-display)">Happiness is not a goal…<br>it's a by-product of a life well lived.</h2>
       <p class="lede">快樂不是一個目標，它是踏實人生的副產品。（Eleanor Roosevelt）</p>
       <div style="display:flex;flex-wrap:wrap;gap:10px">
         <a class="pill" href="https://www.facebook.com/chungmenghsiu" target="_blank" rel="noopener" style="text-decoration:none;color:var(--ink)">鍾孟修 臉書</a>

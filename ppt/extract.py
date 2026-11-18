@@ -12,7 +12,7 @@ for m in re.finditer(r'<section class="slide[^"]*" data-title="([^"]*)"[^>]*>(.*
     steps = [dict(img=a, cap=html.unescape(b), title=txt(c), desc=txt(d)) for a, b, c, d in
              re.findall(r'<li data-img="([^"]*)" data-cap="([^"]*)"><span class="n">\d+</span><div><b>(.*?)</b><p>(.*?)</p></div></li>', body, re.S)]
     prompts = [dict(lab=txt(re.sub(r'<button.*?</button>', '', a)), text=txt(b)) for a, b in
-               re.findall(r'<div class="prompt"><div class="lab">(.*?)</div>(.*?)</div>', body, re.S)]
+               re.findall(r'<div class="prompt"[^>]*><div class="lab">(.*?)</div>(.*?)</div>', body, re.S)]
     out.append(dict(title=title, eyebrow=txt(eb.group(1)) if eb else '', h2=txt(h2.group(1)) if h2 else '',
                     lede=txt(lede.group(1)) if lede else '', steps=steps, prompts=prompts))
 json.dump(out, open('ppt/slides.json', 'w'), ensure_ascii=False, indent=1)
